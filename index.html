@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Континуум</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script defer src="scripts/validation.js"></script>
+    <script defer src="scripts/scripts.js"></script>
+    <meta name="viewport" content="width=device-width">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+
+<!--<div class="alert alert_pass">Вводите пароль используя<br>латиницу и цифры</div>-->
+<!--<div class="alert alert_name">Вводите имя <br>на русском языке</div>-->
+<header class="header">
+    <img class="header__logo" src="images/logo.svg" alt="logo">
+    <img onclick="showHideMenu(this)" class="header__burger" src="images/menu-burger.svg" alt="burger">
+    <div class="header__menu header__menu_desktop" id="menu_desktop"
+         style="display: flex; justify-content: space-between">
+        <nav class="navbar">
+            <a href="#" class="navbar__link">ЕГЭ
+                <!--                <img class="navbar__arrow" src="images/ege_CaretDoubleDown.svg" alt="Стрелка">-->
+            </a>
+            <a href="#" class="navbar__link">ОГЭ
+                <!--                <img class="navbar__arrow" src="images/oge_CaretDoubleDown.svg" alt="Стрелка">-->
+            </a>
+            <a href="#" class="navbar__link">10 класс
+                <!--                <img class="navbar__arrow" src="images/10_CaretDoubleDown.svg" alt="Стрелка">-->
+            </a>
+            <a href="#" class="navbar__link">Отзывы</a>
+            <a href="#" class="navbar__link">Преподаватели</a>
+        </nav>
+        <div class="header__menu__contacts">
+            <div><img src="images/location.svg"><span style="color: #326EEA;margin: 0 22px 0 4px">Екб</span></div>
+            <div>
+                <a class="header__menu__number" href="tel: +79923466545">+7 992 346-65-45</a>
+                <div class="header__menu__time">на связи 9–21:00</div>
+            </div>
+            <a href="#">
+                <img src="images/profile_icon.svg" style="margin-left: 64px">
+            </a>
+        </div>
+
+    </div>
+</header>
+<section style="padding: 0 84px">
+    <div class="announce">
+        <div class="announce__block"><img src="images/fire-emoji.svg" alt="emoji">
+            <span class="announce__block__text">Скидка 30% на<span style="color: #F35C22"> годовой курс</span> до 1 августа </span>
+        </div>
+    </div>
+    <div class="page-title">
+        Подготовка к <span class="page-title__span" style="color: #326EEA">ЕГЭ 2023</span>
+        <!--        <ul class="wave-border__ul">-->
+        <!--            <li class="wave-border__li"></li>-->
+        <!--            <li class="wave-border__li"></li>-->
+        <!--            <li class="wave-border__li"></li>-->
+        <!--            <li class="wave-border__li"></li>-->
+        <!--            <li class="wave-border__li"></li>-->
+        <!--            <li class="wave-border__li"></li>-->
+        <!--            <li class="wave-border__li"></li>-->
+        <!--            <li class="wave-border__li"></li>-->
+        <!--            <li class="wave-border__li"></li>-->
+        <!--        </ul>-->
+        <br>по всем предметам
+    </div>
+    <div class="important-things">
+        <!--        <div class="row">-->
+        <div class="important-things__block" style="max-width: 345px">
+            <div style="display: flex">
+                <img src="images/important-things/teacher-m.svg" style="padding-right: 16px">
+                <img src="images/important-things/teacher-w.svg">
+            </div>
+            <div class="important-things__block__title">Опытные преподаватели</div>
+            <div class="important-things__block__text">Эксперты ЕГЭ, учителя первой<br>категории и научные сотрудники
+            </div>
+        </div>
+        <div class="important-things__block" style="max-width: 308px">
+            <img src="images/important-things/books.svg">
+            <div class="important-things__block__title">Эффективный формат</div>
+            <div class="important-things__block__text">360 ак. часов обучения<br>по каждому предмету в год</div>
+        </div>
+        <div class="important-things__block">
+            <img src="images/important-things/present.svg">
+            <div class="important-things__block__title">Результативные курсы со скидкой</div>
+            <div class="important-things__block__text">На 2 и 3 предметы скидка до 70%.<br>Стоимость ак. ч. от 60 ₽
+            </div>
+        </div>
+        <!--    </div>-->
+    </div>
+    <div class="recruit">
+        <div class="recruit__title">Идёт набор на <span style="color: #F35C22">годовой курс</span></div>
+        <div class="recruit__info">
+            <div class="recruit__info__desc">Чем раньше запишетесь,<br>тем выгоднее будет цена</div>
+            <form>
+                <input class="recruit__input" type=tel value="+7" maxlength="17">
+                <button class="recruit__button">Оставить заявку</button>
+            </form>
+            <div class="recruit__info__agree">Отправляя форму, вы даете согласие на обработку персональных данных</div>
+        </div>
+        <div class="recruit__discount">Скидка<br>30% до<br>1 августа</div>
+    </div>
+
+    <div class="universities">
+        <div class="universities__title">Каждый год выпускаем 100-балльников и высокобалльников.
+            <br><br>Выпускники поступают на бюджет в МГУ, Бауманку, МФТИ, ИТМО, Политех, СПбГАСУ, МАИ, УрГАХУ, УрФУ,
+            УГМУ.
+        </div>
+        <div class="universities__icons">
+            <img style="z-index: 8;" class="universities__icon" src="images/universities/mgu.svg" alt="МГУ">
+            <img style="z-index: 7;" class="universities__icon" src="images/universities/baumanka.svg" alt="Бауманка">
+            <img style="z-index: 6;" class="universities__icon" src="images/universities/mfti.svg" alt="МФТИ">
+            <img style="z-index: 5;" class="universities__icon" src="images/universities/itmo.svg" alt="ИТМО">
+            <img style="z-index: 4;" class="universities__icon" src="images/universities/politech.svg" alt="Политех">
+            <img style="z-index: 3;" class="universities__icon" src="images/universities/spbgasu.svg" alt="СПбГАСУ">
+            <img style="z-index: 2;" class="universities__icon" src="images/universities/mai.svg" alt="МАИ">
+            <img style="z-index: 1;" class="universities__icon" src="images/universities/urgahu.svg" alt="УрГАХУ">
+            <img style="z-index: 0;" class="universities__icon" src="images/universities/urfu.svg" alt="УРФУ">
+        </div>
+    </div>
+</section>
+<section class="education-info">
+    <div>
+        <div class="education-info__title">Эффективный и удобный формат обучения</div>
+        <div class="education-info__subtitle">Объём подготовки в неделю равен 10 школьным урокам. Это больше чем с
+            репетитором, и в разы выгоднее.
+            <br>Мы единственные, кто проводит пробный экзамен не на занятии, а в отдельный день с регистрацией,
+            наблюдателями и экспертной проверкой. Всё как на ЕГЭ!
+        </div>
+        <div style="display: flex; align-items: center">
+            <img src="images/education-info/plan.svg">
+            <div class="education-info__plan">
+                Годовой план занятий.pdf
+                <a href="#" class="education-info__plan__download">
+                    <img style="margin-right: 8px" src="images/education-info/download-icon.svg">
+                    Скачать
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="education-info__seasons">
+        <div class="season season_autumn">
+            <div><img src="images/education-info/autumn.svg"><span class="season__title">Осень</span></div>
+            <ul class="season__list">
+                <li>Диагностика знаний</li>
+                <li>Выбор подходящей группы</li>
+                <li>Начало занятий</li>
+                <li class="season__list__orange">Пробный экзамен</li>
+            </ul>
+        </div>
+        <div class="season season_winter">
+            <div><img src="images/education-info/winter.svg"><span class="season__title">Зима</span></div>
+            <ul class="season__list">
+                <li>Закрываем пробелы в базовых знаниях</li>
+                <li>Теоретический зачёт</li>
+                <li class="season__list__orange">Пробный экзамен</li>
+                <li>Разбираем подводные камни экзамена</li>
+            </ul>
+        </div>
+        <div class="season season_spring">
+            <div><img src="images/education-info/spring.svg"><span class="season__title">Весна</span></div>
+            <ul class="season__list">
+                <li>Теоретический зачёт</li>
+                <li class="season__list__orange">Персональный пробный экзамен</li>
+                <li>Индивидуальный план занятий</li>
+                <li class="season__list__orange">Итоговый пробный экзамен</li>
+            </ul>
+        </div>
+        <div class="season season_summer">
+            <div><img src="images/education-info/summer.svg"><span class="season__title">Лето</span></div>
+            <ul class="season__list">
+                <li>Занятия до самого экзамен</li>
+                <li>Психологическая поддержка</li>
+                <li>Помощь с аппеляцией</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="benefits">
+    <div class="benefits__block">
+        <div class="benefits__block__title" style="padding-top: 48px">
+            <span style="color: #60A01C; font-weight: 700">Неделя</span> обучения — это:
+        </div>
+        <div class="benefits__hours">
+            <img src="images/arrow-right-hours.svg">
+            <div style="margin-left: 16px">
+                <span class="benefits__hours__title">3 ак. ч.</span>
+                <div class="benefits__hours__description">Прохождение онлайн-модуля со всей необходимой теорией для
+                    подготовки к ЕГЭ.
+                </div>
+                <a class="benefits__hours__link" style="width: 374px;">Смотреть пример онлайн-модуля <img
+                        src="images/ArrowRight.svg"></a>
+            </div>
+        </div>
+        <div class="benefits__hours">
+            <img src="images/arrow-right-hours.svg">
+            <div style="margin-left: 16px">
+                <span class="benefits__hours__title">4 ак. ч.</span>
+                <div class="benefits__hours__description">Выполнение домашнего задания с моментальной проверкой,
+                    обратной связью преподавателя и подробной статистикой в Личном кабинете.
+                </div>
+            </div>
+        </div>
+        <div class="benefits__hours">
+            <img src="images/arrow-right-hours.svg">
+            <div style="margin-left: 16px">
+                <span class="benefits__hours__title">3 ак. ч.</span>
+                <div class="benefits__hours__description">Очное занятие длительностью 120 мин.
+                    с опытным преподавателем в мини-группе по уровню.
+                </div>
+            </div>
+        </div>
+        <div style="font-size: 30px; line-height: 36px; margin: 40px 0 0 92px">
+            В течение недели <span style="background: #60A01C;border-radius: 24px; padding: 0 10px; z-index: 2">преподаватель</span>
+            <br><span style="background: #60A01C;border-radius: 24px; padding: 0 10px">отвечает на вопросы</span>
+        </div>
+    </div>
+    </div>
+    <div class="benefits__block">
+        <div style="width: 100%; display: flex; justify-content: end">
+            <img style="transform: scale(1, -1); margin-bottom: 32px" src="images/screen.svg">
+        </div>
+        <div class="benefits__block__title">Передовые технологии в образовании</div>
+        <div class="benefits__block__description">Наша образовательная платформа собирает статистику выполнения всех
+            д/з, контрольных работ и пробных экзаменов, на основе которой Искусственный интеллект составляет
+            индивидуальный план подготовки.
+            <br><br>Благодаря этому опытный преподаватель точно знает над чем необходимо работать каждому ученику, чтобы
+            закрыть
+            все пробелы в знаниях и подготовиться на максимальный балл.
+        </div>
+    </div>
+</section>
+<section class="price">
+    <div class="price__title">Стоимость обучения</div>
+    <div class="price__subtitle">Вы можете получить налоговый вычет за образовательные услуги
+        и использовать материнский капитал
+    </div>
+    <div class="price__columns">
+        <div class="price__column">
+            <div class="price__column__title">1. Выберите предметы:</div>
+            <div style="display: flex">
+                <div style="margin-right: 40px">
+                    <div class="price__column__subject">
+                        <input type="checkbox" class="price__column__subject__checkbox">
+                        <!--                        <span class="price__column__subject__custom-cb"></span>-->
+                        <div class="price__column__subject__name">Математика</div>
+                    </div>
+                    <div class="price__column__subject">
+                        <input type="checkbox" class="price__column__subject__checkbox">
+                        <div class="price__column__subject__name">Русский язык</div>
+                    </div>
+                    <div class="price__column__subject">
+                        <input type="checkbox" class="price__column__subject__checkbox">
+                        <div class="price__column__subject__name">Информатика</div>
+                    </div>
+                    <div class="price__column__subject">
+                        <input type="checkbox" class="price__column__subject__checkbox">
+                        <div class="price__column__subject__name">Химия</div>
+                    </div>
+                    <div class="price__column__subject">
+                        <input type="checkbox" class="price__column__subject__checkbox">
+                        <div class="price__column__subject__name">Обществознание</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="price__column__subject">
+                        <input type="checkbox" class="price__column__subject__checkbox">
+                        <div class="price__column__subject__name">Биология</div>
+                    </div>
+                    <div class="price__column__subject">
+                        <input type="checkbox" class="price__column__subject__checkbox">
+                        <div class="price__column__subject__name">Физика</div>
+                    </div>
+                    <div class="price__column__subject">
+                        <input type="checkbox" class="price__column__subject__checkbox">
+                        <div class="price__column__subject__name">История</div>
+                    </div>
+                    <div class="price__column__subject">
+                        <input type="checkbox" class="price__column__subject__checkbox">
+                        <div class="price__column__subject__name">Литература</div>
+                    </div>
+                    <div class="price__column__subject">
+                        <input type="checkbox" class="price__column__subject__checkbox">
+                        <div class="price__column__subject__name">Английский<br>язык</div>
+                    </div>
+                </div>
+            </div>
+            <div class="price__discount">
+                <div class="price__discount__title">3-й предмет</div>
+                <div class="price__discount__number">-45%</div>
+            </div>
+        </div>
+        <div class="price__border"></div>
+        <div class="price__column" style="min-width: 307px;">
+            <div class="price__column__title">2. Период оплаты:</div>
+            <div class="price__column__period">
+                <div class="price__column__period__option">
+                    <input type="radio" class="price__column__period__radio">
+                    <div class="price__column__period__name">Каждую неделю</div>
+                </div>
+                <div class="price__column__period__option">
+                    <input type="radio" class="price__column__period__radio">
+                    <div class="price__column__period__name">Каждый месяц (выгода 10%)</div>
+                </div>
+                <div class="price__column__period__option">
+                    <input type="radio" class="price__column__period__radio">
+                    <div class="price__column__period__name">1 раз в полгода (выгода 20%)</div>
+                </div>
+                <div class="price__column__period__option">
+                    <input type="radio" class="price__column__period__radio">
+                    <div class="price__column__period__name">1 раз в год (выгода 25%)</div>
+                </div>
+            </div>
+        </div>
+        <div class="price__check">
+            <div class="check__title">
+                При заключении договора до 1 авг.
+            </div>
+            <div class="check__line" style="margin-bottom: 4px"></div>
+            <div class="check__line"></div>
+            <div style="font-weight: 400;font-size: 32px;line-height: 34px;color: #2B2D33; margin: 24px 0 8px">
+                Стоимость:
+            </div>
+            <div class="check__subject">
+                <div style="display: flex; justify-content: space-between">
+                    <div class="check__subject__name">1-й предмет</div>
+                    <div class="check__subject__price">120 ₽/ак.ч.</div>
+                </div>
+                <div class="check__subject__discount" style="font-size: 16px;
+                line-height: 18px;text-align: right;color: #F35C22;">выгода 25%
+                </div>
+            </div>
+            <div class="check__subject" style="margin: 24px 0 32px;">
+                <div style="display: flex; justify-content: space-between">
+                    <div class="check__subject__name">2-й предмет</div>
+                    <div class="check__subject__price">90 ₽/ак.ч.</div>
+                </div>
+                <div class="check__subject__discount" style="font-size: 16px;
+                line-height: 18px;text-align: right;color: #F35C22;">выгода 50%
+                </div>
+            </div>
+            <form>
+                <input class="check__input" value="+7" type="tel" maxlength="17">
+                <button class="check__button">Зафиксировать стоимость</button>
+            </form>
+            <div style="padding: 8px 0; color: #2B2D33; text-align: center">или</div>
+            <a href="#" class="check__link">Задать вопрос</a>
+            <div class="check__rights">Отправляя форму, вы даете согласие на
+                <a href="#">обработку персональных данных</a></div>
+        </div>
+    </div>
+
+</section>
+<section class="license">
+    <div style="margin-left: 52px; max-width: 584px;">
+        <div class="license__title">У нас есть Государственная образовательная лицензия</div>
+        <div class="license__description">Наши учебные программы и преподаватели соответствуют государственным
+            стандартам.
+            Вы можете быть уверены в качестве обучения.
+        </div>
+        <a href="#" class="license__link" style="width: 390px;">Смотреть на сайте Рособрнадзора<img
+                src="images/ArrowRight.svg"></a>
+    </div>
+    <div style="display: flex; align-items: end"><img src="images/license.svg"></div>
+</section>
+<section class="teachers-wrapper">
+    <div class="teachers__description">
+        <div class="teachers__title">Методисты и разработчики <span>курсов</span></div>
+        <div class="teachers__subtitle">Ежегодно разрабатывают и обновляют наши учебные материалы, изучают
+            изменения в демоверсиях, спецификациях и кодификаторах ФИПИ, записывают видеолекции на понятном
+            ученику языке и подбирают актуальные задания экзаменационного формата.
+        </div>
+        <a href="#" class="teachers__link">Узнать о преподавателях <img src="images/ArrowRight.svg"> </a>
+    </div>
+    <div class="teachers">
+        <div class="teachers__slider">
+            <div class="teachers__slides">
+                <input checked type="radio" name="teachers__slider__r" id="teachers__slider__radio1">
+                <input type="radio" name="teachers__slider__r" id="teachers__slider__radio2">
+                <input type="radio" name="teachers__slider__r" id="teachers__slider__radio3">
+                <input type="radio" name="teachers__slider__r" id="teachers__slider__radio4">
+                <input type="radio" name="teachers__slider__r" id="teachers__slider__radio5">
+                <div class="teachers__slide teachers__slide_1">
+                    <div class="teacher">
+                        <div class="teacher__photo">
+                            <img style="z-index: 1" src="images/teachers/social-science-teacher.svg">
+                            <div class="teacher__photo__bg"></div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 28px 0 12px">
+                            <img src="images/teachers/social-science-icon.svg">
+                            <div class="teacher__name">Евгения Орлова</div>
+                        </div>
+                        <div class="teacher__education">HR-директор. Закончила РАНХиГС и РГППУ,
+                            преподаёт историю и обществознание
+                        </div>
+                        <div class="teacher__experience">Преподаватель первой квалификационной категории;<br>
+                            Автор и ведущий тренингов по профессиональной подготовке;<br>
+                            9 лет готовит к ЕГЭ и ОГЭ.
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div class="teacher__photo">
+                            <img src="images/teachers/english-teacher.svg">
+                            <div class="teacher__photo__bg"></div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 28px 0 12px">
+                            <img src="images/teachers/english-icon.svg">
+                            <div class="teacher__name">Евгения Мехренина</div>
+                        </div>
+                        <div class="teacher__education">Закончила УрГЮУ. Получила международные сертификаты Cambridge и
+                            Pearson, преподаёт английский язык.
+                        </div>
+                        <div class="teacher__experience">Диплом переводчика в юридической сфере;
+                            Организатор разговорных клубов;
+                            6 лет готовит к ЕГЭ и ОГЭ.
+                        </div>
+                    </div>
+                </div>
+                <div class="teachers__slide teachers__slide_2">
+                    <div class="teacher">
+                        <div class="teacher__photo">
+                            <img src="images/teachers/history-teacher.svg">
+                            <div class="teacher__photo__bg"></div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 28px 0 12px">
+                            <img src="images/teachers/history-icon.svg">
+                            <div class="teacher__name">Михаил Храмцов</div>
+                        </div>
+                        <div class="teacher__education">Закончил УрФУ, преподаёт историю.
+                        </div>
+                        <div class="teacher__experience">Инженер-исследователь Института истории и археологии УрФУ;
+                            3-й историк Урала в 2016 году;
+                            Автор 7 статей в индексе цитируемости РИНЦ и 2 статей в ВАК
+                            5 лет готовит к ЕГЭ и ОГЭ.
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div class="teacher__photo">
+                            <img src="images/teachers/social-science-teacher2.svg">
+                            <div class="teacher__photo__bg"></div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 28px 0 12px">
+                            <img src="images/teachers/social-science-icon.svg">
+                            <div class="teacher__name">Александра Соболева</div>
+                        </div>
+                        <div class="teacher__education">Закончила УрГЮУ, НИУ ВШЭ (Спб), преподаёт обществознание.
+                        </div>
+                        <div class="teacher__experience">Выпускница проекта «Учитель для России»;
+                            Уехала из Москвы в Обнинск, чтобы преподавать;
+                            8 лет готовит к ЕГЭ и ОГЭ.
+                        </div>
+                    </div>
+                </div>
+                <div class="teachers__slide">
+                    <div class="teacher">
+                        <div class="teacher__photo">
+                            <img src="images/teachers/russian-teacher.svg">
+                            <div class="teacher__photo__bg"></div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 28px 0 12px">
+                            <img src="images/teachers/russian-icon.svg">
+                            <div class="teacher__name">Ксения Шахмина</div>
+                        </div>
+                        <div class="teacher__education">Закончила УрГПУ, преподаёт русский язык и литературу.
+                        </div>
+                        <div class="teacher__experience">Обучает искусству публичных выступлений;
+                            Автор курса по внедрению психолингвистических методик в обучение;
+                            7 лет готовит к ЕГЭ и ОГЭ.
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div class="teacher__photo">
+                            <img src="images/teachers/chemistry-teacher.svg">
+                            <div class="teacher__photo__bg"></div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 28px 0 12px">
+                            <img src="images/teachers/chemistry-icon.svg">
+                            <div class="teacher__name">Ксения Боброва</div>
+                        </div>
+                        <div class="teacher__education">Закончила УрФУ, преподаёт химию.
+                        </div>
+                        <div class="teacher__experience">Инженер института высокотемпературной электрохимии;
+                            Аспирант института высокотемпературной электрохимии УрО РАН;
+                            5 лет готовит к ЕГЭ и ОГЭ.
+                        </div>
+                    </div>
+                </div>
+                <div class="teachers__slide">
+                    <div class="teacher">
+                        <div class="teacher__photo">
+                            <img src="images/teachers/it-teacher.svg">
+                            <div class="teacher__photo__bg"></div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 28px 0 12px">
+                            <img src="images/teachers/it-icon.svg">
+                            <div class="teacher__name">Николай Фирсов</div>
+                        </div>
+                        <div class="teacher__education">Исполнительный директор. Закончил УрФУ, преподаёт информатику.
+                        </div>
+                        <div class="teacher__experience">Преподаватель в техническом университете УГМК и УрФУ в 2015–16;
+                            Выпускники поступают в лучшие IT вузы России;
+                            7 лет готовит к ЕГЭ и ОГЭ.
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div class="teacher__photo">
+                            <img src="images/teachers/math-teacher.svg">
+                            <div class="teacher__photo__bg"></div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 28px 0 12px">
+                            <img src="images/teachers/math-icon.svg">
+                            <div class="teacher__name">Николай Кайманов</div>
+                        </div>
+                        <div class="teacher__education">Операционный директор. Закончил УрФУ, преподаёт математику и
+                            физику.
+                        </div>
+                        <div class="teacher__experience">Преподаватель электроники в УрФУ в 2015–16;
+                            Выигрывает апелляции со своими учениками;
+                            7 лет готовит к ЕГЭ и ОГЭ.
+                        </div>
+                    </div>
+                </div>
+                <div class="teachers__slide">
+                    <div class="teacher">
+                        <div class="teacher__photo">
+                            <img src="images/teachers/bio-teacher.svg">
+                            <div class="teacher__photo__bg"></div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 28px 0 12px">
+                            <img src="images/teachers/bio-icon.svg">
+                            <div class="teacher__name">Евгения Орлова</div>
+                        </div>
+                        <div class="teacher__education">HR-директор. Закончила РАНХиГС и РГППУ,
+                            преподаёт историю и обществознание
+                        </div>
+                        <div class="teacher__experience">Преподаватель первой квалификационной категории;<br>
+                            Автор и ведущий тренингов по профессиональной подготовке;<br>
+                            9 лет готовит к ЕГЭ и ОГЭ.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--            <div style="display: flex">-->
+            <div class="teachers__slider__navigation">
+                <label onclick="radioBgChange(this)" style="margin-left: 2px" for="teachers__slider__radio1"
+                       class="teachers__slider__navigation__label" id="slider__label1"></label>
+                <label onclick="radioBgChange(this)" for="teachers__slider__radio2"
+                       class="teachers__slider__navigation__label"
+                       id="slider__label2"></label>
+                <label onclick="radioBgChange(this)" for="teachers__slider__radio3"
+                       class="teachers__slider__navigation__label"
+                       id="slider__label3"></label>
+                <label onclick="radioBgChange(this)" for="teachers__slider__radio4"
+                       class="teachers__slider__navigation__label"
+                       id="slider__label4"></label>
+                <label onclick="radioBgChange(this)" for="teachers__slider__radio5"
+                       class="teachers__slider__navigation__label"
+                       id="slider__label5"></label>
+            </div>
+            <div style="display: flex; position: absolute; z-index: 3; top: 640px; right: 84px">
+                <div class="slider__button" style="margin-right: 12px" onclick="slideTeachersLeft()">
+<!--                    <img class="slider__button__arrow-left" src="images/slider/arrow-left.svg">-->
+                </div>
+                <div class="slider__button slider__button_right" onclick="slideTeachersRight()">
+<!--                    <img class="slider__button__arrow-right" src="images/slider/arrow-left.svg">-->
+                </div>
+            </div>
+            <!--            </div>-->
+
+        </div>
+        <!--        <input checked type="radio" class="teachers__slider__radio">-->
+    </div>
+</section>
+<section class="results">
+    <div class="results__title">Результаты наших учеников</div>
+    <div class="results__subtitle">Выпускники победили экзамены вместе с нами и поступили в ВУЗ мечты. Наша средняя
+        оценка по отзывам на Флампе 5 из 5!
+    </div>
+    <a href="#" class="results__link">Читать 97 отзывов на Flamp.ru</a>
+    <div class="row">
+        <div class="col-md-3">
+            <div>
+                <div class="comment">
+                    <div style="display: flex">
+                        <div class="comment__title">100 баллов</div>
+                        <img src="images/comments/emoji1.svg">
+                    </div>
+                    <div class="comment__subject">Информатика ЕГЭ</div>
+                    <div class="comment__body">На ЕГЭ я рассчитывала на 86-92 балла, нервничала, боялась, а когда пришёл
+                        результат не поверила - 100. Учитывая, что изначально я порог не переходила, коллектив
+                        Континуума
+                        совершил чудо.
+                    </div>
+                </div>
+                <a href="#" class="comment__poster">
+                    <img src="images/comments/student1.svg" style="padding-right: 8px">
+                    <span>Софья Мелькова</span>
+                    <img src="images/comments/vk-icon.svg" style="padding-left: 4px">
+                </a>
+            </div>
+            <div>
+                <div class="comment comment_white">
+                    <div style="display: flex">
+                        <div class="comment__title">100 баллов</div>
+                        <img src="images/comments/emoji1.svg">
+                    </div>
+                    <div class="comment__subject">Информатика ЕГЭ</div>
+                    <div class="comment__body">На ЕГЭ я рассчитывала на 86-92 балла, нервничала, боялась, а когда пришёл
+                        результат не поверила - 100. Учитывая, что изначально я порог не переходила, коллектив
+                        Континуума
+                        совершил чудо.
+                    </div>
+                </div>
+                <a href="#" class="comment__poster">
+                    <img src="images/comments/student1.svg" style="padding-right: 8px">
+                    <span>Анна Карпова</span>
+                    <img src="images/comments/vk-icon.svg" style="padding-left: 4px">
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div>
+                <div class="comment" style="margin-top: 64px;  max-width: 316px;">
+                    <div style="display: flex">
+                        <div class="comment__title">100, 99, 98<br>и 92 балла</div>
+                        <img src="images/comments/emoji1.svg">
+                    </div>
+                    <div class="comment__subject">Физика, математика, информатика и русский язык ЕГЭ</div>
+                    <div class="comment__body" style="max-width: 248px;">Здесь превосходная атмосфера и очень
+                        внимательные
+                        преподаватели, которые
+                        очень
+                        хорошо преподносят материал. Во время обучения было много пробников, это +, т.к привыкаешь к
+                        формату
+                        экзамена и разрабатываешь стратегию решения. На последних пробниках я уже стабильно набирал 90+,
+                        хотя
+                        приходил на результате около 70 баллов.
+                        Также здесь не боятся придумывать какие-то классные плюшки.
+                    </div>
+                </div>
+                <a href="#" class="comment__poster">
+                    <img src="images/comments/student1.svg" style="padding-right: 8px">
+                    <span>Денис Окутин</span>
+                    <img src="images/comments/vk-icon.svg" style="padding-left: 4px">
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3" style="margin-top: 64px;  max-width: 316px;">
+            <div>
+                <div class="comment comment_white">
+                    <div class="comment__title" style="padding-right: 0">Отзыв мамы ;)</div>
+                    <div class="comment__subject">Информатика и математика ЕГЭ</div>
+                    <div class="comment__body" style="max-width: 248px;">К выбору образовательных курсов подошла очень
+                        ответственно. Звонила,
+                        спрашивала,
+                        уточняла. Почему остановились на Континуум? Общение с педагогами показало их высокую
+                        заинтересованность
+                        и глубокую погруженность в материал. Обстоятельно рассказали про учебный процесс и формат.
+                        Записались сначала на пробное занятие, а затем и курсы. Порадовало, что оба педагога нашли общий
+                        язык с
+                        сыном.
+                    </div>
+                </div>
+                <a href="#" class="comment__poster">
+                    <img src="images/comments/student1.svg" style="padding-right: 8px">
+                    <span>Жанна Стенина</span>
+                    <img src="images/comments/vk-icon.svg" style="padding-left: 4px">
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div>
+                <div class="comment">
+                    <div style="display: flex">
+                        <div class="comment__title">100 и 92<br>балла</div>
+                        <img src="images/comments/emoji1.svg">
+                    </div>
+                    <div class="comment__subject">Физика и информатика ЕГЭ</div>
+                    <div class="comment__body">Преподаватель будет давать вам экзаменационные задания, сложность которых
+                        зависит
+                        только от вашего уровня знания предмета, поэтому на курсы реально стоит записываться всем,
+                        неважно
+                        на
+                        какой балл вы претендуете.
+                    </div>
+                </div>
+                <a href="#" class="comment__poster">
+                    <img src="images/comments/student1.svg" style="padding-right: 8px">
+                    <span>Артём Шайханов</span>
+                    <img src="images/comments/vk-icon.svg" style="padding-left: 4px">
+                </a>
+            </div>
+            <div class="comment__alert">Проверь<br>отзыв, нажав<br>на иконку<br>соц сети</div>
+            <div style="margin-top: 36px">
+                <div class="comment comment_white">
+                    <div style="display: flex">
+                        <div class="comment__title">99, 98, 97<br>и 90 баллов</div>
+                    </div>
+                    <div class="comment__subject">Математика, русский, химия и информатика ЕГЭ</div>
+
+                </div>
+                <a href="#" class="comment__poster">
+                    <span>Ангелина</span>
+                    <img src="images/comments/flamp.svg" style="padding-left: 4px">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="examples">
+    <div class="examples__slider">
+        <div class="example">
+            <div class="example__points">86, 83 и 82 балла</div>
+            <div class="example__subject">Русский язык, физика и математика ЕГЭ</div>
+            <div style="display: flex">
+                <img src="images/examples/example-kalinin.svg">
+                <div class="example__name">Илья Калинин <img src="images/comments/vk-icon.svg"></div>
+            </div>
+        </div>
+        <div style="display: flex; margin: 0 auto">
+            <div class="slider__button" style="margin-right: 12px" onclick="slideLeft()">
+                <!--                    <img class="slider__button__arrow-left" src="images/slider/arrow-left.svg">-->
+            </div>
+            <div class="slider__button slider__button_right" onclick="slideRight()">
+                <!--                    <img class="slider__button__arrow-right" src="images/slider/arrow-left.svg">-->
+            </div>
+        </div>
+    </div>
+</section>
+<section class="map">
+    <img class="map__location" src="images/map/location.svg">
+    <div class="map__info">
+        <div class="map__info__address">г. Екатеринбург, ул. Толмачёва 17, 1 этаж</div>
+        <div class="map__info__extra-infos">
+            <div class="map__info__extra-info">
+                <img src="images/arrow-right-hours.svg">
+                <div style="margin-left: 16px">
+                    <div class="map__info__extra-info__title">Отдельный вход</div>
+                    <div class="map__info__extra-info__subtitle">Вход напротив бывшего кинотеатра Салют рядом с кофейней
+                        Папа Карло
+                    </div>
+                </div>
+            </div>
+            <div class="map__info__extra-info"><img src="images/arrow-right-hours.svg">
+                <div style="margin-left: 16px">
+                    <div class="map__info__extra-info__title">Ближайшие остановки</div>
+                    <div class="map__info__extra-info__subtitle">Площадь Труда, Просп. Ленина, Архитектурная академия
+                    </div>
+                    <div class="map__info__extra-info__subtitle">Театр музкомедии</div>
+                    <div class="map__info__extra-info__subtitle">Площадь 1905 года</div>
+                </div>
+            </div>
+            <div class="map__info__extra-info">
+                <img src="images/arrow-right-hours.svg">
+                <div style="margin-left: 16px">
+                    <div class="map__info__extra-info__title">Парковка для родителей</div>
+                    <div class="map__info__extra-info__subtitle">Въезд с ул. Малышева на ул. Толмачёва</div>
+                </div>
+            </div>
+        </div>
+        <div style="font-size: 30px; line-height: 32px;">
+            <span style="background-color: #F35C22; border-radius: 24px;padding: 0 8px;">
+                Заходите в гости</span> и убедитесь во <span style="padding-left: 8px">всём сами</span>
+        </div>
+    </div>
+</section>
+<section class="questions">
+    <div class="questions__title">Есть <span style="color: #F35C22">вопросы?</span></div>
+    <div class="questions__subtitle">Мы перезвоним в течение рабочего дня и расскажем о курсах</div>
+    <form>
+        <div style="  display: flex; align-items: center;">
+            <input class="questions__name" type="text" placeholder="Имя">
+            <input class="questions__tel" type="tel" placeholder="+7">
+            <select class="questions__time" style="margin-right: 24px">
+                <option disabled selected hidden>Время звонка</option>
+                <option>9:00</option>
+                <option>10:00</option>
+                <option>11:00</option>
+            </select>
+            <button class="questions__button">Оставить заявку</button>
+        </div>
+        <input type="radio"><span>Родитель</span>
+        <input type="radio"><span>Ученик</span>
+    </form>
+</section>
+<!--<div class="menu-mobile">-->
+<!--    <a href="#" class="menu-mobile__link">Курсы ЕГЭ</a>-->
+<!--    <a href="#" class="menu-mobile__link">Курсы ОГЭ</a>-->
+<!--    <button class="menu-mobile__button">Войти</button>-->
+<!--</div>-->
+
+<section class="footer">
+    <div class="footer__info">
+        <div class="footer__links">
+            <a class="footer__link" href="#">Отзывы</a>
+            <a class="footer__link" href="#">Преподаватели</a>
+            <a class="footer__link" href="#">Вакансии</a>
+        </div>
+        <div class="footer__ogrn">
+            ОГРН 318665800008347 г. Екатеринбург
+            <br>© 2018–2022 Континуум
+        </div>
+    </div>
+    <div class="footer__contacts">
+        <a class="footer__link" href="tel: +79923466545">+7 992 346-65-45</a>
+        <div>
+            <img class="footer__icon" src="images/vk-link-icon.svg">
+            <img class="footer__icon" src="images/tg-link-icon.svg">
+            <img class="footer__icon" src="images/wa-link-icon.svg">
+        </div>
+    </div>
+</section>
+</body>
+</html>
