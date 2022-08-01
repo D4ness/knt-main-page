@@ -12,12 +12,43 @@
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 <body>
-
-<!--<div class="alert alert_pass">Вводите пароль используя<br>латиницу и цифры</div>-->
-<!--<div class="alert alert_name">Вводите имя <br>на русском языке</div>-->
+<div class="menu-mobile">
+    <div class="menu-mobile__city">
+        <div>Ваш город</div>
+        <div style="display: flex; margin-top: 24px; align-items: center">
+            <div class="price__period__option" style="margin-right: 32px">
+                <input class="price__period__radio" type="radio" name="city" id="city-ekb">
+                <label class="price__period__label" for="city-ekb">
+                    <div class="period__label__circle"></div>
+                </label>
+                <div class="price__period__name">Екатеринбург</div>
+            </div>
+            <div class="price__period__option">
+                <input class="price__period__radio" type="radio" name="city" id="city-chel">
+                <label class="price__period__label" for="city-chel">
+                    <div class="period__label__circle"></div>
+                </label>
+                <div class="price__period__name">Челябинск</div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="navbar__link">ЕГЭ</a>
+    <a href="#" class="navbar__link">ОГЭ</a>
+    <a href="#" class="navbar__link">10 класс</a>
+    <a href="#" class="navbar__link">Отзывы</a>
+    <a href="#" class="navbar__link">Преподаватели</a>
+    <a class="recruit__button menu-mobile__button">Бесплатное занятие</a>
+</div>
 <header class="header">
-    <img class="header__logo" src="images/logo.svg" alt="logo">
-    <img onclick="showHideMenu(this)" class="header__burger" src="images/menu-burger.svg" alt="burger">
+    <div class="header__menu desktop__hidden" style="display: flex; justify-content: space-between">
+        <img class="header__logo" src="images/logo.svg" alt="logo">
+        <div>
+            <a href="#"><img src="images/profile_icon.svg" style="margin-left: 64px"></a>
+            <img onclick="showHideMenu(this)" class="header__burger desktop__hidden" src="images/menu-burger.svg"
+                 alt="burger">
+        </div>
+    </div>
+    <img class="header__logo mobile__hidden" src="images/logo.svg" alt="logo">
     <div class="header__menu header__menu_desktop" id="menu_desktop"
          style="display: flex; justify-content: space-between">
         <nav class="navbar">
@@ -30,23 +61,23 @@
             <a href="#" class="navbar__link">10 класс
                 <!--                <img class="navbar__arrow" src="images/10_CaretDoubleDown.svg" alt="Стрелка">-->
             </a>
-            <a href="#" class="navbar__link">Отзывы</a>
-            <a href="#" class="navbar__link">Преподаватели</a>
+            <a href="#" class="navbar__link mobile__hidden">Отзывы</a>
+            <a href="#" class="navbar__link mobile__hidden">Преподаватели</a>
         </nav>
         <div class="header__menu__contacts">
             <div><img src="images/location.svg"><span style="color: #326EEA;margin: 0 22px 0 4px">Екб</span></div>
-            <div>
+            <div class="mobile__hidden">
                 <a class="header__menu__number" href="tel: +79923466545">+7 992 346-65-45</a>
                 <div class="header__menu__time">на связи 9–21:00</div>
             </div>
-            <a href="#">
+            <a href="#" class="mobile__hidden">
                 <img src="images/profile_icon.svg" style="margin-left: 64px">
             </a>
         </div>
 
     </div>
 </header>
-<section style="padding: 0 84px">
+<section class="wrapper">
     <div class="announce">
         <div class="announce__block"><img src="images/fire-emoji.svg" alt="emoji">
             <span class="announce__block__text">Скидка 30% на<span style="color: #F35C22"> годовой курс</span> до 1 августа </span>
@@ -67,52 +98,74 @@
         <!--        </ul>-->
         <br>по всем предметам
     </div>
-    <div class="important-things">
-        <!--        <div class="row">-->
-        <div class="important-things__block" style="max-width: 345px">
-            <div style="display: flex">
-                <img src="images/important-things/teacher-m.svg" style="padding-right: 16px">
-                <img src="images/important-things/teacher-w.svg">
+    <div style="display: flex; flex-direction: column">
+        <div class="important-things">
+            <!--        <div class="row">-->
+            <div class="important-things__block important-things__block__mobile" style="max-width: 345px">
+                <div class="important-things__block__images__mobile" style="display: flex">
+                    <img class="important-things__block__img" src="images/important-things/teacher-m.svg"
+                         style="margin-right: 16px">
+                    <img class="important-things__block__img" src="images/important-things/teacher-w.svg">
+                </div>
+                <div>
+                    <div class="important-things__block__title">Опытные преподаватели</div>
+                    <div class="important-things__block__text">Эксперты ЕГЭ, учителя первой<br>категории и научные
+                        сотрудники
+                    </div>
+                </div>
             </div>
-            <div class="important-things__block__title">Опытные преподаватели</div>
-            <div class="important-things__block__text">Эксперты ЕГЭ, учителя первой<br>категории и научные сотрудники
+            <div class="important-things__block important-things__block__mobile" style="max-width: 308px">
+                <div class="important-things__block__images__mobile" style="display: flex">
+                    <img src="images/important-things/books.svg">
+                </div>
+                <div>
+                    <div class="important-things__block__title">Эффективный формат</div>
+                    <div class="important-things__block__text">360 ак. часов обучения<br>по каждому предмету в год</div>
+                </div>
+            </div>
+            <div class="important-things__block important-things__block__mobile">
+                <div class="important-things__block__images__mobile" style="display: flex">
+                    <img src="images/important-things/present.svg">
+                </div>
+                <div>
+                    <div class="important-things__block__title">Результативные курсы со скидкой</div>
+                    <div class="important-things__block__text">На 2 и 3 предметы скидка до 70%.<br>Стоимость ак. ч. от
+                        60 ₽
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="important-things__block" style="max-width: 308px">
-            <img src="images/important-things/books.svg">
-            <div class="important-things__block__title">Эффективный формат</div>
-            <div class="important-things__block__text">360 ак. часов обучения<br>по каждому предмету в год</div>
-        </div>
-        <div class="important-things__block">
-            <img src="images/important-things/present.svg">
-            <div class="important-things__block__title">Результативные курсы со скидкой</div>
-            <div class="important-things__block__text">На 2 и 3 предметы скидка до 70%.<br>Стоимость ак. ч. от 60 ₽
+        <div class="recruit">
+            <div class="recruit__title">Идёт набор на <span style="color: #F35C22">годовой курс</span></div>
+            <div class="recruit__info">
+                <div class="recruit__info__desc">Чем раньше запишетесь,<br>тем выгоднее будет цена</div>
+                <form>
+                    <input class="recruit__input" type=tel value="+7" maxlength="17">
+                    <button class="recruit__button">Оставить заявку</button>
+                </form>
+                <div class="recruit__info__agree">Отправляя форму, вы даете согласие на обработку персональных данных
+                </div>
             </div>
+            <div class="recruit__discount">Скидка<br>30% до<br>1 августа</div>
         </div>
-        <!--    </div>-->
     </div>
-    <div class="recruit">
-        <div class="recruit__title">Идёт набор на <span style="color: #F35C22">годовой курс</span></div>
-        <div class="recruit__info">
-            <div class="recruit__info__desc">Чем раньше запишетесь,<br>тем выгоднее будет цена</div>
-            <form>
-                <input class="recruit__input" type=tel value="+7" maxlength="17">
-                <button class="recruit__button">Оставить заявку</button>
-            </form>
-            <div class="recruit__info__agree">Отправляя форму, вы даете согласие на обработку персональных данных</div>
-        </div>
-        <div class="recruit__discount">Скидка<br>30% до<br>1 августа</div>
-    </div>
-
     <div class="universities">
+        <div class="universities__icons desktop__hidden" style="justify-content: start; margin-bottom: 32px">
+            <img style="z-index: 8;" class="universities__icon" src="images/universities/mgu.svg" alt="МГУ">
+            <img style="z-index: 7;" class="universities__icon" src="images/universities/baumanka.svg" alt="Бауманка">
+            <img style="z-index: 6;" class="universities__icon" src="images/universities/mfti.svg" alt="МФТИ">
+        </div>
         <div class="universities__title">Каждый год выпускаем 100-балльников и высокобалльников.
             <br><br>Выпускники поступают на бюджет в МГУ, Бауманку, МФТИ, ИТМО, Политех, СПбГАСУ, МАИ, УрГАХУ, УрФУ,
             УГМУ.
         </div>
         <div class="universities__icons">
-            <img style="z-index: 8;" class="universities__icon" src="images/universities/mgu.svg" alt="МГУ">
-            <img style="z-index: 7;" class="universities__icon" src="images/universities/baumanka.svg" alt="Бауманка">
-            <img style="z-index: 6;" class="universities__icon" src="images/universities/mfti.svg" alt="МФТИ">
+            <div class="mobile__hidden">
+                <img style="z-index: 8;" class="universities__icon" src="images/universities/mgu.svg" alt="МГУ">
+                <img style="z-index: 7;" class="universities__icon" src="images/universities/baumanka.svg"
+                     alt="Бауманка">
+                <img style="z-index: 6;" class="universities__icon" src="images/universities/mfti.svg" alt="МФТИ">
+            </div>
             <img style="z-index: 5;" class="universities__icon" src="images/universities/itmo.svg" alt="ИТМО">
             <img style="z-index: 4;" class="universities__icon" src="images/universities/politech.svg" alt="Политех">
             <img style="z-index: 3;" class="universities__icon" src="images/universities/spbgasu.svg" alt="СПбГАСУ">
@@ -213,7 +266,7 @@
                 </div>
             </div>
         </div>
-        <div style="font-size: 30px; line-height: 36px; margin: 40px 0 0 92px">
+        <div class="benefits__hours__alert">
             В течение недели <span style="background: #60A01C;border-radius: 24px; padding: 0 10px; z-index: 2">преподаватель</span>
             <br><span style="background: #60A01C;border-radius: 24px; padding: 0 10px">отвечает на вопросы</span>
         </div>
@@ -221,7 +274,9 @@
     </div>
     <div class="benefits__block">
         <div style="width: 100%; display: flex; justify-content: end">
-            <img style="transform: scale(1, -1); margin-bottom: 32px" src="images/screen.svg">
+            <img class="mobile__hidden" style="transform: scale(1, -1); margin-bottom: 32px" src="images/screen.svg">
+            <img class="desktop__hidden" style="transform: scale(1, -1); margin-bottom: 24px"
+                 src="images/screen-mobile.svg">
         </div>
         <div class="benefits__block__title">Передовые технологии в образовании</div>
         <div class="benefits__block__description">Наша образовательная платформа собирает статистику выполнения всех
@@ -242,49 +297,79 @@
         <div class="price__column">
             <div class="price__column__title">1. Выберите предметы:</div>
             <div style="display: flex">
-                <div style="margin-right: 40px">
-                    <div class="price__column__subject">
-                        <input type="checkbox" class="price__column__subject__checkbox">
+                <div class="price__margin">
+                    <div class="price__subject">
+                        <input type="checkbox" class="price__subject__checkbox" id="input-math">
+                        <label for="input-math" class="price__subject__label">
+                            <img src="images/check-mark.svg">
+                        </label>
                         <!--                        <span class="price__column__subject__custom-cb"></span>-->
-                        <div class="price__column__subject__name">Математика</div>
+                        <div class="price__subject__name">Математика</div>
                     </div>
-                    <div class="price__column__subject">
-                        <input type="checkbox" class="price__column__subject__checkbox">
-                        <div class="price__column__subject__name">Русский язык</div>
+                    <div class="price__subject">
+                        <input type="checkbox" class="price__subject__checkbox" id="input-rus">
+                        <label for="input-rus" class="price__subject__label">
+                            <img src="images/check-mark.svg">
+                        </label>
+                        <div class="price__subject__name">Русский язык</div>
                     </div>
-                    <div class="price__column__subject">
-                        <input type="checkbox" class="price__column__subject__checkbox">
-                        <div class="price__column__subject__name">Информатика</div>
+                    <div class="price__subject">
+                        <input type="checkbox" class="price__subject__checkbox" id="input-it">
+                        <label for="input-it" class="price__subject__label">
+                            <img src="images/check-mark.svg">
+                        </label>
+                        <div class="price__subject__name">Информатика</div>
                     </div>
-                    <div class="price__column__subject">
-                        <input type="checkbox" class="price__column__subject__checkbox">
-                        <div class="price__column__subject__name">Химия</div>
+                    <div class="price__subject">
+                        <input type="checkbox" class="price__subject__checkbox" id="input-chemistry">
+                        <label for="input-chemistry" class="price__subject__label">
+                            <img src="images/check-mark.svg">
+                        </label>
+                        <div class="price__subject__name">Химия</div>
                     </div>
-                    <div class="price__column__subject">
-                        <input type="checkbox" class="price__column__subject__checkbox">
-                        <div class="price__column__subject__name">Обществознание</div>
+                    <div class="price__subject">
+                        <input type="checkbox" class="price__subject__checkbox" id="input-soc">
+                        <label for="input-soc" class="price__subject__label">
+                            <img src="images/check-mark.svg">
+                        </label>
+                        <div class="price__subject__name">Обществознание</div>
                     </div>
                 </div>
                 <div>
-                    <div class="price__column__subject">
-                        <input type="checkbox" class="price__column__subject__checkbox">
-                        <div class="price__column__subject__name">Биология</div>
+                    <div class="price__subject">
+                        <input type="checkbox" class="price__subject__checkbox" id="input-bio">
+                        <label for="input-bio" class="price__subject__label">
+                            <img src="images/check-mark.svg">
+                        </label>
+                        <div class="price__subject__name">Биология</div>
                     </div>
-                    <div class="price__column__subject">
-                        <input type="checkbox" class="price__column__subject__checkbox">
-                        <div class="price__column__subject__name">Физика</div>
+                    <div class="price__subject">
+                        <input type="checkbox" class="price__subject__checkbox" id="input-phys">
+                        <label for="input-phys" class="price__subject__label">
+                            <img src="images/check-mark.svg">
+                        </label>
+                        <div class="price__subject__name">Физика</div>
                     </div>
-                    <div class="price__column__subject">
-                        <input type="checkbox" class="price__column__subject__checkbox">
-                        <div class="price__column__subject__name">История</div>
+                    <div class="price__subject">
+                        <input type="checkbox" class="price__subject__checkbox" id="input-history">
+                        <label for="input-history" class="price__subject__label">
+                            <img src="images/check-mark.svg">
+                        </label>
+                        <div class="price__subject__name">История</div>
                     </div>
-                    <div class="price__column__subject">
-                        <input type="checkbox" class="price__column__subject__checkbox">
-                        <div class="price__column__subject__name">Литература</div>
+                    <div class="price__subject">
+                        <input type="checkbox" class="price__subject__checkbox" id="input-liter">
+                        <label for="input-liter" class="price__subject__label">
+                            <img src="images/check-mark.svg">
+                        </label>
+                        <div class="price__subject__name">Литература</div>
                     </div>
-                    <div class="price__column__subject">
-                        <input type="checkbox" class="price__column__subject__checkbox">
-                        <div class="price__column__subject__name">Английский<br>язык</div>
+                    <div class="price__subject">
+                        <input type="checkbox" class="price__subject__checkbox" id="input-eng">
+                        <label for="input-eng" class="price__subject__label">
+                            <img src="images/check-mark.svg">
+                        </label>
+                        <div class="price__subject__name">Английский<br>язык</div>
                     </div>
                 </div>
             </div>
@@ -293,25 +378,37 @@
                 <div class="price__discount__number">-45%</div>
             </div>
         </div>
-        <div class="price__border"></div>
+        <div class="price__border mobile__hidden"></div>
         <div class="price__column" style="min-width: 307px;">
             <div class="price__column__title">2. Период оплаты:</div>
             <div class="price__column__period">
-                <div class="price__column__period__option">
-                    <input type="radio" class="price__column__period__radio">
-                    <div class="price__column__period__name">Каждую неделю</div>
+                <div class="price__period__option">
+                    <input type="radio" name="period" class="price__period__radio" id="period__radio1">
+                    <label class="price__period__label" for="period__radio1">
+                        <div class="period__label__circle"></div>
+                    </label>
+                    <div class="price__period__name">Каждую неделю</div>
                 </div>
-                <div class="price__column__period__option">
-                    <input type="radio" class="price__column__period__radio">
-                    <div class="price__column__period__name">Каждый месяц (выгода 10%)</div>
+                <div class="price__period__option">
+                    <input type="radio" name="period" class="price__period__radio" id="period__radio2">
+                    <label class="price__period__label" for="period__radio2">
+                        <div class="period__label__circle"></div>
+                    </label>
+                    <div class="price__period__name">Каждый месяц (выгода 10%)</div>
                 </div>
-                <div class="price__column__period__option">
-                    <input type="radio" class="price__column__period__radio">
-                    <div class="price__column__period__name">1 раз в полгода (выгода 20%)</div>
+                <div class="price__period__option">
+                    <input type="radio" name="period" class="price__period__radio" id="period__radio3">
+                    <label class="price__period__label" for="period__radio3">
+                        <div class="period__label__circle"></div>
+                    </label>
+                    <div class="price__period__name">1 раз в полгода (выгода 20%)</div>
                 </div>
-                <div class="price__column__period__option">
-                    <input type="radio" class="price__column__period__radio">
-                    <div class="price__column__period__name">1 раз в год (выгода 25%)</div>
+                <div class="price__period__option">
+                    <input type="radio" name="period" class="price__period__radio" id="period__radio4">
+                    <label class="price__period__label" for="period__radio4">
+                        <div class="period__label__circle"></div>
+                    </label>
+                    <div class="price__period__name">1 раз в год (выгода 25%)</div>
                 </div>
             </div>
         </div>
@@ -355,16 +452,19 @@
 
 </section>
 <section class="license">
-    <div style="margin-left: 52px; max-width: 584px;">
+    <div class="license__wrapper">
         <div class="license__title">У нас есть Государственная образовательная лицензия</div>
         <div class="license__description">Наши учебные программы и преподаватели соответствуют государственным
             стандартам.
             Вы можете быть уверены в качестве обучения.
         </div>
-        <a href="#" class="license__link" style="width: 390px;">Смотреть на сайте Рособрнадзора<img
+        <a href="#" class="license__link">Смотреть на сайте Рособрнадзора<img
                 src="images/ArrowRight.svg"></a>
     </div>
-    <div style="display: flex; align-items: end"><img src="images/license.svg"></div>
+    <div style="display: flex; align-items: end;">
+        <img class="mobile__hidden" src="images/license.svg">
+        <img class="desktop__hidden" src="images/license-mobile.svg">
+    </div>
 </section>
 <section class="teachers-wrapper">
     <div class="teachers__description">
@@ -419,7 +519,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="teachers__slide teachers__slide_2">
+                <div class="teachers__slide">
                     <div class="teacher">
                         <div class="teacher__photo">
                             <img src="images/teachers/history-teacher.svg">
@@ -561,11 +661,12 @@
                        id="slider__label5"></label>
             </div>
             <div style="display: flex; position: absolute; z-index: 3; top: 640px; right: 84px">
-                <div class="slider__button" style="margin-right: 12px" onclick="slideTeachersLeft()">
-<!--                    <img class="slider__button__arrow-left" src="images/slider/arrow-left.svg">-->
+                <div class="slider__button slider__button__left" style="margin-right: 12px"
+                     onclick="slideTeachersLeft()">
+                    <!--                    <img class="slider__button__arrow-left" src="images/slider/arrow-left.svg">-->
                 </div>
                 <div class="slider__button slider__button_right" onclick="slideTeachersRight()">
-<!--                    <img class="slider__button__arrow-right" src="images/slider/arrow-left.svg">-->
+                    <!--                    <img class="slider__button__arrow-right" src="images/slider/arrow-left.svg">-->
                 </div>
             </div>
             <!--            </div>-->
@@ -580,8 +681,8 @@
         оценка по отзывам на Флампе 5 из 5!
     </div>
     <a href="#" class="results__link">Читать 97 отзывов на Flamp.ru</a>
-    <div class="row">
-        <div class="col-md-3">
+    <div class="row results__row" style="display: flex">
+        <div class="col-md-3 col-sm-12">
             <div>
                 <div class="comment">
                     <div style="display: flex">
@@ -621,7 +722,7 @@
                 </a>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-12">
             <div>
                 <div class="comment" style="margin-top: 64px;  max-width: 316px;">
                     <div style="display: flex">
@@ -731,7 +832,7 @@
     </div>
 </section>
 <section class="map">
-    <img class="map__location" src="images/map/location.svg">
+    <img class="map__location mobile__hidden" src="images/map/location.svg">
     <div class="map__info">
         <div class="map__info__address">г. Екатеринбург, ул. Толмачёва 17, 1 этаж</div>
         <div class="map__info__extra-infos">
@@ -747,10 +848,25 @@
             <div class="map__info__extra-info"><img src="images/arrow-right-hours.svg">
                 <div style="margin-left: 16px">
                     <div class="map__info__extra-info__title">Ближайшие остановки</div>
-                    <div class="map__info__extra-info__subtitle">Площадь Труда, Просп. Ленина, Архитектурная академия
+                    <div class="map__info__extra-info__subtitle">
+                        <div class="map__info__extra-info__icon">
+                            <img style="padding-top: 6px; margin-right: 8px;" src="images/map/bus.svg">
+                            <img src="images/map/trolley.svg">
+                        </div>
+                        Площадь Труда, Просп. Ленина, Архитектурная академия
                     </div>
-                    <div class="map__info__extra-info__subtitle">Театр музкомедии</div>
-                    <div class="map__info__extra-info__subtitle">Площадь 1905 года</div>
+                    <div class="map__info__extra-info__subtitle">
+                        <div class="map__info__extra-info__icon">
+                            <img src="images/map/tram.svg">
+                        </div>
+                        Театр музкомедии
+                    </div>
+                    <div class="map__info__extra-info__subtitle">
+                        <div class="map__info__extra-info__icon">
+                            <img style="padding-top: 6px;" src="images/map/subway.svg">
+                        </div>
+                        Площадь 1905 года
+                    </div>
                 </div>
             </div>
             <div class="map__info__extra-info">
@@ -771,10 +887,10 @@
     <div class="questions__title">Есть <span style="color: #F35C22">вопросы?</span></div>
     <div class="questions__subtitle">Мы перезвоним в течение рабочего дня и расскажем о курсах</div>
     <form>
-        <div style="  display: flex; align-items: center;">
+        <div style="  display: flex; align-items: center; flex-wrap: wrap">
             <input class="questions__name" type="text" placeholder="Имя">
             <input class="questions__tel" type="tel" placeholder="+7">
-            <select class="questions__time" style="margin-right: 24px">
+            <select class="questions__time">
                 <option disabled selected hidden>Время звонка</option>
                 <option>9:00</option>
                 <option>10:00</option>
@@ -782,8 +898,24 @@
             </select>
             <button class="questions__button">Оставить заявку</button>
         </div>
-        <input type="radio"><span>Родитель</span>
-        <input type="radio"><span>Ученик</span>
+        <div style="display: flex; margin-top: 24px; align-items: center">
+            <div class="price__period__option" style="margin-right: 32px">
+                <input class="price__period__radio" type="radio" name="who" id="parent__radio">
+                <label class="price__period__label" for="parent__radio">
+                    <div class="period__label__circle"></div>
+                </label>
+                <div class="price__period__name">Родитель</div>
+            </div>
+            <div class="price__period__option">
+                <input class="price__period__radio" type="radio" name="who" id="student__radio">
+                <label class="price__period__label" for="student__radio">
+                    <div class="period__label__circle"></div>
+                </label>
+                <div class="price__period__name">Ученик</div>
+            </div>
+            <div class="check__rights questions__rights">Отправляя форму, вы даете согласие на
+                <a href="#">обработку персональных данных</a></div>
+        </div>
     </form>
 </section>
 <!--<div class="menu-mobile">-->
@@ -800,8 +932,8 @@
             <a class="footer__link" href="#">Вакансии</a>
         </div>
         <div class="footer__ogrn">
-            ОГРН 318665800008347 г. Екатеринбург
-            <br>© 2018–2022 Континуум
+            <div>ОГРН 318665800008347 г. Екатеринбург</div>
+            <div class="footer__years">© 2018–2022 Континуум</div>
         </div>
     </div>
     <div class="footer__contacts">

@@ -2,14 +2,14 @@ const slideTeachersRight = () => {
     const slide = document.getElementsByClassName('teachers__slide_1')[0];
     const btn = document.getElementsByClassName('slider__button')[0];
     btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
-
+    const shift = 10;
     const prevMargin = parseInt(slide.style.marginLeft) || 0;
     if (prevMargin > (-80)) {
-        slide.style.marginLeft = (prevMargin - 20).toString() + "%";
-        let radioNum = -prevMargin / 20 + 2;
+        slide.style.marginLeft = (prevMargin - shift).toString() + "%";
+        let radioNum = -prevMargin / shift + 2;
         const radio = document.getElementById('slider__label' + radioNum.toString())
         radioBgChange(radio);
-        if (prevMargin - 20 === -80) {
+        if (prevMargin - shift === -80) {
             const btn = document.getElementsByClassName('slider__button')[1];
             btn.style.backgroundImage = 'url(images/slider/arrow-left-disabled.svg)';
             console.log(btn, btn.style.backgroundImage);
@@ -22,13 +22,13 @@ const slideTeachersLeft = () => {
     const btn = document.getElementsByClassName('slider__button')[1];
     btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
     const prevMargin = parseInt(slide.style.marginLeft) || 0;
-
+    const shift = 10;
     if (prevMargin < (0)) {
-        slide.style.marginLeft = (prevMargin + 20).toString() + "%";
-        let radioNum = -prevMargin / 20;
+        slide.style.marginLeft = (prevMargin + shift).toString() + "%";
+        let radioNum = -prevMargin / shift;
         const radio = document.getElementById('slider__label' + radioNum.toString())
         radioBgChange(radio);
-        if (prevMargin + 20 === 0) {
+        if (prevMargin + shift === 0) {
             const btn = document.getElementsByClassName('slider__button')[0];
             btn.style.backgroundImage = 'url(images/slider/arrow-left-disabled.svg)';
             console.log(btn, btn.style.backgroundImage);
@@ -45,4 +45,12 @@ const radioBgChange = (el) => {
     }
     el.style.backgroundColor = '#326EEA';
     el.style.opacity = '1';
+}
+
+const showHideMenu = () => {
+    const menu = document.querySelector('.menu-mobile');
+    if (menu.classList.value === 'menu-mobile')
+        document.querySelector('.menu-mobile').classList.add('active');
+    else if (menu.classList.value === 'menu-mobile active')
+        document.querySelector('.menu-mobile').classList.remove('active');
 }
