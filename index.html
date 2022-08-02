@@ -72,7 +72,7 @@
     <div class="header__menu desktop__hidden" style="display: flex; justify-content: space-between">
         <img class="header__logo" src="images/logo.svg" alt="logo">
         <div>
-            <a href="#"><img src="images/profile_icon.svg"></a>
+            <a href="#"><img class="header__profile" src="images/profile_icon.svg"></a>
             <img onclick="showHideMenu(this)" class="header__burger desktop__hidden" src="images/mobile/btn-menu.svg"
                  alt="burger">
             <img onclick="showHideMenu(this)" style="display: none" class="header__burger desktop__hidden"
@@ -103,10 +103,9 @@
                 <div class="header__menu__time">на связи 9–21:00</div>
             </div>
             <a href="#" class="mobile__hidden">
-                <img src="images/profile_icon.svg" style="margin-left: 64px">
+                <img class="header__profile" src="images/profile_icon.svg">
             </a>
         </div>
-
     </div>
 </header>
 <section class="wrapper">
@@ -846,19 +845,93 @@
 </section>
 <section class="examples">
     <div class="examples__slider">
-        <div class="example">
-            <div class="example__points">86, 83 и 82 балла</div>
-            <div class="example__subject">Русский язык, физика и математика ЕГЭ</div>
-            <div style="display: flex">
-                <img src="images/examples/example-kalinin.svg">
-                <div class="example__name">Илья Калинин <img src="images/comments/vk-icon.svg"></div>
+        <div class="examples__slides">
+            <div class="example example_1 example_white" style="margin-left: -284px">
+                <div class="example__points">85 и 80 баллов</div>
+                <div class="example__subject">Информатика и математика ЕГЭ</div>
+                <div style="display: flex">
+                    <img src="images/examples/example-nesmiyanov.svg">
+                    <div class="example__name">Матвей Несмиянов<img src="images/comments/vk-icon.svg"></div>
+                </div>
+            </div>
+            <div class="example">
+                <div class="example__points">85, 84 и 84 балла</div>
+                <div class="example__subject">Информатика, русский язык и математика ЕГЭ</div>
+                <div style="display: flex">
+                    <img src="images/examples/example-tromanova.svg">
+                    <div class="example__name">Влада Троманова<img src="images/comments/vk-icon.svg"></div>
+                </div>
+            </div>
+            <div class="example example_white">
+                <div class="example__points">84 балла</div>
+                <div class="example__subject">Информатика ЕГЭ</div>
+                <div style="display: flex">
+                    <img src="images/examples/example-semyonova.svg">
+                    <div class="example__name">Софья Семёнова<img src="images/comments/vk-icon.svg"></div>
+                </div>
+            </div>
+            <div class="example">
+                <div class="example__points">86, 83 и 82 балла</div>
+                <div class="example__subject">Русский язык, физика и математика ЕГЭ</div>
+                <div style="display: flex">
+                    <img src="images/examples/example-skarulin.svg">
+                    <div class="example__name">Илья Калинин<img src="images/comments/vk-icon.svg"></div>
+                </div>
+            </div>
+            <div class="example">
+                <div class="example__points">84 балла</div>
+                <div class="example__subject">Математика ЕГЭ</div>
+                <div style="display: flex">
+                    <img src="images/examples/example-tulpa.svg">
+                    <div class="example__name">Евгений Тюльпа <br><img src="images/comments/vk-icon.svg"></div>
+                </div>
+            </div>
+            <div class="example example_white">
+                <div class="example__points">86, 85 и 82 балла</div>
+                <div class="example__subject">Русский язык, физика и математика ЕГЭ</div>
+                <div style="display: flex">
+                    <img src="images/examples/example-vaulina.svg">
+                    <div class="example__name">Анна Ваулина<img src="images/comments/vk-icon.svg"></div>
+                </div>
+            </div>
+            <div class="example">
+                <div class="example__points">86 и 83 балла</div>
+                <div class="example__subject">Русский язык, физика и математика ЕГЭ</div>
+                <div style="display: flex">
+                    <img src="images/examples/example-skarulin.svg">
+                    <div class="example__name">Андрей Скарулин<img src="images/comments/vk-icon.svg"></div>
+                </div>
+            </div>
+            <div class="example example_white">
+                <div class="example__points">84 балла</div>
+                <div class="example__subject">Русский язык ЕГЭ</div>
+                <div style="display: flex">
+                    <img src="images/examples/example-suhanova.svg">
+                    <div class="example__name">Саша Суханова<img src="images/comments/vk-icon.svg"></div>
+                </div>
+            </div>
+            <div class="example">
+                <div class="example__points">83 балла</div>
+                <div class="example__subject">Информатика ЕГЭ</div>
+                <div style="display: flex">
+                    <img src="images/examples/example-sergeeva.svg">
+                    <div class="example__name">Настя Сергеева<img src="images/comments/vk-icon.svg"></div>
+                </div>
+            </div>
+            <div class="example">
+                <div class="example__points">85 и 80 баллов</div>
+                <div class="example__subject">Информатика и русский язык ЕГЭ</div>
+                <div style="display: flex">
+                    <img src="images/examples/example-berdugin.svg">
+                    <div class="example__name">Антон Бердюгин<img src="images/comments/vk-icon.svg"></div>
+                </div>
             </div>
         </div>
-        <div style="display: flex; margin: 0 auto">
-            <div class="slider__button" style="margin-right: 12px" onclick="slideLeft()">
+        <div style="display: flex; margin: 64px auto 120px">
+            <div class="slider__button slider__button__left slider__button__left__examples" style="margin-right: 12px" onclick="slideExampleLeft()">
                 <!--                    <img class="slider__button__arrow-left" src="images/slider/arrow-left.svg">-->
             </div>
-            <div class="slider__button slider__button_right" onclick="slideRight()">
+            <div class="slider__button slider__button_right" onclick="slideExampleRight()">
                 <!--                    <img class="slider__button__arrow-right" src="images/slider/arrow-left.svg">-->
             </div>
         </div>
@@ -920,35 +993,46 @@
     <div class="questions__title">Есть <span style="color: #F35C22">вопросы?</span></div>
     <div class="questions__subtitle">Мы перезвоним в течение рабочего дня и расскажем о курсах</div>
     <form>
-        <div style="  display: flex; align-items: center; flex-wrap: wrap">
-            <input class="questions__name" type="text" placeholder="Имя">
-            <input class="questions__tel" type="tel" placeholder="+7">
-            <select class="questions__time">
-                <option disabled selected hidden>Время звонка</option>
-                <option>9:00</option>
-                <option>10:00</option>
-                <option>11:00</option>
-            </select>
-            <button class="questions__button">Оставить заявку</button>
-        </div>
-        <div style="display: flex; margin-top: 24px; align-items: center">
-            <div class="price__period__option" style="margin-right: 32px">
-                <input class="price__period__radio" type="radio" name="who" id="parent__radio">
-                <label class="price__period__label" for="parent__radio">
-                    <div class="period__label__circle"></div>
-                </label>
-                <div class="price__period__name">Родитель</div>
+        <div style="  display: flex; align-items: start; flex-wrap: wrap">
+            <div class="questions__name-wrapper">
+                <input class="questions__name" type="text" placeholder="Имя">
+                <div style="display: flex; margin-top: 24px; align-items: center">
+                    <div class="price__period__option" style="margin-right: 32px">
+                        <input class="price__period__radio" type="radio" name="who" id="parent__radio">
+                        <label class="price__period__label" for="parent__radio">
+                            <div class="period__label__circle"></div>
+                        </label>
+                        <div class="price__period__name">Родитель</div>
+                    </div>
+                    <div class="price__period__option">
+                        <input class="price__period__radio" type="radio" name="who" id="student__radio">
+                        <label class="price__period__label" for="student__radio">
+                            <div class="period__label__circle"></div>
+                        </label>
+                        <div class="price__period__name">Ученик</div>
+                    </div>
+
+                </div>
             </div>
-            <div class="price__period__option">
-                <input class="price__period__radio" type="radio" name="who" id="student__radio">
-                <label class="price__period__label" for="student__radio">
-                    <div class="period__label__circle"></div>
-                </label>
-                <div class="price__period__name">Ученик</div>
+            <div>
+                <div style="display: flex; flex-wrap: wrap;">
+                    <input class="questions__tel" type="tel" placeholder="+7">
+                    <select class="questions__time">
+                        <option disabled selected hidden>Время звонка</option>
+                        <option>9:00</option>
+                        <option>10:00</option>
+                        <option>11:00</option>
+                    </select>
+                    <button class="questions__button">Оставить заявку</button>
+                </div>
+                <div class="check__rights questions__rights">Отправляя форму, вы даете согласие на
+                    <a href="#">обработку персональных данных</a>
+                </div>
             </div>
-            <div class="check__rights questions__rights">Отправляя форму, вы даете согласие на
-                <a href="#">обработку персональных данных</a></div>
+
         </div>
+
+
     </form>
 </section>
 
@@ -959,18 +1043,22 @@
             <a class="footer__link" href="#">Преподаватели</a>
             <a class="footer__link" href="#">Вакансии</a>
         </div>
-        <div class="footer__ogrn">
+        <div class="footer__ogrn mobile__hidden">
             <div>ОГРН 318665800008347 г. Екатеринбург</div>
             <div class="footer__years">© 2018–2022 Континуум</div>
         </div>
     </div>
     <div class="footer__contacts">
-        <a class="footer__link" href="tel: +79923466545">+7 992 346-65-45</a>
+        <a class="footer__link footer__tel" href="tel: +79923466545">+7 992 346-65-45</a>
         <div>
             <img class="footer__icon" src="images/vk-link-icon.svg">
             <img class="footer__icon" src="images/tg-link-icon.svg">
             <img class="footer__icon" src="images/wa-link-icon.svg">
         </div>
+    </div>
+    <div class="footer__ogrn desktop__hidden">
+        <div>ОГРН 318665800008347 г. Екатеринбург</div>
+        <div class="footer__years">© 2018–2022 Континуум</div>
     </div>
 </section>
 </body>

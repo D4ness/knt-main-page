@@ -2,7 +2,7 @@ const slideTeachersRight = () => {
     const slide = document.getElementsByClassName('teachers__slide_1')[0];
     const btn = document.getElementsByClassName('slider__button')[0];
     btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
-    const shift = 10;
+    const shift = 20;
     const prevMargin = parseInt(slide.style.marginLeft) || 0;
     if (prevMargin > (-80)) {
         slide.style.marginLeft = (prevMargin - shift).toString() + "%";
@@ -16,13 +16,45 @@ const slideTeachersRight = () => {
         }
     }
 }
+const slideExampleRight = () => {
+    const slide = document.getElementsByClassName('example_1')[0];
+    const btn = document.getElementsByClassName('slider__button')[2];
+    btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
+    const shift = 272;
+    const prevMargin = parseInt(slide.style.marginLeft) || 0;
+    console.log(prevMargin);
+    if (prevMargin > -1100) {
+        slide.style.marginLeft = (prevMargin - shift).toString() + "px";
+        if (prevMargin - shift === -1100 ) {
+            const btn = document.getElementsByClassName('slider__button')[3];
+            btn.style.backgroundImage = 'url(images/slider/arrow-left-disabled.svg)';
+            console.log(btn, btn.style.backgroundImage);
+        }
+    }
+}
+const slideExampleLeft = () => {
+    const slide = document.getElementsByClassName('example_1')[0];
+    const btn = document.getElementsByClassName('slider__button')[3];
+    btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
+    const shift = 272;
+    const prevMargin = parseInt(slide.style.marginLeft) || 0;
+    console.log(prevMargin);
+    if (prevMargin < 532) {
+        slide.style.marginLeft = (prevMargin + shift).toString() + "px";
+        if (prevMargin + shift === 532) {
+            const btn = document.getElementsByClassName('slider__button')[2];
+            btn.style.backgroundImage = 'url(images/slider/arrow-left-disabled.svg)';
+            console.log(btn, btn.style.backgroundImage);
+        }
+    }
+}
 
 const slideTeachersLeft = () => {
     const slide = document.getElementsByClassName('teachers__slide_1')[0];
     const btn = document.getElementsByClassName('slider__button')[1];
     btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
     const prevMargin = parseInt(slide.style.marginLeft) || 0;
-    const shift = 10;
+    const shift = 20;
     if (prevMargin < (0)) {
         slide.style.marginLeft = (prevMargin + shift).toString() + "%";
         let radioNum = -prevMargin / shift;
@@ -36,6 +68,13 @@ const slideTeachersLeft = () => {
     }
 }
 
+const slideRadio = () => {
+    const slide = document.getElementsByClassName('teachers__slide_1')[0];
+    const prevMargin = slide.style.marginLeft;
+    console.log(prevMargin);
+    // slideTeachersRight();
+}
+
 const radioBgChange = (el) => {
     const labels = document.getElementsByClassName('teachers__slider__navigation__label');
     for (let i = 0; i < labels.length; i++) {
@@ -45,6 +84,7 @@ const radioBgChange = (el) => {
     }
     el.style.backgroundColor = '#326EEA';
     el.style.opacity = '1';
+    slideRadio();
 }
 
 const showHideMenu = (el) => {

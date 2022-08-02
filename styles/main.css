@@ -73,6 +73,9 @@
   background: white;
   cursor: pointer;
 }
+.header__profile {
+  margin-left: 64px;
+}
 #menu-mobile {
   display: none;
 }
@@ -441,7 +444,8 @@
 .price__subject__name {
   font-size: 19px;
   line-height: 20px;
-  margin-left: 12px;
+  margin-left: 6px;
+  padding: 5px 8px;
 }
 .price__subject__checkbox {
   position: absolute;
@@ -471,6 +475,19 @@
 .price #input-liter:checked ~ label img,
 .price #input-eng:checked ~ label img {
   display: flex;
+}
+.price #input-math:checked ~ .price__subject__name,
+.price #input-rus:checked ~ .price__subject__name,
+.price #input-it:checked ~ .price__subject__name,
+.price #input-chemistry:checked ~ .price__subject__name,
+.price #input-soc:checked ~ .price__subject__name,
+.price #input-bio:checked ~ .price__subject__name,
+.price #input-phys:checked ~ .price__subject__name,
+.price #input-history:checked ~ .price__subject__name,
+.price #input-liter:checked ~ .price__subject__name,
+.price #input-eng:checked ~ .price__subject__name {
+  background-color: #326EEA;
+  border-radius: 24px;
 }
 .price__period__option {
   display: flex;
@@ -561,7 +578,7 @@
 .check__line {
   width: 278px;
   height: 0;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 .check__subject div {
   color: #2B2D33;
@@ -757,6 +774,9 @@ input[name="teachers__slider__r"] {
   background-image: url("../images/slider/arrow-left-disabled.svg");
   cursor: pointer;
 }
+.slider__button__left__examples {
+  background-image: url("../images/slider/arrow-left.svg");
+}
 .slider__button__left:hover {
   transform: scale(1.1);
 }
@@ -894,12 +914,33 @@ input[name="teachers__slider__r"] {
   top: -394px;
   margin: 0 84px;
 }
+.examples__slider {
+  overflow: hidden;
+  max-width: 1064px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.examples__slides {
+  width: 200%;
+  height: 100%;
+  display: flex;
+}
 .example {
+  height: fit-content;
+  transition: all 0.5s ease;
   background: #F1F6FF;
   border-radius: 26px;
   padding: 32px 24px 40px;
   color: #203567;
-  max-width: 248px;
+  width: 248px;
+  min-width: 248px;
+  margin: 0 12px;
+}
+.example_white {
+  background: white;
+  border: 1.75px solid #F4F4F4;
 }
 .example__points {
   font-weight: 700;
@@ -1012,7 +1053,7 @@ input[name="teachers__slider__r"] {
   border: none;
 }
 .questions__rights {
-  margin: 0 0 24px 60px;
+  margin: 28px 0 0 56px;
 }
 #parent__radio:checked ~ label div {
   background: #326EEA;
@@ -1118,10 +1159,13 @@ input[name="teachers__slider__r"] {
   }
   .header {
     display: block;
-    padding: 0;
     height: auto;
     padding: 0 16px;
     z-index: 10;
+  }
+  .header__profile {
+    margin-left: 0;
+    margin-right: 24px;
   }
   .header__menu {
     padding: 16px 0;
@@ -1490,8 +1534,11 @@ input[name="teachers__slider__r"] {
     line-height: 26px;
     max-width: 296px;
   }
+  .questions__name-wrapper {
+    width: 100%;
+  }
   .questions__tel {
-    margin: 32px 0 16px;
+    margin: 6px 0 16px;
   }
   .questions__name,
   .questions__tel,
@@ -1506,6 +1553,12 @@ input[name="teachers__slider__r"] {
     margin: 24px 0 16px;
     font-size: 20px;
     line-height: 26px;
+    max-height: 44px;
+  }
+  .questions__rights {
+    margin: 0;
+    padding-bottom: 64px;
+    text-align: left;
   }
   .footer {
     margin: 0 16px;
@@ -1519,8 +1572,16 @@ input[name="teachers__slider__r"] {
     line-height: 22px;
     margin-right: 22px;
   }
+  .footer__tel {
+    color: #326EEA;
+    font-size: 30px;
+    line-height: 22px;
+  }
   .footer__years {
     padding-top: 8px;
+  }
+  .footer__contacts {
+    margin-top: 32px;
   }
 }
 /*# sourceMappingURL=main.css.map */

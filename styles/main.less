@@ -98,6 +98,10 @@
     background: white;
     cursor: pointer;
   }
+
+  &__profile {
+    margin-left: 64px;
+  }
 }
 
 #menu-mobile {
@@ -552,7 +556,8 @@
     &__name {
       font-size: 19px;
       line-height: 20px;
-      margin-left: 12px;
+      margin-left: 6px;
+      padding: 5px 8px;
     }
 
     &__checkbox {
@@ -588,6 +593,21 @@
   #input-liter:checked ~ label img,
   #input-eng:checked ~ label img {
     display: flex;
+  }
+
+  #input-math:checked ~ .price__subject__name,
+  #input-rus:checked ~ .price__subject__name,
+  #input-it:checked ~ .price__subject__name,
+  #input-chemistry:checked ~ .price__subject__name,
+  #input-soc:checked ~ .price__subject__name,
+  #input-bio:checked ~ .price__subject__name,
+  #input-phys:checked ~ .price__subject__name,
+  #input-history:checked ~ .price__subject__name,
+  #input-liter:checked ~ .price__subject__name,
+  #input-eng:checked ~ .price__subject__name {
+    background-color: #326EEA;
+
+    border-radius: 24px;
   }
 
   &__period {
@@ -701,7 +721,7 @@
   &__line {
     width: 278px;
     height: 0;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   }
 
   &__subject {
@@ -711,7 +731,6 @@
       font-size: 19px;
       line-height: 21px;
       font-family: 'PT Mono', monospace;
-
     }
   }
 
@@ -849,6 +868,7 @@
     font-size: 24px;
     line-height: 32px;
     color: #326EEA;
+
     & span {
       border-bottom: 1px solid #326EEA;
     }
@@ -929,6 +949,7 @@ input[name="teachers__slider__r"] {
 }
 
 .slider {
+
   &__button {
     width: 44px;
     height: 44px;
@@ -937,6 +958,10 @@ input[name="teachers__slider__r"] {
     align-items: center;
     background-image: url("../images/slider/arrow-left-disabled.svg");
     cursor: pointer;
+
+    &__left__examples {
+      background-image: url("../images/slider/arrow-left.svg");
+    }
 
     &__left:hover {
       transform: scale(1.1);
@@ -1103,15 +1128,39 @@ input[name="teachers__slider__r"] {
   position: relative;
   top: @price-offset+@license-offset;
   margin: 0 84px;
+
+  &__slider {
+    //display: flex;
+    overflow: hidden;
+    max-width: 1064px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__slides {
+    width: 200%;
+    height: 100%;
+    display: flex;
+  }
 }
 
 .example {
+  //width: 10%;
+  height: fit-content;
+  transition: all 0.5s ease;
   background: #F1F6FF;
   border-radius: 26px;
   padding: 32px 24px 40px;
   color: #203567;
-  max-width: 248px;
-
+  width: 248px;
+  min-width: 248px;
+  margin: 0 12px;
+  &_white {
+    background: white;
+    border: 1.75px solid #F4F4F4;
+  }
   &__points {
     font-weight: 700;
     font-size: 30px;
@@ -1240,7 +1289,7 @@ input[name="teachers__slider__r"] {
   }
 
   &__rights {
-    margin: 0 0 24px 60px;
+    margin: 28px 0 0 56px;
   }
 }
 
@@ -1355,13 +1404,15 @@ input[name="teachers__slider__r"] {
       padding: 3px 16px;
       height: auto;
       margin: 24px 0 40px;
+
       &:hover {
         color: white;
       }
     }
+
     &__tel {
       text-decoration: none;
-      color:#326EEA;
+      color: #326EEA;
       font-size: 30px;
       line-height: 22px;
       padding-bottom: 20px;
@@ -1376,10 +1427,14 @@ input[name="teachers__slider__r"] {
 
   .header {
     display: block;
-    padding: 0;
     height: auto;
     padding: 0 16px;
     z-index: 10;
+
+    &__profile {
+      margin-left: 0;
+      margin-right: 24px;
+    }
 
     &__menu {
       padding: 16px 0;
@@ -1845,8 +1900,12 @@ input[name="teachers__slider__r"] {
       max-width: 296px;
     }
 
+    &__name-wrapper {
+      width: 100%;
+    }
+
     &__tel {
-      margin: 32px 0 16px;
+      margin: 6px 0 16px;
     }
 
     &__name, &__tel, &__time, &__button {
@@ -1861,6 +1920,13 @@ input[name="teachers__slider__r"] {
       margin: 24px 0 16px;
       font-size: 20px;
       line-height: 26px;
+      max-height: 44px;
+    }
+
+    &__rights {
+      margin: 0;
+      padding-bottom: 64px;
+      text-align: left;
     }
   }
 
@@ -1882,8 +1948,18 @@ input[name="teachers__slider__r"] {
       margin-right: 22px;
     }
 
+    &__tel {
+      color: #326EEA;
+      font-size: 30px;
+      line-height: 22px;
+    }
+
     &__years {
       padding-top: 8px;
+    }
+
+    &__contacts {
+      margin-top: 32px;
     }
   }
 
