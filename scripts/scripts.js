@@ -47,20 +47,27 @@ const radioBgChange = (el) => {
     el.style.opacity = '1';
 }
 
-const showHideMenu = () => {
+const showHideMenu = (el) => {
     const menu = document.querySelector('.menu-mobile');
-    if (menu.classList.value === 'menu-mobile')
+    if (menu.classList.value === 'menu-mobile') {
         document.querySelector('.menu-mobile').classList.add('active');
-    else if (menu.classList.value === 'menu-mobile active')
+        el.style.display = 'none';
+        document.getElementsByClassName('header__burger')[1].style.display = 'inline';
+        document.getElementsByClassName('header')[0].style.position = 'fixed';
+    } else if (menu.classList.value === 'menu-mobile active') {
         document.querySelector('.menu-mobile').classList.remove('active');
+        el.style.display = 'none';
+        document.getElementsByClassName('header__burger')[0].style.display = 'inline';
+        document.getElementsByClassName('header')[0].style.position = 'relative';
+
+    }
 }
 
 const showHideNavList = (el) => {
     const ul = el.nextElementSibling;
-    if ((ul.style.display === 'none')||(ul.style.display ==='')){
+    if ((ul.style.display === 'none') || (ul.style.display === '')) {
         ul.style.display = 'block';
-    }
-    else {
+    } else {
         ul.style.display = 'none';
     }
 }
