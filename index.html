@@ -10,6 +10,9 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="menu-mobile">
@@ -72,11 +75,12 @@
             <a href="#"><img src="images/profile_icon.svg"></a>
             <img onclick="showHideMenu(this)" class="header__burger desktop__hidden" src="images/mobile/btn-menu.svg"
                  alt="burger">
-            <img onclick="showHideMenu(this)" style="display: none" class="header__burger desktop__hidden" src="images/mobile/cross.svg"
+            <img onclick="showHideMenu(this)" style="display: none" class="header__burger desktop__hidden"
+                 src="images/mobile/cross.svg"
                  alt="cross">
         </div>
     </div>
-<!--    <img class="header__logo mobile__hidden" src="images/logo.svg" alt="logo">-->
+    <img class="header__logo mobile__hidden" src="images/logo.svg" alt="logo">
     <div class="header__menu header__menu_desktop" id="menu_desktop"
          style="display: flex; justify-content: space-between">
         <nav class="navbar">
@@ -208,7 +212,7 @@
         <div class="education-info__title">Эффективный и удобный формат обучения</div>
         <div class="education-info__subtitle">Объём подготовки в неделю равен 10 школьным урокам. Это больше чем с
             репетитором, и в разы выгоднее.
-            <br>Мы единственные, кто проводит пробный экзамен не на занятии, а в отдельный день с регистрацией,
+            <br><br>Мы единственные, кто проводит пробный экзамен не на занятии, а в отдельный день с регистрацией,
             наблюдателями и экспертной проверкой. Всё как на ЕГЭ!
         </div>
         <div style="display: flex; align-items: center">
@@ -330,37 +334,38 @@
                         <input type="checkbox" class="price__subject__checkbox" id="input-math">
                         <label for="input-math" class="price__subject__label">
                             <img src="images/check-mark.svg">
+
                         </label>
+                        <label for="input-math" class="price__subject__name">Математика</label>
                         <!--                        <span class="price__column__subject__custom-cb"></span>-->
-                        <div class="price__subject__name">Математика</div>
                     </div>
                     <div class="price__subject">
                         <input type="checkbox" class="price__subject__checkbox" id="input-rus">
                         <label for="input-rus" class="price__subject__label">
                             <img src="images/check-mark.svg">
                         </label>
-                        <div class="price__subject__name">Русский язык</div>
+                        <label for="input-rus" class="price__subject__name">Русский язык</label>
                     </div>
                     <div class="price__subject">
                         <input type="checkbox" class="price__subject__checkbox" id="input-it">
                         <label for="input-it" class="price__subject__label">
                             <img src="images/check-mark.svg">
                         </label>
-                        <div class="price__subject__name">Информатика</div>
+                        <label for="input-it" class="price__subject__name">Информатика</label>
                     </div>
                     <div class="price__subject">
                         <input type="checkbox" class="price__subject__checkbox" id="input-chemistry">
                         <label for="input-chemistry" class="price__subject__label">
                             <img src="images/check-mark.svg">
                         </label>
-                        <div class="price__subject__name">Химия</div>
+                        <label for="input-chemistry" class="price__subject__name">Химия</label>
                     </div>
                     <div class="price__subject">
                         <input type="checkbox" class="price__subject__checkbox" id="input-soc">
                         <label for="input-soc" class="price__subject__label">
                             <img src="images/check-mark.svg">
                         </label>
-                        <div class="price__subject__name">Обществознание</div>
+                        <label for="input-soc" class="price__subject__name">Обществознание</label>
                     </div>
                 </div>
                 <div>
@@ -369,35 +374,35 @@
                         <label for="input-bio" class="price__subject__label">
                             <img src="images/check-mark.svg">
                         </label>
-                        <div class="price__subject__name">Биология</div>
+                        <label for="input-bio" class="price__subject__name">Биология</label>
                     </div>
                     <div class="price__subject">
                         <input type="checkbox" class="price__subject__checkbox" id="input-phys">
                         <label for="input-phys" class="price__subject__label">
                             <img src="images/check-mark.svg">
                         </label>
-                        <div class="price__subject__name">Физика</div>
+                        <label for="input-phys" class="price__subject__name">Физика</label>
                     </div>
                     <div class="price__subject">
                         <input type="checkbox" class="price__subject__checkbox" id="input-history">
                         <label for="input-history" class="price__subject__label">
                             <img src="images/check-mark.svg">
                         </label>
-                        <div class="price__subject__name">История</div>
+                        <label for="input-history" class="price__subject__name">История</label>
                     </div>
                     <div class="price__subject">
                         <input type="checkbox" class="price__subject__checkbox" id="input-liter">
                         <label for="input-liter" class="price__subject__label">
                             <img src="images/check-mark.svg">
                         </label>
-                        <div class="price__subject__name">Литература</div>
+                        <label for="input-liter" class="price__subject__name">Литература</label>
                     </div>
                     <div class="price__subject">
                         <input type="checkbox" class="price__subject__checkbox" id="input-eng">
                         <label for="input-eng" class="price__subject__label">
                             <img src="images/check-mark.svg">
                         </label>
-                        <div class="price__subject__name">Английский<br>язык</div>
+                        <label for="input-eng" class="price__subject__name">Английский<br>язык</label>
                     </div>
                 </div>
             </div>
@@ -415,28 +420,28 @@
                     <label class="price__period__label" for="period__radio1">
                         <div class="period__label__circle"></div>
                     </label>
-                    <div class="price__period__name">Каждую неделю</div>
+                    <label for="period__radio1" class="price__period__name">Каждую неделю</label>
                 </div>
                 <div class="price__period__option">
                     <input type="radio" name="period" class="price__period__radio" id="period__radio2">
                     <label class="price__period__label" for="period__radio2">
                         <div class="period__label__circle"></div>
                     </label>
-                    <div class="price__period__name">Каждый месяц (выгода 10%)</div>
+                    <label for="period__radio2" class="price__period__name">Каждый месяц (выгода 10%)</label>
                 </div>
                 <div class="price__period__option">
                     <input type="radio" name="period" class="price__period__radio" id="period__radio3">
                     <label class="price__period__label" for="period__radio3">
                         <div class="period__label__circle"></div>
                     </label>
-                    <div class="price__period__name">1 раз в полгода (выгода 20%)</div>
+                    <label for="period__radio3" class="price__period__name">1 раз в полгода (выгода 20%)</label>
                 </div>
                 <div class="price__period__option">
                     <input type="radio" name="period" class="price__period__radio" id="period__radio4">
                     <label class="price__period__label" for="period__radio4">
                         <div class="period__label__circle"></div>
                     </label>
-                    <div class="price__period__name">1 раз в год (выгода 25%)</div>
+                    <label for="period__radio4" class="price__period__name">1 раз в год (выгода 25%)</label>
                 </div>
             </div>
         </div>
@@ -446,7 +451,8 @@
             </div>
             <div class="check__line" style="margin-bottom: 4px"></div>
             <div class="check__line"></div>
-            <div style="font-weight: 400;font-size: 32px;line-height: 34px;color: #2B2D33; margin: 24px 0 8px">
+            <div style="font-weight: 400;font-size: 32px;line-height: 34px;color: #2B2D33;
+                        margin: 24px 0 8px; font-family: 'PT Mono', monospace;">
                 Стоимость:
             </div>
             <div class="check__subject">
@@ -493,215 +499,215 @@
         <img class="desktop__hidden" src="images/license-mobile.svg">
     </div>
 </section>
-<!--<section class="teachers-wrapper">-->
-<!--    <div class="teachers__description">-->
-<!--        <div class="teachers__title">Методисты и разработчики <span>курсов</span></div>-->
-<!--        <div class="teachers__subtitle">Ежегодно разрабатывают и обновляют наши учебные материалы, изучают-->
-<!--            изменения в демоверсиях, спецификациях и кодификаторах ФИПИ, записывают видеолекции на понятном-->
-<!--            ученику языке и подбирают актуальные задания экзаменационного формата.-->
-<!--        </div>-->
-<!--        <a href="#" class="teachers__link">Узнать о преподавателях <img src="images/ArrowRight.svg"> </a>-->
-<!--    </div>-->
-<!--    <div class="teachers">-->
-<!--        <div class="teachers__slider">-->
-<!--            <div class="teachers__slides">-->
-<!--                <input checked type="radio" name="teachers__slider__r" id="teachers__slider__radio1">-->
-<!--                <input type="radio" name="teachers__slider__r" id="teachers__slider__radio2">-->
-<!--                <input type="radio" name="teachers__slider__r" id="teachers__slider__radio3">-->
-<!--                <input type="radio" name="teachers__slider__r" id="teachers__slider__radio4">-->
-<!--                <input type="radio" name="teachers__slider__r" id="teachers__slider__radio5">-->
-<!--                <div class="teachers__slide teachers__slide_1">-->
-<!--                    <div class="teacher">-->
-<!--                        <div class="teacher__photo">-->
-<!--                            <img style="z-index: 1" src="images/teachers/social-science-teacher.svg">-->
-<!--                            <div class="teacher__photo__bg"></div>-->
-<!--                        </div>-->
-<!--                        <div style="display: flex; align-items: center; margin: 28px 0 12px">-->
-<!--                            <img src="images/teachers/social-science-icon.svg">-->
-<!--                            <div class="teacher__name">Евгения Орлова</div>-->
-<!--                        </div>-->
-<!--                        <div class="teacher__education">HR-директор. Закончила РАНХиГС и РГППУ,-->
-<!--                            преподаёт историю и обществознание-->
-<!--                        </div>-->
-<!--                        <div class="teacher__experience">Преподаватель первой квалификационной категории;<br>-->
-<!--                            Автор и ведущий тренингов по профессиональной подготовке;<br>-->
-<!--                            9 лет готовит к ЕГЭ и ОГЭ.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="teacher">-->
-<!--                        <div class="teacher__photo">-->
-<!--                            <img src="images/teachers/english-teacher.svg">-->
-<!--                            <div class="teacher__photo__bg"></div>-->
-<!--                        </div>-->
-<!--                        <div style="display: flex; align-items: center; margin: 28px 0 12px">-->
-<!--                            <img src="images/teachers/english-icon.svg">-->
-<!--                            <div class="teacher__name">Евгения Мехренина</div>-->
-<!--                        </div>-->
-<!--                        <div class="teacher__education">Закончила УрГЮУ. Получила международные сертификаты Cambridge и-->
-<!--                            Pearson, преподаёт английский язык.-->
-<!--                        </div>-->
-<!--                        <div class="teacher__experience">Диплом переводчика в юридической сфере;-->
-<!--                            Организатор разговорных клубов;-->
-<!--                            6 лет готовит к ЕГЭ и ОГЭ.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="teachers__slide">-->
-<!--                    <div class="teacher">-->
-<!--                        <div class="teacher__photo">-->
-<!--                            <img src="images/teachers/history-teacher.svg">-->
-<!--                            <div class="teacher__photo__bg"></div>-->
-<!--                        </div>-->
-<!--                        <div style="display: flex; align-items: center; margin: 28px 0 12px">-->
-<!--                            <img src="images/teachers/history-icon.svg">-->
-<!--                            <div class="teacher__name">Михаил Храмцов</div>-->
-<!--                        </div>-->
-<!--                        <div class="teacher__education">Закончил УрФУ, преподаёт историю.-->
-<!--                        </div>-->
-<!--                        <div class="teacher__experience">Инженер-исследователь Института истории и археологии УрФУ;-->
-<!--                            3-й историк Урала в 2016 году;-->
-<!--                            Автор 7 статей в индексе цитируемости РИНЦ и 2 статей в ВАК-->
-<!--                            5 лет готовит к ЕГЭ и ОГЭ.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="teacher">-->
-<!--                        <div class="teacher__photo">-->
-<!--                            <img src="images/teachers/social-science-teacher2.svg">-->
-<!--                            <div class="teacher__photo__bg"></div>-->
-<!--                        </div>-->
-<!--                        <div style="display: flex; align-items: center; margin: 28px 0 12px">-->
-<!--                            <img src="images/teachers/social-science-icon.svg">-->
-<!--                            <div class="teacher__name">Александра Соболева</div>-->
-<!--                        </div>-->
-<!--                        <div class="teacher__education">Закончила УрГЮУ, НИУ ВШЭ (Спб), преподаёт обществознание.-->
-<!--                        </div>-->
-<!--                        <div class="teacher__experience">Выпускница проекта «Учитель для России»;-->
-<!--                            Уехала из Москвы в Обнинск, чтобы преподавать;-->
-<!--                            8 лет готовит к ЕГЭ и ОГЭ.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="teachers__slide">-->
-<!--                    <div class="teacher">-->
-<!--                        <div class="teacher__photo">-->
-<!--                            <img src="images/teachers/russian-teacher.svg">-->
-<!--                            <div class="teacher__photo__bg"></div>-->
-<!--                        </div>-->
-<!--                        <div style="display: flex; align-items: center; margin: 28px 0 12px">-->
-<!--                            <img src="images/teachers/russian-icon.svg">-->
-<!--                            <div class="teacher__name">Ксения Шахмина</div>-->
-<!--                        </div>-->
-<!--                        <div class="teacher__education">Закончила УрГПУ, преподаёт русский язык и литературу.-->
-<!--                        </div>-->
-<!--                        <div class="teacher__experience">Обучает искусству публичных выступлений;-->
-<!--                            Автор курса по внедрению психолингвистических методик в обучение;-->
-<!--                            7 лет готовит к ЕГЭ и ОГЭ.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="teacher">-->
-<!--                        <div class="teacher__photo">-->
-<!--                            <img src="images/teachers/chemistry-teacher.svg">-->
-<!--                            <div class="teacher__photo__bg"></div>-->
-<!--                        </div>-->
-<!--                        <div style="display: flex; align-items: center; margin: 28px 0 12px">-->
-<!--                            <img src="images/teachers/chemistry-icon.svg">-->
-<!--                            <div class="teacher__name">Ксения Боброва</div>-->
-<!--                        </div>-->
-<!--                        <div class="teacher__education">Закончила УрФУ, преподаёт химию.-->
-<!--                        </div>-->
-<!--                        <div class="teacher__experience">Инженер института высокотемпературной электрохимии;-->
-<!--                            Аспирант института высокотемпературной электрохимии УрО РАН;-->
-<!--                            5 лет готовит к ЕГЭ и ОГЭ.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="teachers__slide">-->
-<!--                    <div class="teacher">-->
-<!--                        <div class="teacher__photo">-->
-<!--                            <img src="images/teachers/it-teacher.svg">-->
-<!--                            <div class="teacher__photo__bg"></div>-->
-<!--                        </div>-->
-<!--                        <div style="display: flex; align-items: center; margin: 28px 0 12px">-->
-<!--                            <img src="images/teachers/it-icon.svg">-->
-<!--                            <div class="teacher__name">Николай Фирсов</div>-->
-<!--                        </div>-->
-<!--                        <div class="teacher__education">Исполнительный директор. Закончил УрФУ, преподаёт информатику.-->
-<!--                        </div>-->
-<!--                        <div class="teacher__experience">Преподаватель в техническом университете УГМК и УрФУ в 2015–16;-->
-<!--                            Выпускники поступают в лучшие IT вузы России;-->
-<!--                            7 лет готовит к ЕГЭ и ОГЭ.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="teacher">-->
-<!--                        <div class="teacher__photo">-->
-<!--                            <img src="images/teachers/math-teacher.svg">-->
-<!--                            <div class="teacher__photo__bg"></div>-->
-<!--                        </div>-->
-<!--                        <div style="display: flex; align-items: center; margin: 28px 0 12px">-->
-<!--                            <img src="images/teachers/math-icon.svg">-->
-<!--                            <div class="teacher__name">Николай Кайманов</div>-->
-<!--                        </div>-->
-<!--                        <div class="teacher__education">Операционный директор. Закончил УрФУ, преподаёт математику и-->
-<!--                            физику.-->
-<!--                        </div>-->
-<!--                        <div class="teacher__experience">Преподаватель электроники в УрФУ в 2015–16;-->
-<!--                            Выигрывает апелляции со своими учениками;-->
-<!--                            7 лет готовит к ЕГЭ и ОГЭ.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="teachers__slide">-->
-<!--                    <div class="teacher">-->
-<!--                        <div class="teacher__photo">-->
-<!--                            <img src="images/teachers/bio-teacher.svg">-->
-<!--                            <div class="teacher__photo__bg"></div>-->
-<!--                        </div>-->
-<!--                        <div style="display: flex; align-items: center; margin: 28px 0 12px">-->
-<!--                            <img src="images/teachers/bio-icon.svg">-->
-<!--                            <div class="teacher__name">Евгения Орлова</div>-->
-<!--                        </div>-->
-<!--                        <div class="teacher__education">HR-директор. Закончила РАНХиГС и РГППУ,-->
-<!--                            преподаёт историю и обществознание-->
-<!--                        </div>-->
-<!--                        <div class="teacher__experience">Преподаватель первой квалификационной категории;<br>-->
-<!--                            Автор и ведущий тренингов по профессиональной подготовке;<br>-->
-<!--                            9 лет готовит к ЕГЭ и ОГЭ.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            &lt;!&ndash;            <div style="display: flex">&ndash;&gt;-->
-<!--            <div class="teachers__slider__navigation">-->
-<!--                <label onclick="radioBgChange(this)" style="margin-left: 2px" for="teachers__slider__radio1"-->
-<!--                       class="teachers__slider__navigation__label" id="slider__label1"></label>-->
-<!--                <label onclick="radioBgChange(this)" for="teachers__slider__radio2"-->
-<!--                       class="teachers__slider__navigation__label"-->
-<!--                       id="slider__label2"></label>-->
-<!--                <label onclick="radioBgChange(this)" for="teachers__slider__radio3"-->
-<!--                       class="teachers__slider__navigation__label"-->
-<!--                       id="slider__label3"></label>-->
-<!--                <label onclick="radioBgChange(this)" for="teachers__slider__radio4"-->
-<!--                       class="teachers__slider__navigation__label"-->
-<!--                       id="slider__label4"></label>-->
-<!--                <label onclick="radioBgChange(this)" for="teachers__slider__radio5"-->
-<!--                       class="teachers__slider__navigation__label"-->
-<!--                       id="slider__label5"></label>-->
-<!--            </div>-->
-<!--            <div style="display: flex; position: absolute; z-index: 3; top: 640px; right: 84px">-->
-<!--                <div class="slider__button slider__button__left" style="margin-right: 12px"-->
-<!--                     onclick="slideTeachersLeft()">-->
-<!--                    &lt;!&ndash;                    <img class="slider__button__arrow-left" src="images/slider/arrow-left.svg">&ndash;&gt;-->
-<!--                </div>-->
-<!--                <div class="slider__button slider__button_right" onclick="slideTeachersRight()">-->
-<!--                    &lt;!&ndash;                    <img class="slider__button__arrow-right" src="images/slider/arrow-left.svg">&ndash;&gt;-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            &lt;!&ndash;            </div>&ndash;&gt;-->
+<section class="teachers-wrapper">
+    <div class="teachers__description">
+        <div class="teachers__title">Методисты и разработчики <span>курсов</span></div>
+        <div class="teachers__subtitle">Ежегодно разрабатывают и обновляют наши учебные материалы, изучают
+            изменения в демоверсиях, спецификациях и кодификаторах ФИПИ, записывают видеолекции на понятном
+            ученику языке и подбирают актуальные задания экзаменационного формата.
+        </div>
+        <a href="#" class="teachers__link"><span>Узнать о преподавателях</span> <img src="images/ArrowRight.svg"> </a>
+    </div>
+    <div class="teachers">
+        <div class="teachers__slider">
+            <div class="teachers__slides">
+                <input checked type="radio" name="teachers__slider__r" id="teachers__slider__radio1">
+                <input type="radio" name="teachers__slider__r" id="teachers__slider__radio2">
+                <input type="radio" name="teachers__slider__r" id="teachers__slider__radio3">
+                <input type="radio" name="teachers__slider__r" id="teachers__slider__radio4">
+                <input type="radio" name="teachers__slider__r" id="teachers__slider__radio5">
+                <div class="teachers__slide teachers__slide_1">
+                    <div class="teacher">
+                        <div class="teacher__photo">
+                            <img style="z-index: 1" src="images/teachers/social-science-teacher.svg">
+                            <div class="teacher__photo__bg"></div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 28px 0 12px">
+                            <img src="images/teachers/social-science-icon.svg">
+                            <div class="teacher__name">Евгения Орлова</div>
+                        </div>
+                        <div class="teacher__education">HR-директор. Закончила РАНХиГС и РГППУ,
+                            преподаёт историю и обществознание
+                        </div>
+                        <div class="teacher__experience">Преподаватель первой квалификационной категории;<br>
+                            Автор и ведущий тренингов по профессиональной подготовке;<br>
+                            9 лет готовит к ЕГЭ и ОГЭ.
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div class="teacher__photo">
+                            <img src="images/teachers/english-teacher.svg">
+                            <div class="teacher__photo__bg"></div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 28px 0 12px">
+                            <img src="images/teachers/english-icon.svg">
+                            <div class="teacher__name">Евгения Мехренина</div>
+                        </div>
+                        <div class="teacher__education">Закончила УрГЮУ. Получила международные сертификаты Cambridge и
+                            Pearson, преподаёт английский язык.
+                        </div>
+                        <div class="teacher__experience">Диплом переводчика в юридической сфере;
+                            Организатор разговорных клубов;
+                            6 лет готовит к ЕГЭ и ОГЭ.
+                        </div>
+                    </div>
+                </div>
+                <div class="teachers__slide">
+                    <div class="teacher">
+                        <div class="teacher__photo">
+                            <img src="images/teachers/history-teacher.svg">
+                            <div class="teacher__photo__bg"></div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 28px 0 12px">
+                            <img src="images/teachers/history-icon.svg">
+                            <div class="teacher__name">Михаил Храмцов</div>
+                        </div>
+                        <div class="teacher__education">Закончил УрФУ, преподаёт историю.
+                        </div>
+                        <div class="teacher__experience">Инженер-исследователь Института истории и археологии УрФУ;
+                            3-й историк Урала в 2016 году;
+                            Автор 7 статей в индексе цитируемости РИНЦ и 2 статей в ВАК
+                            5 лет готовит к ЕГЭ и ОГЭ.
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div class="teacher__photo">
+                            <img src="images/teachers/social-science-teacher2.svg">
+                            <div class="teacher__photo__bg"></div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 28px 0 12px">
+                            <img src="images/teachers/social-science-icon.svg">
+                            <div class="teacher__name">Александра Соболева</div>
+                        </div>
+                        <div class="teacher__education">Закончила УрГЮУ, НИУ ВШЭ (Спб), преподаёт обществознание.
+                        </div>
+                        <div class="teacher__experience">Выпускница проекта «Учитель для России»;
+                            Уехала из Москвы в Обнинск, чтобы преподавать;
+                            8 лет готовит к ЕГЭ и ОГЭ.
+                        </div>
+                    </div>
+                </div>
+                <div class="teachers__slide">
+                    <div class="teacher">
+                        <div class="teacher__photo">
+                            <img src="images/teachers/russian-teacher.svg">
+                            <div class="teacher__photo__bg"></div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 28px 0 12px">
+                            <img src="images/teachers/russian-icon.svg">
+                            <div class="teacher__name">Ксения Шахмина</div>
+                        </div>
+                        <div class="teacher__education">Закончила УрГПУ, преподаёт русский язык и литературу.
+                        </div>
+                        <div class="teacher__experience">Обучает искусству публичных выступлений;
+                            Автор курса по внедрению психолингвистических методик в обучение;
+                            7 лет готовит к ЕГЭ и ОГЭ.
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div class="teacher__photo">
+                            <img src="images/teachers/chemistry-teacher.svg">
+                            <div class="teacher__photo__bg"></div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 28px 0 12px">
+                            <img src="images/teachers/chemistry-icon.svg">
+                            <div class="teacher__name">Ксения Боброва</div>
+                        </div>
+                        <div class="teacher__education">Закончила УрФУ, преподаёт химию.
+                        </div>
+                        <div class="teacher__experience">Инженер института высокотемпературной электрохимии;
+                            Аспирант института высокотемпературной электрохимии УрО РАН;
+                            5 лет готовит к ЕГЭ и ОГЭ.
+                        </div>
+                    </div>
+                </div>
+                <div class="teachers__slide">
+                    <div class="teacher">
+                        <div class="teacher__photo">
+                            <img src="images/teachers/it-teacher.svg">
+                            <div class="teacher__photo__bg"></div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 28px 0 12px">
+                            <img src="images/teachers/it-icon.svg">
+                            <div class="teacher__name">Николай Фирсов</div>
+                        </div>
+                        <div class="teacher__education">Исполнительный директор. Закончил УрФУ, преподаёт информатику.
+                        </div>
+                        <div class="teacher__experience">Преподаватель в техническом университете УГМК и УрФУ в 2015–16;
+                            Выпускники поступают в лучшие IT вузы России;
+                            7 лет готовит к ЕГЭ и ОГЭ.
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div class="teacher__photo">
+                            <img src="images/teachers/math-teacher.svg">
+                            <div class="teacher__photo__bg"></div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 28px 0 12px">
+                            <img src="images/teachers/math-icon.svg">
+                            <div class="teacher__name">Николай Кайманов</div>
+                        </div>
+                        <div class="teacher__education">Операционный директор. Закончил УрФУ, преподаёт математику и
+                            физику.
+                        </div>
+                        <div class="teacher__experience">Преподаватель электроники в УрФУ в 2015–16;
+                            Выигрывает апелляции со своими учениками;
+                            7 лет готовит к ЕГЭ и ОГЭ.
+                        </div>
+                    </div>
+                </div>
+                <div class="teachers__slide">
+                    <div class="teacher">
+                        <div class="teacher__photo">
+                            <img src="images/teachers/bio-teacher.svg">
+                            <div class="teacher__photo__bg"></div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 28px 0 12px">
+                            <img src="images/teachers/bio-icon.svg">
+                            <div class="teacher__name">Евгения Орлова</div>
+                        </div>
+                        <div class="teacher__education">HR-директор. Закончила РАНХиГС и РГППУ,
+                            преподаёт историю и обществознание
+                        </div>
+                        <div class="teacher__experience">Преподаватель первой квалификационной категории;<br>
+                            Автор и ведущий тренингов по профессиональной подготовке;<br>
+                            9 лет готовит к ЕГЭ и ОГЭ.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--            <div style="display: flex">-->
+            <div class="teachers__slider__navigation">
+                <label onclick="radioBgChange(this)" style="margin-left: 2px" for="teachers__slider__radio1"
+                       class="teachers__slider__navigation__label" id="slider__label1"></label>
+                <label onclick="radioBgChange(this)" for="teachers__slider__radio2"
+                       class="teachers__slider__navigation__label"
+                       id="slider__label2"></label>
+                <label onclick="radioBgChange(this)" for="teachers__slider__radio3"
+                       class="teachers__slider__navigation__label"
+                       id="slider__label3"></label>
+                <label onclick="radioBgChange(this)" for="teachers__slider__radio4"
+                       class="teachers__slider__navigation__label"
+                       id="slider__label4"></label>
+                <label onclick="radioBgChange(this)" for="teachers__slider__radio5"
+                       class="teachers__slider__navigation__label"
+                       id="slider__label5"></label>
+            </div>
+            <div style="display: flex; position: absolute; z-index: 3; top: 640px; right: 84px">
+                <div class="slider__button slider__button__left" style="margin-right: 12px"
+                     onclick="slideTeachersLeft()">
+                    <!--                    <img class="slider__button__arrow-left" src="images/slider/arrow-left.svg">-->
+                </div>
+                <div class="slider__button slider__button_right" onclick="slideTeachersRight()">
+                    <!--                    <img class="slider__button__arrow-right" src="images/slider/arrow-left.svg">-->
+                </div>
+            </div>
+            <!--            </div>-->
 
-<!--        </div>-->
-<!--        &lt;!&ndash;        <input checked type="radio" class="teachers__slider__radio">&ndash;&gt;-->
-<!--    </div>-->
-<!--</section>-->
+        </div>
+        <!--        <input checked type="radio" class="teachers__slider__radio">-->
+    </div>
+</section>
 <section class="results">
     <div class="results__title">Результаты наших учеников</div>
     <div class="results__subtitle">Выпускники победили экзамены вместе с нами и поступили в ВУЗ мечты. Наша средняя
@@ -910,67 +916,62 @@
         </div>
     </div>
 </section>
-<!--<section class="questions">-->
-<!--    <div class="questions__title">Есть <span style="color: #F35C22">вопросы?</span></div>-->
-<!--    <div class="questions__subtitle">Мы перезвоним в течение рабочего дня и расскажем о курсах</div>-->
-<!--    <form>-->
-<!--        <div style="  display: flex; align-items: center; flex-wrap: wrap">-->
-<!--            <input class="questions__name" type="text" placeholder="Имя">-->
-<!--            <input class="questions__tel" type="tel" placeholder="+7">-->
-<!--            <select class="questions__time">-->
-<!--                <option disabled selected hidden>Время звонка</option>-->
-<!--                <option>9:00</option>-->
-<!--                <option>10:00</option>-->
-<!--                <option>11:00</option>-->
-<!--            </select>-->
-<!--            <button class="questions__button">Оставить заявку</button>-->
-<!--        </div>-->
-<!--        <div style="display: flex; margin-top: 24px; align-items: center">-->
-<!--            <div class="price__period__option" style="margin-right: 32px">-->
-<!--                <input class="price__period__radio" type="radio" name="who" id="parent__radio">-->
-<!--                <label class="price__period__label" for="parent__radio">-->
-<!--                    <div class="period__label__circle"></div>-->
-<!--                </label>-->
-<!--                <div class="price__period__name">Родитель</div>-->
-<!--            </div>-->
-<!--            <div class="price__period__option">-->
-<!--                <input class="price__period__radio" type="radio" name="who" id="student__radio">-->
-<!--                <label class="price__period__label" for="student__radio">-->
-<!--                    <div class="period__label__circle"></div>-->
-<!--                </label>-->
-<!--                <div class="price__period__name">Ученик</div>-->
-<!--            </div>-->
-<!--            <div class="check__rights questions__rights">Отправляя форму, вы даете согласие на-->
-<!--                <a href="#">обработку персональных данных</a></div>-->
-<!--        </div>-->
-<!--    </form>-->
-<!--</section>-->
-<!--<div class="menu-mobile">-->
-<!--    <a href="#" class="menu-mobile__link">Курсы ЕГЭ</a>-->
-<!--    <a href="#" class="menu-mobile__link">Курсы ОГЭ</a>-->
-<!--    <button class="menu-mobile__button">Войти</button>-->
-<!--</div>-->
+<section class="questions">
+    <div class="questions__title">Есть <span style="color: #F35C22">вопросы?</span></div>
+    <div class="questions__subtitle">Мы перезвоним в течение рабочего дня и расскажем о курсах</div>
+    <form>
+        <div style="  display: flex; align-items: center; flex-wrap: wrap">
+            <input class="questions__name" type="text" placeholder="Имя">
+            <input class="questions__tel" type="tel" placeholder="+7">
+            <select class="questions__time">
+                <option disabled selected hidden>Время звонка</option>
+                <option>9:00</option>
+                <option>10:00</option>
+                <option>11:00</option>
+            </select>
+            <button class="questions__button">Оставить заявку</button>
+        </div>
+        <div style="display: flex; margin-top: 24px; align-items: center">
+            <div class="price__period__option" style="margin-right: 32px">
+                <input class="price__period__radio" type="radio" name="who" id="parent__radio">
+                <label class="price__period__label" for="parent__radio">
+                    <div class="period__label__circle"></div>
+                </label>
+                <div class="price__period__name">Родитель</div>
+            </div>
+            <div class="price__period__option">
+                <input class="price__period__radio" type="radio" name="who" id="student__radio">
+                <label class="price__period__label" for="student__radio">
+                    <div class="period__label__circle"></div>
+                </label>
+                <div class="price__period__name">Ученик</div>
+            </div>
+            <div class="check__rights questions__rights">Отправляя форму, вы даете согласие на
+                <a href="#">обработку персональных данных</a></div>
+        </div>
+    </form>
+</section>
 
-<!--<section class="footer">-->
-<!--    <div class="footer__info">-->
-<!--        <div class="footer__links">-->
-<!--            <a class="footer__link" href="#">Отзывы</a>-->
-<!--            <a class="footer__link" href="#">Преподаватели</a>-->
-<!--            <a class="footer__link" href="#">Вакансии</a>-->
-<!--        </div>-->
-<!--        <div class="footer__ogrn">-->
-<!--            <div>ОГРН 318665800008347 г. Екатеринбург</div>-->
-<!--            <div class="footer__years">© 2018–2022 Континуум</div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="footer__contacts">-->
-<!--        <a class="footer__link" href="tel: +79923466545">+7 992 346-65-45</a>-->
-<!--        <div>-->
-<!--            <img class="footer__icon" src="images/vk-link-icon.svg">-->
-<!--            <img class="footer__icon" src="images/tg-link-icon.svg">-->
-<!--            <img class="footer__icon" src="images/wa-link-icon.svg">-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
+<section class="footer">
+    <div class="footer__info">
+        <div class="footer__links">
+            <a class="footer__link" href="#">Отзывы</a>
+            <a class="footer__link" href="#">Преподаватели</a>
+            <a class="footer__link" href="#">Вакансии</a>
+        </div>
+        <div class="footer__ogrn">
+            <div>ОГРН 318665800008347 г. Екатеринбург</div>
+            <div class="footer__years">© 2018–2022 Континуум</div>
+        </div>
+    </div>
+    <div class="footer__contacts">
+        <a class="footer__link" href="tel: +79923466545">+7 992 346-65-45</a>
+        <div>
+            <img class="footer__icon" src="images/vk-link-icon.svg">
+            <img class="footer__icon" src="images/tg-link-icon.svg">
+            <img class="footer__icon" src="images/wa-link-icon.svg">
+        </div>
+    </div>
+</section>
 </body>
 </html>

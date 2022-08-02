@@ -212,7 +212,7 @@
 
     &__text {
       text-align: left;
-      font-weight: 500;
+      font-weight: 400;
     }
   }
 }
@@ -227,9 +227,6 @@
   display: flex;
   align-items: center;
   margin-bottom: 120px;
-  //font-weight: 500;
-  //font-size: 64px;
-  //line-height: 70px;
 
   & div {
     color: white;
@@ -277,6 +274,7 @@
     font-size: 24px;
     line-height: 32px;
     color: #203567;
+    padding-left: 16px;
   }
 
   &__button {
@@ -348,6 +346,9 @@
   &__subtitle {
     width: 476px;
     padding: 40px 0 50px;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
   }
 
   .education-info__seasons {
@@ -419,7 +420,6 @@
 
   &__block {
     width: 616px;
-    height: 728px;
     border-radius: 26px;
     color: white;
     z-index: 2;
@@ -710,6 +710,8 @@
       font-weight: 400;
       font-size: 19px;
       line-height: 21px;
+      font-family: 'PT Mono', monospace;
+
     }
   }
 
@@ -777,7 +779,6 @@
 @license-offset: -200px;
 .license {
   margin: 0 84px;
-  height: 364px;
   background: #326EEA;
   border-radius: 30px;
   position: relative;
@@ -807,6 +808,7 @@
 
   &__link {
     width: 390px;
+    margin-bottom: 64px;
   }
 }
 
@@ -847,6 +849,9 @@
     font-size: 24px;
     line-height: 32px;
     color: #326EEA;
+    & span {
+      border-bottom: 1px solid #326EEA;
+    }
   }
 
   &__slider {

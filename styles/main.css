@@ -157,7 +157,7 @@
 }
 .important-things__block__text {
   text-align: left;
-  font-weight: 500;
+  font-weight: 400;
 }
 .recruit {
   color: #2B2D33;
@@ -208,6 +208,7 @@
   font-size: 24px;
   line-height: 32px;
   color: #203567;
+  padding-left: 16px;
 }
 .recruit__button {
   padding: 6px 24px;
@@ -268,6 +269,9 @@
 .education-info__subtitle {
   width: 476px;
   padding: 40px 0 50px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
 }
 .education-info .education-info__seasons {
   display: flex;
@@ -325,7 +329,6 @@
 }
 .benefits__block {
   width: 616px;
-  height: 728px;
   border-radius: 26px;
   color: white;
   z-index: 2;
@@ -565,6 +568,7 @@
   font-weight: 400;
   font-size: 19px;
   line-height: 21px;
+  font-family: 'PT Mono', monospace;
 }
 .check__input,
 .check__button {
@@ -622,7 +626,6 @@
 }
 .license {
   margin: 0 84px;
-  height: 364px;
   background: #326EEA;
   border-radius: 30px;
   position: relative;
@@ -649,6 +652,7 @@
 }
 .license__link {
   width: 390px;
+  margin-bottom: 64px;
 }
 .teachers {
   margin-left: 160px;
@@ -683,6 +687,9 @@
   font-size: 24px;
   line-height: 32px;
   color: #326EEA;
+}
+.teachers__link span {
+  border-bottom: 1px solid #326EEA;
 }
 .teachers__slider {
   overflow: hidden;
