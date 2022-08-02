@@ -1068,7 +1068,7 @@ input[name="teachers__slider__r"] {
     position: relative;
   }
   .menu-mobile {
-    position: fixed;
+    position: absolute;
     margin-top: 64px;
     padding: 0 16px 32px;
     width: 100%;
@@ -1086,15 +1086,6 @@ input[name="teachers__slider__r"] {
     right: 0;
     transition: right 0.5s;
   }
-  .menu-mobile > * {
-    margin: 25px 0;
-  }
-  .menu-mobile__link {
-    text-decoration: none;
-    color: black;
-    padding: 0 5px 10px;
-    border-bottom: solid 2px black;
-  }
   .menu-mobile__button {
     text-decoration: none;
     font-size: 20px;
@@ -1102,9 +1093,17 @@ input[name="teachers__slider__r"] {
     cursor: pointer;
     padding: 3px 16px;
     height: auto;
+    margin: 24px 0 40px;
   }
   .menu-mobile__button:hover {
     color: white;
+  }
+  .menu-mobile__tel {
+    text-decoration: none;
+    color: #326EEA;
+    font-size: 30px;
+    line-height: 22px;
+    padding-bottom: 20px;
   }
   .mobile__hidden {
     position: absolute;
@@ -1129,8 +1128,34 @@ input[name="teachers__slider__r"] {
   .header__logo {
     padding: 0;
   }
+  .navbar__el {
+    border-bottom: 1px solid #F2F2F2;
+    padding: 16px 0;
+  }
+  .navbar__ul {
+    display: none;
+    padding-left: 16px;
+    transition: all 0.5s ease;
+    margin-top: 8px;
+  }
+  .navbar__li {
+    list-style: none;
+  }
+  .navbar__li a {
+    margin-left: 8px;
+    text-decoration: none;
+    color: #2B2D33;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+  }
   .navbar__link {
     padding-right: 32px;
+    border: none;
+    background: white;
+    margin: 0;
+    font-size: 20px;
+    line-height: 26px;
   }
   .wrapper {
     padding: 0 16px;

@@ -1280,12 +1280,15 @@ input[name="teachers__slider__r"] {
     }
   }
 }
+
 .menu-mobile {
   display: none;
 }
+
 #city-ekb:checked ~ label div {
   background: #326EEA;
 }
+
 #city-ekb:checked ~ div {
   color: #326EEA;
 }
@@ -1293,16 +1296,19 @@ input[name="teachers__slider__r"] {
 #city-chel:checked ~ label div {
   background: #326EEA;
 }
+
 #city-chel:checked ~ div {
   color: #326EEA;
 }
+
 @media (max-width: 767px) {
   .desktop__hidden {
     visibility: visible;
     position: relative;
   }
+
   .menu-mobile {
-    position: fixed;
+    position: absolute;
     margin-top: 64px;
     padding: 0 16px 32px;
     //display: none;
@@ -1312,8 +1318,6 @@ input[name="teachers__slider__r"] {
     z-index: 1;
     flex-direction: column;
     justify-content: center;
-    //border: solid 1px #8B8B8B;
-    //box-shadow: 0 5px 10px 5px rgb(61 52 52 / 10%), 0 -5px 10px 5px rgb(61 52 52 0.1);
 
     display: flex;
     right: -100%;
@@ -1325,16 +1329,12 @@ input[name="teachers__slider__r"] {
       transition: right .5s;
     }
 
-    & > * {
-      margin: 25px 0;
-    }
-
-    &__link {
-      text-decoration: none;
-      color: black;
-      padding: 0 5px 10px;
-      border-bottom: solid 2px black;
-    }
+    //&__link {
+    //  text-decoration: none;
+    //  color: black;
+    //  padding: 0 5px 10px;
+    //  border-bottom: solid 2px black;
+    //}
 
     &__button {
       text-decoration: none;
@@ -1343,11 +1343,20 @@ input[name="teachers__slider__r"] {
       cursor: pointer;
       padding: 3px 16px;
       height: auto;
+      margin: 24px 0 40px;
       &:hover {
         color: white;
       }
     }
+    &__tel {
+      text-decoration: none;
+      color:#326EEA;
+      font-size: 30px;
+      line-height: 22px;
+      padding-bottom: 20px;
+    }
   }
+
   .mobile__hidden {
     position: absolute;
     visibility: hidden;
@@ -1378,8 +1387,40 @@ input[name="teachers__slider__r"] {
     }
   }
 
-  .navbar__link {
-    padding-right: 32px;
+  .navbar {
+    &__el {
+      border-bottom: 1px solid #F2F2F2;
+      padding: 16px 0;
+    }
+
+    &__ul {
+      display: none;
+      padding-left: 16px;
+      transition: all 0.5s ease;
+      margin-top: 8px;
+    }
+
+    &__li {
+      list-style: none;
+
+      & a {
+        margin-left: 8px;
+        text-decoration: none;
+        color: #2B2D33;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+
+    &__link {
+      padding-right: 32px;
+      border: none;
+      background: white;
+      margin: 0;
+      font-size: 20px;
+      line-height: 26px;
+    }
   }
 
   .wrapper {
@@ -1726,18 +1767,22 @@ input[name="teachers__slider__r"] {
 
   .results {
     margin: 0 16px;
+
     &__row div:first-child {
       order: 5;
     }
-    &__row div:nth-child(2){
+
+    &__row div:nth-child(2) {
       order: 0;
     }
+
     &__title {
       font-size: 44px;
       line-height: 48px;
       text-align: left;
       max-width: 296px;
     }
+
     &__subtitle {
       font-size: 24px;
       line-height: 32px;
@@ -1795,6 +1840,7 @@ input[name="teachers__slider__r"] {
     &__name, &__tel, &__time, &__button {
       width: 100%;
     }
+
     &__time {
       margin: 0;
     }

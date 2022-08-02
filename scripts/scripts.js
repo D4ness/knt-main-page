@@ -54,3 +54,13 @@ const showHideMenu = () => {
     else if (menu.classList.value === 'menu-mobile active')
         document.querySelector('.menu-mobile').classList.remove('active');
 }
+
+const showHideNavList = (el) => {
+    const ul = el.nextElementSibling;
+    if ((ul.style.display === 'none')||(ul.style.display ==='')){
+        ul.style.display = 'block';
+    }
+    else {
+        ul.style.display = 'none';
+    }
+}

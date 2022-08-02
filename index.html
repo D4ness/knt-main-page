@@ -15,15 +15,15 @@
 <div class="menu-mobile">
     <div class="menu-mobile__city">
         <div>Ваш город</div>
-        <div style="display: flex; margin-top: 24px; align-items: center">
-            <div class="price__period__option" style="margin-right: 32px">
-                <input class="price__period__radio" type="radio" name="city" id="city-ekb">
+        <div style="display: flex; margin: 24px 0; align-items: center">
+            <div class="price__period__option" style="margin: 0 32px 0 0">
+                <input checked class="price__period__radio" type="radio" name="city" id="city-ekb">
                 <label class="price__period__label" for="city-ekb">
                     <div class="period__label__circle"></div>
                 </label>
                 <div class="price__period__name">Екатеринбург</div>
             </div>
-            <div class="price__period__option">
+            <div class="price__period__option" style="margin: 0">
                 <input class="price__period__radio" type="radio" name="city" id="city-chel">
                 <label class="price__period__label" for="city-chel">
                     <div class="period__label__circle"></div>
@@ -32,12 +32,38 @@
             </div>
         </div>
     </div>
-    <a href="#" class="navbar__link">ЕГЭ</a>
-    <a href="#" class="navbar__link">ОГЭ</a>
-    <a href="#" class="navbar__link">10 класс</a>
+    <div class="navbar__el" style="padding-top: 0px">
+        <button onclick="showHideNavList(this)" class="navbar__link">ЕГЭ</button>
+        <ul class="navbar__ul">
+            <li class="navbar__li"><img src="images/mobile/yellow-arrow.svg"><a href="#">Формат обучения</a></li>
+            <li class="navbar__li"><img src="images/mobile/yellow-arrow.svg"><a href="#">Стоимость</a></li>
+            <li class="navbar__li"><img src="images/mobile/yellow-arrow.svg"><a href="#">Преподаватели</a></li>
+            <li class="navbar__li"><img src="images/mobile/yellow-arrow.svg"><a href="#">Отзывы</a></li>
+        </ul>
+    </div>
+    <div class="navbar__el">
+        <button onclick="showHideNavList(this)" class="navbar__link">ОГЭ</button>
+        <ul class="navbar__ul">
+            <li class="navbar__li"><img src="images/mobile/yellow-arrow.svg"><a href="#">Формат обучения</a></li>
+            <li class="navbar__li"><img src="images/mobile/yellow-arrow.svg"><a href="#">Стоимость</a></li>
+            <li class="navbar__li"><img src="images/mobile/yellow-arrow.svg"><a href="#">Преподаватели</a></li>
+            <li class="navbar__li"><img src="images/mobile/yellow-arrow.svg"><a href="#">Отзывы</a></li>
+        </ul>
+    </div>
+    <div class="navbar__el">
+        <button onclick="showHideNavList(this)" class="navbar__link">10 класс</button>
+        <ul class="navbar__ul">
+            <li class="navbar__li"><img src="images/mobile/yellow-arrow.svg"><a href="#">Формат обучения</a></li>
+            <li class="navbar__li"><img src="images/mobile/yellow-arrow.svg"><a href="#">Стоимость</a></li>
+            <li class="navbar__li"><img src="images/mobile/yellow-arrow.svg"><a href="#">Преподаватели</a></li>
+            <li class="navbar__li"><img src="images/mobile/yellow-arrow.svg"><a href="#">Отзывы</a></li>
+        </ul>
+    </div>
+    <a href="#" class="navbar__link" style="padding: 16px 0 24px">Преподаватели</a>
     <a href="#" class="navbar__link">Отзывы</a>
-    <a href="#" class="navbar__link">Преподаватели</a>
-    <a class="recruit__button menu-mobile__button">Бесплатное занятие</a>
+    <button class="recruit__button menu-mobile__button">Бесплатное занятие</button>
+    <a href="tel: +79923466545" class="menu-mobile__tel">+7 992 346-65-45</a>
+    <div style="font-weight: 400;font-size: 14px;line-height: 10px;">на связи 9–21:00</div>
 </div>
 <header class="header">
     <div class="header__menu desktop__hidden" style="display: flex; justify-content: space-between">
