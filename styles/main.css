@@ -1542,14 +1542,10 @@ input[name="teachers__slider__r"] {
   .teachers__slider {
     margin-right: 334px;
   }
-  .teachers__slides {
-    width: 900%;
-  }
   .teachers__slide {
     display: flex;
-    flex-wrap: wrap;
+    margin-right: 32px;
     overflow: hidden;
-    width: 10%;
     transition: all 0.5s ease;
   }
   .teacher {

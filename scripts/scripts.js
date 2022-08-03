@@ -1,32 +1,50 @@
 const deviceWidth = window.screen.width;
-console.log(deviceWidth);
+const shiftTeachers = deviceWidth > 767 ? 636: 334;
 
 const slideTeachersRight = () => {
     const slide = document.getElementsByClassName('teachers__slide_1')[0];
     const btn = document.getElementsByClassName('slider__button')[0];
     btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
-    const shift = 20;
     const prevMargin = parseInt(slide.style.marginLeft) || 0;
-    if (prevMargin > (-80)) {
-        slide.style.marginLeft = (prevMargin - shift).toString() + "%";
-        let radioNum = -prevMargin / shift + 2;
-        const radio = document.getElementById('slider__label' + radioNum.toString())
-        radioBgChange(radio);
-        if (prevMargin - shift === -80) {
+    if (prevMargin > -2544) {
+        slide.style.marginLeft = (prevMargin - shiftTeachers).toString() + "px";
+        // let radioNum = -prevMargin / shift + 2;
+        // const radio = document.getElementById('slider__label' + radioNum.toString())
+        // radioBgChange(radio);
+        if ((prevMargin - shiftTeachers === -2544)||(prevMargin - shiftTeachers === -2672)) {
             const btn = document.getElementsByClassName('slider__button')[1];
             btn.style.backgroundImage = 'url(images/slider/arrow-left-disabled.svg)';
             console.log(btn, btn.style.backgroundImage);
         }
     }
 }
-const offset = deviceWidth > 767 ? 0 : 170;
+const slideTeachersLeft = () => {
+    const slide = document.getElementsByClassName('teachers__slide_1')[0];
+    const btn = document.getElementsByClassName('slider__button')[1];
+    btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
+    const prevMargin = parseInt(slide.style.marginLeft) || 0;
+    // const shift = 20;
+    console.log(prevMargin);
+    if (prevMargin < 0) {
+        slide.style.marginLeft = (prevMargin + shiftTeachers).toString() + "px";
+        // let radioNum = -prevMargin / shiftTeachers;
+        // const radio = document.getElementById('slider__label' + radioNum.toString())
+        // radioBgChange(radio);
+        if (prevMargin + shiftTeachers === 0) {
+            const btn = document.getElementsByClassName('slider__button')[0];
+            btn.style.backgroundImage = 'url(images/slider/arrow-left-disabled.svg)';
+            console.log(btn, btn.style.backgroundImage);
+        }
+    }
+}
+const offsetExample = deviceWidth > 767 ? 0 : 170;
 
 const slideExampleRight = () => {
     const slide = document.getElementsByClassName('example_1')[0];
     const btn = document.getElementsByClassName('slider__button')[2];
     btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
     const shift = 272;
-    const prevMargin = parseInt(slide.style.marginLeft) || offset;
+    const prevMargin = parseInt(slide.style.marginLeft) || offsetExample;
     console.log(prevMargin);
     if (prevMargin > -1100) {
         slide.style.marginLeft = (prevMargin - shift).toString() + "px";
@@ -42,7 +60,7 @@ const slideExampleLeft = () => {
     const btn = document.getElementsByClassName('slider__button')[3];
     btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
     const shift = 272;
-    const prevMargin = parseInt(slide.style.marginLeft) || offset;
+    const prevMargin = parseInt(slide.style.marginLeft) || offsetExample;
     console.log(prevMargin);
     if (prevMargin < 532) {
         slide.style.marginLeft = (prevMargin + shift).toString() + "px";
@@ -54,24 +72,7 @@ const slideExampleLeft = () => {
     }
 }
 
-const slideTeachersLeft = () => {
-    const slide = document.getElementsByClassName('teachers__slide_1')[0];
-    const btn = document.getElementsByClassName('slider__button')[1];
-    btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
-    const prevMargin = parseInt(slide.style.marginLeft) || 0;
-    const shift = 20;
-    if (prevMargin < (0)) {
-        slide.style.marginLeft = (prevMargin + shift).toString() + "%";
-        let radioNum = -prevMargin / shift;
-        const radio = document.getElementById('slider__label' + radioNum.toString())
-        radioBgChange(radio);
-        if (prevMargin + shift === 0) {
-            const btn = document.getElementsByClassName('slider__button')[0];
-            btn.style.backgroundImage = 'url(images/slider/arrow-left-disabled.svg)';
-            console.log(btn, btn.style.backgroundImage);
-        }
-    }
-}
+
 
 const slideRadio = () => {
     const slide = document.getElementsByClassName('teachers__slide_1')[0];
