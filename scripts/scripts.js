@@ -11,7 +11,7 @@ const slideTeachersRight = () => {
         // let radioNum = -prevMargin / shift + 2;
         // const radio = document.getElementById('slider__label' + radioNum.toString())
         // radioBgChange(radio);
-        if ((prevMargin - shiftTeachers === -2544)||(prevMargin - shiftTeachers === -2672)) {
+        if ((prevMargin - shiftTeachers === -2544)||(prevMargin - shiftTeachers === -2004)) {
             const btn = document.getElementsByClassName('slider__button')[1];
             btn.style.backgroundImage = 'url(images/slider/arrow-left-disabled.svg)';
             console.log(btn, btn.style.backgroundImage);
@@ -37,7 +37,7 @@ const slideTeachersLeft = () => {
         }
     }
 }
-const offsetExample = deviceWidth > 767 ? 0 : 170;
+const offsetExample = deviceWidth > 767 ? -272 : 170;
 
 const slideExampleRight = () => {
     const slide = document.getElementsByClassName('example_1')[0];
@@ -45,7 +45,7 @@ const slideExampleRight = () => {
     btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
     const shift = 272;
     const prevMargin = parseInt(slide.style.marginLeft) || offsetExample;
-    console.log(prevMargin);
+    console.log(prevMargin, offsetExample);
     if (prevMargin > -1100) {
         slide.style.marginLeft = (prevMargin - shift).toString() + "px";
         if (prevMargin - shift === -1100 ) {
@@ -64,7 +64,7 @@ const slideExampleLeft = () => {
     console.log(prevMargin);
     if (prevMargin < 532) {
         slide.style.marginLeft = (prevMargin + shift).toString() + "px";
-        if (prevMargin + shift === 532) {
+        if (prevMargin - shift === 532) {
             const btn = document.getElementsByClassName('slider__button')[2];
             btn.style.backgroundImage = 'url(images/slider/arrow-left-disabled.svg)';
             console.log(btn, btn.style.backgroundImage);

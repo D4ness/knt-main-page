@@ -1540,17 +1540,25 @@ input[name="teachers__slider__r"] {
     line-height: 48px;
   }
   .teachers__slider {
-    margin-right: 334px;
+    max-width: 334px;
+  }
+  .teachers__slides {
+    width: 1000%;
+    overflow: hidden;
   }
   .teachers__slide {
     display: flex;
     margin-right: 32px;
     overflow: hidden;
+    width: 302px;
     transition: all 0.5s ease;
   }
   .teacher {
     margin-bottom: 32px;
     width: 100%;
+  }
+  .teacher:nth-child(odd) {
+    margin-right: 0;
   }
   .comment {
     width: 100%;
