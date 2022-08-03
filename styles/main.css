@@ -952,11 +952,16 @@ input[name="teachers__slider__r"] {
   line-height: 18px;
   padding: 8px 0 32px;
 }
+.example__link {
+  display: flex;
+  text-decoration: none;
+}
 .example__name {
   margin-left: 16px;
   max-width: 84px;
   font-size: 18px;
   line-height: 22px;
+  color: #2B2D33;
 }
 .map {
   min-height: 988px;
@@ -1060,6 +1065,70 @@ input[name="teachers__slider__r"] {
 }
 #student__radio:checked ~ label div {
   background: #326EEA;
+}
+.photos {
+  position: relative;
+  top: -394px;
+  margin: 0 84px 120px;
+  display: flex;
+}
+.photos__middle {
+  margin: 0 24px 0 76px;
+}
+.photos__alert {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 160px;
+  height: 160px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  transform: rotate(-30deg);
+  background-image: url("../images/photos/alert.svg");
+  color: white;
+}
+.emojis {
+  display: flex;
+  margin: 0 16px 24px;
+}
+.emoji:nth-child(n+2) {
+  margin-left: 16px;
+}
+.photo__bg {
+  margin-top: 196px;
+  width: 300px;
+  height: 292px;
+  background: #326EEA;
+  border-radius: 26px;
+  display: flex;
+  align-items: end;
+  z-index: 0;
+}
+#photo-1 {
+  position: absolute;
+  top: 0;
+  margin-left: 52px;
+  z-index: 3;
+}
+#photo-3 {
+  position: absolute;
+  left: 200px;
+  top: 470px;
+}
+#photo-logo {
+  margin-top: 80px;
+  display: flex;
+  justify-content: end;
+}
+#photo-logo img {
+  width: 348.44px;
+  height: 64px;
+}
+#photo-5 {
+  margin: 24px 0 0 52px;
 }
 .footer {
   position: relative;
