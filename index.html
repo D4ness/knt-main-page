@@ -170,7 +170,7 @@
             <div class="recruit__title">Идёт набор на <span style="color: #F35C22">годовой курс</span></div>
             <div class="recruit__info">
                 <div class="recruit__info__desc">Чем раньше запишетесь,<br>тем выгоднее будет цена</div>
-                <form>
+                <form style="width: 100%;">
                     <input class="recruit__input" type=tel value="+7" maxlength="17">
                     <button class="recruit__button">Оставить заявку</button>
                 </form>
@@ -508,7 +508,7 @@
         <a href="#" class="teachers__link"><span>Узнать о преподавателях</span> <img src="images/ArrowRight.svg"> </a>
     </div>
     <div class="teachers">
-        <div class="teachers__slider">
+        <div class="teachers__slider mobile__hidden">
             <div class="teachers__slides">
                 <input checked type="radio" name="teachers__slider__r" id="teachers__slider__radio1">
                 <input type="radio" name="teachers__slider__r" id="teachers__slider__radio2">
@@ -846,7 +846,7 @@
 <section class="examples">
     <div class="examples__slider">
         <div class="examples__slides">
-            <div class="example example_1 example_white" style="margin-left: -284px">
+            <div class="example example_1 example_white">
                 <div class="example__points">85 и 80 баллов</div>
                 <div class="example__subject">Информатика и математика ЕГЭ</div>
                 <a href="#" class="example__link">
@@ -1042,12 +1042,11 @@
 
     <!--    <div class="photos__wrapper">-->
     <div class="photos__left">
-        <div style="z-index: 5"></div>
         <div class="photo__bg">
             <img src="images/photos/photo-2.svg">
         </div>
         <img id="photo-1" src="images/photos/photo-1.svg">
-        <div style="display: flex;">
+        <div style="display: flex; order: 3">
             <div class="photos__alert">У тебя всё получится<br>❤</div>
             <img id="photo-3" src="images/photos/photo-3.svg">
         </div>
@@ -1061,20 +1060,21 @@
                 <img src="images/photos/emoji-4.svg" class="emoji">
                 <img src="images/photos/emoji-5.svg" class="emoji">
             </div>
-            <div class="mobile hidden">
+            <div class="mobile__hidden">
                 <img src="images/photos/emoji-6.svg" class="emoji">
                 <img src="images/photos/emoji-7.svg" class="emoji">
                 <img src="images/photos/emoji-8.svg" class="emoji">
             </div>
         </div>
         <img id="photo-middle" src="images/photos/photo-middle.svg">
-        <div id="photo-logo"><img src="images/logo.svg"></div>
         <!--        </div>-->
     </div>
     <div class="photos__right">
         <img src="images/photos/photo-4.svg">
-        <img id="photo-5" src="images/photos/photo-5.svg">
+        <img class="mobile__hidden" id="photo-5" src="images/photos/photo-5.svg">
     </div>
+    <div id="photo-logo"><img src="images/logo.svg"></div>
+
 </section>
 <section class="footer">
     <div class="footer__info">

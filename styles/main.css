@@ -938,6 +938,9 @@ input[name="teachers__slider__r"] {
   min-width: 248px;
   margin: 0 12px;
 }
+.example_1 {
+  margin-left: -284px;
+}
 .example_white {
   background: white;
   border: 1.75px solid #F4F4F4;
@@ -1119,7 +1122,9 @@ input[name="teachers__slider__r"] {
   top: 470px;
 }
 #photo-logo {
-  margin-top: 80px;
+  position: absolute;
+  top: 572px;
+  left: 562px;
   display: flex;
   justify-content: end;
 }
@@ -1548,6 +1553,9 @@ input[name="teachers__slider__r"] {
     margin-bottom: 32px;
     width: 100%;
   }
+  .comment__alert {
+    top: 0;
+  }
   .results {
     margin: 0 16px;
   }
@@ -1567,6 +1575,12 @@ input[name="teachers__slider__r"] {
     font-size: 24px;
     line-height: 32px;
     text-align: left;
+  }
+  .examples {
+    margin: 0 16px;
+  }
+  .example_1 {
+    margin-left: 170px;
   }
   .map {
     background: none;
@@ -1628,6 +1642,72 @@ input[name="teachers__slider__r"] {
     margin: 0;
     padding-bottom: 64px;
     text-align: left;
+  }
+  .photos {
+    max-width: 100%;
+    margin: 0 16px 40px;
+    flex-wrap: wrap;
+  }
+  .photos__middle {
+    order: 0;
+    max-width: 100%;
+    margin: 0;
+  }
+  .photos__left {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .photos__right {
+    margin-top: 32px;
+    order: 3;
+    width: 100%;
+  }
+  .photos__right img {
+    width: 100%;
+  }
+  .photos__alert {
+    order: 2;
+  }
+  .photo__bg {
+    order: 1;
+    width: 100%;
+    height: 292px;
+    margin-top: 250px;
+  }
+  .photo__bg img {
+    width: 296px;
+    height: auto;
+  }
+  #photo-1 {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    position: absolute;
+    top: 380px;
+    order: 0;
+  }
+  #photo-3 {
+    width: 174px;
+    position: relative;
+    top: 0;
+    left: 0;
+    order: 0;
+  }
+  #photo-middle {
+    width: 100%;
+    height: auto;
+  }
+  #photo-logo {
+    position: relative;
+    order: 4;
+    margin-top: 64px;
+    top: 0;
+    left: 0;
+  }
+  #photo-logo img {
+    width: 296px;
   }
   .footer {
     margin: 0 16px;
