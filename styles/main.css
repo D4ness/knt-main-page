@@ -743,7 +743,7 @@
 }
 .teachers__slide {
   display: flex;
-  width: 20%;
+  width: 10%;
   transition: all 0.5s ease;
 }
 #teachers__slider__radio1:checked ~ .teachers__slide_1 {
