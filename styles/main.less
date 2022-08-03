@@ -959,6 +959,14 @@ input[name="teachers__slider__r"] {
     background-image: url("../images/slider/arrow-left-disabled.svg");
     cursor: pointer;
 
+    &__wrapper {
+      display: flex;
+      position: absolute;
+      z-index: 3;
+      top: 640px;
+      right: 84px
+    }
+
     &__left__examples {
       background-image: url("../images/slider/arrow-left.svg");
     }
@@ -1928,7 +1936,7 @@ input[name="teachers__slider__r"] {
   }
 
   .teacher {
-    margin-bottom: 32px;
+    margin-bottom: 0;
 
     &:nth-child(odd) {
       margin-right: 0;
@@ -1936,7 +1944,10 @@ input[name="teachers__slider__r"] {
 
     width: 100%;
   }
-
+  .slider__button__wrapper {
+    position: unset;
+    justify-content: center;
+  }
   .comment {
     width: 100%;
     margin: 0;

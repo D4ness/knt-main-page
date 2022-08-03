@@ -1,5 +1,5 @@
 const deviceWidth = window.screen.width;
-const shiftTeachers = deviceWidth > 767 ? 636: 334;
+const shiftTeachers = deviceWidth > 767 ? 636 : 334;
 
 const slideTeachersRight = () => {
     const slide = document.getElementsByClassName('teachers__slide_1')[0];
@@ -11,7 +11,7 @@ const slideTeachersRight = () => {
         // let radioNum = -prevMargin / shift + 2;
         // const radio = document.getElementById('slider__label' + radioNum.toString())
         // radioBgChange(radio);
-        if ((prevMargin - shiftTeachers === -2544)||(prevMargin - shiftTeachers === -2004)) {
+        if ((prevMargin - shiftTeachers === -2544) || (prevMargin === -2004)) {
             const btn = document.getElementsByClassName('slider__button')[1];
             btn.style.backgroundImage = 'url(images/slider/arrow-left-disabled.svg)';
             console.log(btn, btn.style.backgroundImage);
@@ -37,7 +37,16 @@ const slideTeachersLeft = () => {
         }
     }
 }
-const offsetExample = deviceWidth > 767 ? -272 : 170;
+const offsetExample = deviceWidth > 767 ? 0 : 170;
+const exampleLeftSide = deviceWidth > 767 ? 544 : 170;
+const exampleRightSide = deviceWidth > 767 ? -1088 : -2278;
+const slide = document.getElementsByClassName('example_1')[0];
+if (deviceWidth > 767) {
+    slide.style.marginLeft = "0";
+} else {
+    const btn = document.getElementsByClassName('slider__button')[2];
+    btn.style.backgroundImage = 'url(images/slider/arrow-left-disabled.svg)';
+}
 
 const slideExampleRight = () => {
     const slide = document.getElementsByClassName('example_1')[0];
@@ -46,32 +55,33 @@ const slideExampleRight = () => {
     const shift = 272;
     const prevMargin = parseInt(slide.style.marginLeft) || offsetExample;
     console.log(prevMargin, offsetExample);
-    if (prevMargin > -1100) {
+    if (prevMargin > exampleRightSide) {
         slide.style.marginLeft = (prevMargin - shift).toString() + "px";
-        if (prevMargin - shift === -1100 ) {
+        if (prevMargin - shift === exampleRightSide) {
             const btn = document.getElementsByClassName('slider__button')[3];
             btn.style.backgroundImage = 'url(images/slider/arrow-left-disabled.svg)';
             console.log(btn, btn.style.backgroundImage);
         }
     }
 }
+// 0 2278 mobile
 const slideExampleLeft = () => {
     const slide = document.getElementsByClassName('example_1')[0];
     const btn = document.getElementsByClassName('slider__button')[3];
     btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
     const shift = 272;
     const prevMargin = parseInt(slide.style.marginLeft) || offsetExample;
-    console.log(prevMargin);
-    if (prevMargin < 532) {
+    console.log(slide.style.marginLeft);
+    if (prevMargin < exampleLeftSide) {
         slide.style.marginLeft = (prevMargin + shift).toString() + "px";
-        if (prevMargin - shift === 532) {
+        console.log(slide.style.marginLeft, 'ss', prevMargin, shift, prevMargin + shift);
+        if (prevMargin + shift === exampleLeftSide) {
             const btn = document.getElementsByClassName('slider__button')[2];
             btn.style.backgroundImage = 'url(images/slider/arrow-left-disabled.svg)';
             console.log(btn, btn.style.backgroundImage);
         }
     }
 }
-
 
 
 const slideRadio = () => {

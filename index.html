@@ -505,7 +505,7 @@
             изменения в демоверсиях, спецификациях и кодификаторах ФИПИ, записывают видеолекции на понятном
             ученику языке и подбирают актуальные задания экзаменационного формата.
         </div>
-        <a href="#" class="teachers__link"><span>Узнать о преподавателях</span> <img src="images/ArrowRight.svg"> </a>
+        <a href="#" class="teachers__link mobile__hidden"><span>Узнать о преподавателях</span> <img src="images/ArrowRight.svg"> </a>
     </div>
     <div class="teachers">
         <div class="teachers__slider">
@@ -686,7 +686,7 @@
                 </div>
             </div>
             <!--            <div style="display: flex">-->
-            <div class="teachers__slider__navigation">
+            <div class="teachers__slider__navigation mobile__hidden">
                 <label onclick="radioBgChange(this)" style="margin-left: 2px" for="teachers__slider__radio1"
                        class="teachers__slider__navigation__label" id="slider__label1"></label>
                 <label onclick="radioBgChange(this)" for="teachers__slider__radio2"
@@ -702,7 +702,7 @@
                        class="teachers__slider__navigation__label"
                        id="slider__label5"></label>
             </div>
-            <div style="display: flex; position: absolute; z-index: 3; top: 640px; right: 84px">
+            <div class="slider__button__wrapper">
                 <div class="slider__button slider__button__left" style="margin-right: 12px"
                      onclick="slideTeachersLeft()">
                     <!--                    <img class="slider__button__arrow-left" src="images/slider/arrow-left.svg">-->
@@ -712,7 +712,9 @@
                 </div>
             </div>
             <!--            </div>-->
-
+            <a href="#" class="teachers__link desktop__hidden" style="display: block; margin: 40px 0 80px">
+                <span>Узнать о преподавателях</span> <img src="images/ArrowRight.svg">
+            </a>
         </div>
         <!--        <input checked type="radio" class="teachers__slider__radio">-->
     </div>
