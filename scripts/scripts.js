@@ -1,3 +1,6 @@
+const deviceWidth = window.screen.width;
+console.log(deviceWidth);
+
 const slideTeachersRight = () => {
     const slide = document.getElementsByClassName('teachers__slide_1')[0];
     const btn = document.getElementsByClassName('slider__button')[0];
@@ -16,12 +19,14 @@ const slideTeachersRight = () => {
         }
     }
 }
+const offset = deviceWidth > 767 ? 0 : 170;
+
 const slideExampleRight = () => {
     const slide = document.getElementsByClassName('example_1')[0];
     const btn = document.getElementsByClassName('slider__button')[2];
     btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
     const shift = 272;
-    const prevMargin = parseInt(slide.style.marginLeft) || 0;
+    const prevMargin = parseInt(slide.style.marginLeft) || offset;
     console.log(prevMargin);
     if (prevMargin > -1100) {
         slide.style.marginLeft = (prevMargin - shift).toString() + "px";
@@ -37,7 +42,7 @@ const slideExampleLeft = () => {
     const btn = document.getElementsByClassName('slider__button')[3];
     btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
     const shift = 272;
-    const prevMargin = parseInt(slide.style.marginLeft) || 0;
+    const prevMargin = parseInt(slide.style.marginLeft) || offset;
     console.log(prevMargin);
     if (prevMargin < 532) {
         slide.style.marginLeft = (prevMargin + shift).toString() + "px";
