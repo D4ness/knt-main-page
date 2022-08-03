@@ -909,6 +909,10 @@ input[name="teachers__slider__r"] {
   width: 160px;
   height: 160px;
 }
+.comment__margin {
+  margin-top: 64px;
+  max-width: 316px;
+}
 .examples {
   position: relative;
   top: -394px;
@@ -1089,8 +1093,7 @@ input[name="teachers__slider__r"] {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  transform: rotate(-30deg);
-  background-image: url("../images/photos/alert.svg");
+  background-image: url("../images/photos/alert-full.svg");
   color: white;
 }
 .emojis {
@@ -1105,7 +1108,7 @@ input[name="teachers__slider__r"] {
   width: 300px;
   height: 292px;
   background: #326EEA;
-  border-radius: 26px;
+  border-radius: 30px;
   display: flex;
   align-items: end;
   z-index: 0;
@@ -1552,6 +1555,19 @@ input[name="teachers__slider__r"] {
   .teacher {
     margin-bottom: 32px;
     width: 100%;
+  }
+  .comment {
+    width: 100%;
+    margin: 0;
+    max-width: none;
+  }
+  .comment__margin {
+    margin-top: 40px;
+    max-width: none;
+  }
+  .comment__body {
+    margin: 0;
+    max-width: none;
   }
   .comment__alert {
     top: 0;

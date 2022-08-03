@@ -493,7 +493,7 @@
         <a href="#" class="license__link">Смотреть на сайте Рособрнадзора<img
                 src="images/ArrowRight.svg"></a>
     </div>
-    <div style="display: flex; align-items: end;">
+    <div style="display: flex; justify-content: end; width: 100%">
         <img class="mobile__hidden" src="images/license.svg">
         <img class="desktop__hidden" src="images/license-mobile.svg">
     </div>
@@ -719,7 +719,7 @@
                 <div class="comment">
                     <div style="display: flex">
                         <div class="comment__title">100 баллов</div>
-                        <img src="images/comments/emoji1.svg">
+                        <img style="order: 6;" src="images/comments/emoji1.svg">
                     </div>
                     <div class="comment__subject">Информатика ЕГЭ</div>
                     <div class="comment__body">На ЕГЭ я рассчитывала на 86-92 балла, нервничала, боялась, а когда пришёл
@@ -737,18 +737,14 @@
             <div>
                 <div class="comment comment_white">
                     <div style="display: flex">
-                        <div class="comment__title">100 баллов</div>
-                        <img src="images/comments/emoji1.svg">
+                        <div class="comment__title">91 балл</div>
                     </div>
                     <div class="comment__subject">Информатика ЕГЭ</div>
-                    <div class="comment__body">На ЕГЭ я рассчитывала на 86-92 балла, нервничала, боялась, а когда пришёл
-                        результат не поверила - 100. Учитывая, что изначально я порог не переходила, коллектив
-                        Континуума
-                        совершил чудо.
+                    <div class="comment__body">Преподаватели просто класс: профессиональные в своём деле, с чувством юмора, так что 2 часа пролетают незаметно, но плодотворно.
                     </div>
                 </div>
                 <a href="#" class="comment__poster">
-                    <img src="images/comments/student1.svg" style="padding-right: 8px">
+                    <img src="images/comments/student-karpova.svg" style="padding-right: 8px">
                     <span>Анна Карпова</span>
                     <img src="images/comments/vk-icon.svg" style="padding-left: 4px">
                 </a>
@@ -756,13 +752,13 @@
         </div>
         <div class="col-md-3 col-sm-12">
             <div>
-                <div class="comment" style="margin-top: 64px;  max-width: 316px;">
+                <div class="comment comment__margin">
                     <div style="display: flex">
                         <div class="comment__title">100, 99, 98<br>и 92 балла</div>
-                        <img src="images/comments/emoji1.svg">
+                        <img style="order: 6;" src="images/comments/emoji3.svg">
                     </div>
                     <div class="comment__subject">Физика, математика, информатика и русский язык ЕГЭ</div>
-                    <div class="comment__body" style="max-width: 248px;">Здесь превосходная атмосфера и очень
+                    <div class="comment__body">Здесь превосходная атмосфера и очень
                         внимательные
                         преподаватели, которые
                         очень
@@ -775,18 +771,18 @@
                     </div>
                 </div>
                 <a href="#" class="comment__poster">
-                    <img src="images/comments/student1.svg" style="padding-right: 8px">
+                    <img src="images/comments/student-okutin.svg" style="padding-right: 8px">
                     <span>Денис Окутин</span>
                     <img src="images/comments/vk-icon.svg" style="padding-left: 4px">
                 </a>
             </div>
         </div>
-        <div class="col-md-3" style="margin-top: 64px;  max-width: 316px;">
+        <div class="col-md-3 comment__margin">
             <div>
-                <div class="comment comment_white">
+                <div class="comment comment_white comment__margin">
                     <div class="comment__title" style="padding-right: 0">Отзыв мамы ;)</div>
                     <div class="comment__subject">Информатика и математика ЕГЭ</div>
-                    <div class="comment__body" style="max-width: 248px;">К выбору образовательных курсов подошла очень
+                    <div class="comment__body comment__body__width" ]>К выбору образовательных курсов подошла очень
                         ответственно. Звонила,
                         спрашивала,
                         уточняла. Почему остановились на Континуум? Общение с педагогами показало их высокую
@@ -798,7 +794,7 @@
                     </div>
                 </div>
                 <a href="#" class="comment__poster">
-                    <img src="images/comments/student1.svg" style="padding-right: 8px">
+                    <img src="images/comments/student-stenina.svg" style="padding-right: 8px">
                     <span>Жанна Стенина</span>
                     <img src="images/comments/vk-icon.svg" style="padding-left: 4px">
                 </a>
@@ -809,7 +805,7 @@
                 <div class="comment">
                     <div style="display: flex">
                         <div class="comment__title">100 и 92<br>балла</div>
-                        <img src="images/comments/emoji1.svg">
+                        <img style="order: 6;" src="images/comments/emoji2.svg">
                     </div>
                     <div class="comment__subject">Физика и информатика ЕГЭ</div>
                     <div class="comment__body">Преподаватель будет давать вам экзаменационные задания, сложность которых
@@ -821,7 +817,7 @@
                     </div>
                 </div>
                 <a href="#" class="comment__poster">
-                    <img src="images/comments/student1.svg" style="padding-right: 8px">
+                    <img src="images/comments/student-shaikhanov.svg" style="padding-right: 8px">
                     <span>Артём Шайханов</span>
                     <img src="images/comments/vk-icon.svg" style="padding-left: 4px">
                 </a>
@@ -1047,7 +1043,8 @@
         </div>
         <img id="photo-1" src="images/photos/photo-1.svg">
         <div style="display: flex; order: 3">
-            <div class="photos__alert">У тебя всё получится<br>❤</div>
+<!--            <div class="photos__alert">У тебя всё получится<br>❤</div>-->
+            <div class="photos__alert"></div>
             <img id="photo-3" src="images/photos/photo-3.svg">
         </div>
     </div>

@@ -1122,6 +1122,11 @@ input[name="teachers__slider__r"] {
     width: 160px;
     height: 160px;
   }
+
+  &__margin {
+    margin-top: 64px;
+    max-width: 316px;
+  }
 }
 
 .examples {
@@ -1157,9 +1162,11 @@ input[name="teachers__slider__r"] {
   width: 248px;
   min-width: 248px;
   margin: 0 12px;
+
   &_1 {
     margin-left: -284px;
   }
+
   &_white {
     background: white;
     border: 1.75px solid #F4F4F4;
@@ -1332,8 +1339,8 @@ input[name="teachers__slider__r"] {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    transform: rotate(-30deg);
-    background-image: url("../images/photos/alert.svg");
+    //transform: rotate(-30deg);
+    background-image: url("../images/photos/alert-full.svg");
     color: white;
   }
 }
@@ -1354,7 +1361,7 @@ input[name="teachers__slider__r"] {
   width: 300px;
   height: 292px;
   background: #326EEA;
-  border-radius: 26px;
+  border-radius: 30px;
   display: flex;
   align-items: end;
   z-index: 0;
@@ -1920,9 +1927,28 @@ input[name="teachers__slider__r"] {
     margin-bottom: 32px;
     width: 100%;
   }
-  .comment__alert {
-    top: 0;
+
+  .comment {
+    width: 100%;
+    margin: 0;
+    max-width: none;
+
+    &__margin {
+      margin-top: 40px;
+      max-width: none;
+    }
+    &__body {
+      margin: 0;
+      max-width: none;
+    }
+    &__alert {
+      top: 0;
+    }
+    &__poster {
+      //margin-bottom: 40px;
+    }
   }
+
   .results {
     margin: 0 16px;
 
@@ -1947,15 +1973,18 @@ input[name="teachers__slider__r"] {
       text-align: left;
     }
   }
+
   .examples {
     margin: 0 16px;
     //&__slider {
     //  width: 100%;
     //}
   }
+
   .example_1 {
-      margin-left: 170px;
+    margin-left: 170px;
   }
+
   .map {
     background: none;
     margin: 0 16px;
@@ -2052,10 +2081,12 @@ input[name="teachers__slider__r"] {
       margin-top: 32px;
       order: 3;
       width: 100%;
+
       & img {
         width: 100%;
       }
     }
+
     &__alert {
       order: 2;
     }
@@ -2101,6 +2132,7 @@ input[name="teachers__slider__r"] {
     margin-top: 64px;
     top: 0;
     left: 0;
+
     & img {
       width: 296px;
     }
