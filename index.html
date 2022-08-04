@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <script defer src="scripts/validation.js"></script>
     <script defer src="scripts/scripts.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ"></script>
     <meta name="viewport" content="width=device-width">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -949,7 +950,8 @@
     </div>
 </section>
 <section class="map">
-    <img class="map__location mobile__hidden" src="images/map/location.svg">
+<!--    <img class="map__location mobile__hidden" src="images/map/location.svg">-->
+    <div id="map"></div>
     <div class="map__info">
         <div class="map__info__address">г. Екатеринбург, ул. Толмачёва 17, 1 этаж</div>
         <div class="map__info__extra-infos">
@@ -1110,5 +1112,52 @@
         <div class="footer__years">© 2018–2022 Континуум</div>
     </div>
 </section>
+<script>
+    var myMap;
+
+    // Дождёмся загрузки API и готовности DOM.
+    ymaps.ready(init);
+
+    function init () {
+
+        myMap = new ymaps.Map('map', {
+            controls: ['zoomControl'],
+            center: [56.838105, 60.609588],
+            zoom: 17
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+            myMap.behaviors.disable('scrollZoom'),
+
+            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+            ),
+
+            myPlacemark = new ymaps.Placemark([56.838105, 60.609588], {
+                hintContent: 'просп. Ленина, 36, 1 этаж',
+                balloonContent: 'просп. Ленина, 36, 1 этаж'
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: 'images/map/location.svg',
+                iconImageSize: [90, 120],
+                iconImageOffset: [-30, -65]
+            });
+
+
+        myMap.geoObjects
+            .add(myPlacemark);
+
+        const offset = 5;
+        var pixelCenter = myMap.getGlobalPixelCenter(coordinates);
+        pixelCenter = [
+            pixelCenter[0] - 10,
+            pixelCenter[1]
+        ];
+        var geoCenter = myMap.options.get('projection').fromGlobalPixels(pixelCenter, myMap.getZoom());
+        myMap.setCenter(geoCenter);
+    }
+
+</script>
 </body>
 </html>

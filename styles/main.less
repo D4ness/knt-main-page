@@ -1211,8 +1211,8 @@ input[name="teachers__slider__r"] {
   width: 100%;
   position: relative;
   top: @price-offset+@license-offset;
-  padding: 120px 84px;
-  background-image: url("../images/map/map.svg");
+  padding: 0;
+  //background-image: url("../images/map/map.svg");
   color: white;
 
   &__info {
@@ -1221,7 +1221,9 @@ input[name="teachers__slider__r"] {
     height: 748px;
     background: #203567;
     border-radius: 26px;
-    position: relative;
+    position: absolute;
+    top: 120px;
+    left: 84px;
 
     &__address {
       font-weight: 700;
@@ -1270,6 +1272,11 @@ input[name="teachers__slider__r"] {
     top: 386px;
     left: 968px;
   }
+}
+
+#map {
+  width: 100%;
+  height: 988px;
 }
 
 .questions {
@@ -1944,10 +1951,12 @@ input[name="teachers__slider__r"] {
 
     width: 100%;
   }
+
   .slider__button__wrapper {
     position: unset;
     justify-content: center;
   }
+
   .comment {
     width: 100%;
     margin: 0;
@@ -2010,14 +2019,18 @@ input[name="teachers__slider__r"] {
 
   .map {
     background: none;
-    margin: 0 16px;
+    margin: 0 0 64px;
     padding: 0;
     width: auto;
 
     &__info {
-      width: 100%;
+      //max-width: 100%;
+      width: auto;
       height: auto;
       padding: 32px 16px 40px;
+      top: 0;
+      left: 0;
+      margin: 0 16px;
 
       &__address {
         font-size: 30px;
@@ -2037,7 +2050,9 @@ input[name="teachers__slider__r"] {
       }
     }
   }
-
+  #map {
+    height: 1164px;
+  }
   .questions {
     margin: 0 16px;
 
