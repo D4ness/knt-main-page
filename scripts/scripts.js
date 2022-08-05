@@ -38,11 +38,13 @@ const slideTeachersLeft = () => {
     }
 }
 const offsetExample = deviceWidth > 767 ? 0 : 170;
-const exampleLeftSide = deviceWidth > 767 ? 544 : 170;
-const exampleRightSide = deviceWidth > 767 ? -1088 : -2278;
+// const exampleLeftSide = deviceWidth > 767 ? 544 : 170;
+const exampleLeftSide = deviceWidth > 767 ? 908 : 170;
+// const exampleRightSide = deviceWidth > 767 ? -1088 : -2278;
+const exampleRightSide = deviceWidth > 767 ? -997 : -2278;
 const slide = document.getElementsByClassName('example_1')[0];
 if (deviceWidth > 767) {
-    slide.style.marginLeft = "0";
+    slide.style.marginLeft = "92px";
 } else {
     const btn = document.getElementsByClassName('slider__button')[2];
     btn.style.backgroundImage = 'url(images/slider/arrow-left-disabled.svg)';
@@ -85,8 +87,8 @@ const slideExampleLeft = () => {
 
 
 const slideRadio = () => {
-    const slide = document.getElementsByClassName('teachers__slide_1')[0];
-    const prevMargin = slide.style.marginLeft;
+    const slideE = document.getElementsByClassName('teachers__slide_1')[0];
+    const prevMargin = slideE.style.marginLeft;
     console.log(prevMargin);
     // slideTeachersRight();
 }

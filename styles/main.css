@@ -853,7 +853,6 @@ input[name="teachers__slider__r"] {
 }
 .results__link {
   display: block;
-  max-width: 384px;
   text-decoration: none;
   margin: 0 auto;
 }
@@ -862,6 +861,7 @@ input[name="teachers__slider__r"] {
 }
 .results__link,
 .questions__button {
+  width: fit-content;
   color: white;
   padding: 6px 24px;
   background: #326EEA;
@@ -923,22 +923,30 @@ input[name="teachers__slider__r"] {
 .examples {
   position: relative;
   top: -394px;
-  margin: 0 84px;
 }
 .examples__slider {
+  user-select: none;
+  touch-action: pan-y;
   overflow: hidden;
-  max-width: 1064px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+.examples__slider img {
+  poiner-events: none;
+}
+.examples__slider.grab {
+  cursor: grab;
+}
+.examples__slider.grabbing {
+  cursor: grabbing;
+}
 .examples__slides {
-  width: 200%;
-  height: 100%;
   display: flex;
 }
 .example {
+  flex-shrink: 0;
   height: fit-content;
   transition: all 0.5s ease;
   background: #F1F6FF;

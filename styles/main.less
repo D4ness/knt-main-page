@@ -1056,7 +1056,7 @@ input[name="teachers__slider__r"] {
 
   &__link {
     display: block;
-    max-width: 384px;
+    //max-width: 384px;
     text-decoration: none;
     margin: 0 auto;
 
@@ -1068,6 +1068,7 @@ input[name="teachers__slider__r"] {
 }
 
 .results__link, .questions__button {
+  width: fit-content;
   color: white;
   padding: 6px 24px;
   background: #326EEA;
@@ -1140,27 +1141,40 @@ input[name="teachers__slider__r"] {
 .examples {
   position: relative;
   top: @price-offset+@license-offset;
-  margin: 0 84px;
+  //margin: 0 84px;
 
   &__slider {
     //display: flex;
+    user-select: none;
+    touch-action: pan-y;
     overflow: hidden;
-    max-width: 1064px;
+    //max-width: 1064px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     flex-direction: column;
+
+    & img {
+      poiner-events: none;
+    }
+    &.grab {
+      cursor: grab;
+    }
+    &.grabbing {
+      cursor: grabbing;
+    }
   }
 
   &__slides {
-    width: 200%;
-    height: 100%;
+    //width: 200%;
+    //height: 100%;
     display: flex;
   }
 }
 
 .example {
   //width: 10%;
+  flex-shrink: 0;
   height: fit-content;
   transition: all 0.5s ease;
   background: #F1F6FF;
