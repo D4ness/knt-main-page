@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+    <script src="scripts/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <div class="menu-mobile">
@@ -84,6 +85,8 @@
     <img class="header__logo mobile__hidden" src="images/logo.svg" alt="logo">
     <div class="header__menu header__menu_desktop" id="menu_desktop"
          style="display: flex; justify-content: space-between">
+        <div style="width: 100%; display: flex; flex-direction: column; align-items: end">
+        <div style="display:flex; justify-content: space-between; flex: auto; width: 100%">
         <nav class="navbar">
             <a href="#" class="navbar__link">ЕГЭ
                 <!--                <img class="navbar__arrow" src="images/ege_CaretDoubleDown.svg" alt="Стрелка">-->
@@ -98,17 +101,57 @@
             <a href="#" class="navbar__link mobile__hidden">Преподаватели</a>
         </nav>
         <div class="header__menu__contacts">
-            <div><img src="images/location.svg"><span style="color: #326EEA;margin: 0 22px 0 4px">Екб</span></div>
+            <div class="header__menu__city" onclick="showCityWindow()">
+                <img src="images/location.svg">
+                <span style="color: #326EEA;margin: 0 22px 0 4px">Екб</span>
+            </div>
             <div class="mobile__hidden">
                 <a class="header__menu__number" href="tel: +79923466545">+7 992 346-65-45</a>
-                <div class="header__menu__time">на связи 9–21:00</div>
             </div>
             <a href="#" class="mobile__hidden">
                 <img class="header__profile" src="images/profile_icon.svg">
             </a>
         </div>
+        </div>
+            <div class="header__menu__time mobile__hidden">на связи 9–21:00</div>
+
+        </div>
     </div>
 </header>
+<div id="modal-w__city" class="modal-w__wrapper">
+    <!--     onclick="document.querySelector('.modal-w__wrapper').style.display = 'none';"-->
+
+    <div class="modal-w">
+        <div class="modal-w__content">
+            <div class="modal-w__title-wrapper">
+                <div class="modal-w__title">Выберите город</div>
+                <img onclick="document.querySelector('.modal-w__wrapper').style.display = 'none';"
+                     class="modal-w__cross"
+                     src="images/mobile/cross.svg"/>
+            </div>
+
+            <form class="modal-w__form">
+                <div style="display: flex; margin: 24px 0; align-items: center">
+                    <div class="price__period__option" style="margin: 0 32px 0 0">
+                        <input checked class="price__period__radio" type="radio" name="modal-city" id="modal-city-ekb">
+                        <label class="price__period__label" for="modal-city-ekb">
+                            <div class="period__label__circle"></div>
+                        </label>
+                        <div class="price__period__name">Екатеринбург</div>
+                    </div>
+                    <div class="price__period__option" style="margin: 0">
+                        <input class="price__period__radio" type="radio" name="modal-city" id="modal-city-chel">
+                        <label class="price__period__label" for="modal-city-chel">
+                            <div class="period__label__circle"></div>
+                        </label>
+                        <div class="price__period__name">Челябинск</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
 <section class="wrapper">
     <div class="announce">
         <div class="announce__block"><img src="images/fire-emoji.svg" alt="emoji">
@@ -117,17 +160,6 @@
     </div>
     <div class="page-title">
         Подготовка к <span class="page-title__span" style="color: #326EEA">ЕГЭ 2023</span>
-        <!--        <ul class="wave-border__ul">-->
-        <!--            <li class="wave-border__li"></li>-->
-        <!--            <li class="wave-border__li"></li>-->
-        <!--            <li class="wave-border__li"></li>-->
-        <!--            <li class="wave-border__li"></li>-->
-        <!--            <li class="wave-border__li"></li>-->
-        <!--            <li class="wave-border__li"></li>-->
-        <!--            <li class="wave-border__li"></li>-->
-        <!--            <li class="wave-border__li"></li>-->
-        <!--            <li class="wave-border__li"></li>-->
-        <!--        </ul>-->
         <br>по всем предметам
     </div>
     <div style="display: flex; flex-direction: column">
@@ -207,6 +239,27 @@
         </div>
     </div>
 </section>
+<div id="modal-w__download" class="modal-w__wrapper">
+    <!--     onclick="document.querySelector('.modal-w__wrapper').style.display = 'none';"-->
+
+    <div class="modal-w">
+        <div class="modal-w__content">
+            <div class="modal-w__title-wrapper">
+                <div class="modal-w__title">Пришлем вам план занятий</div>
+                <img onclick="document.querySelector('.modal-w__wrapper').style.display = 'none';"
+                     class="modal-w__cross"
+                     src="images/mobile/cross.svg"/>
+            </div>
+
+            <form class="modal-w__form">
+                <input id="modal-w-tel" class="questions__tel" type="tel" value="+7" maxlength="17"/>
+                <button id="modal-w-btn" class="questions__button" type="button">Запросить</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+<!--<div class="modal__download__shadow"></div>-->
 <section class="education-info">
     <div>
         <div class="education-info__title">Эффективный и удобный формат обучения</div>
@@ -219,10 +272,10 @@
             <img src="images/education-info/plan.svg">
             <div class="education-info__plan">
                 Годовой план занятий.pdf
-                <a href="#" class="education-info__plan__download">
+                <button class="education-info__plan__download" onclick="showDownloadWindow()">
                     <img style="margin-right: 8px" src="images/education-info/download-icon.svg">
                     Скачать
-                </a>
+                </button>
             </div>
         </div>
     </div>
@@ -264,6 +317,7 @@
         </div>
     </div>
 </section>
+<div style="position: relative">
 <section class="benefits">
     <div class="benefits__block">
         <div class="benefits__block__title" style="padding-top: 48px">
@@ -303,10 +357,9 @@
             <br><span style="background: #60A01C;border-radius: 24px; padding: 0 10px">отвечает на вопросы</span>
         </div>
     </div>
-    </div>
     <div class="benefits__block">
         <div style="width: 100%; display: flex; justify-content: end">
-            <img class="mobile__hidden" style="transform: scale(1, -1); margin-bottom: 32px" src="images/screen.svg">
+            <img class="mobile__hidden document-img" style="transform: scale(1, -1); margin-bottom: 32px" src="images/screen.svg">
             <img class="desktop__hidden" style="transform: scale(1, -1); margin-bottom: 24px"
                  src="images/screen-mobile.svg">
         </div>
@@ -494,11 +547,12 @@
         <a href="#" class="license__link">Смотреть на сайте Рособрнадзора<img
                 src="images/ArrowRight.svg"></a>
     </div>
-    <div style="display: flex; justify-content: end; width: 100%">
-        <img class="mobile__hidden" src="images/license.svg">
+    <div style="display: flex; justify-content: end; align-items: end; width: 100%;">
+        <img class="mobile__hidden document-img" src="images/license.svg">
         <img class="desktop__hidden" src="images/license-mobile.svg">
     </div>
 </section>
+</div>
 <section class="teachers-wrapper">
     <div class="teachers__description">
         <div class="teachers__title">Методисты и разработчики <span>курсов</span></div>
@@ -943,7 +997,7 @@
                 </div>
             </div>
         </div>
-        <div style="display: flex; margin: 64px auto 120px">
+        <div style="display: flex; margin: 64px auto 120px" class="mobile__hidden">
             <div class="slider__button slider__button__left slider__button__left__examples" style="margin-right: 12px"
                  onclick="slideExampleLeft()">
                 <!--                    <img class="slider__button__arrow-left" src="images/slider/arrow-left.svg">-->
@@ -1058,7 +1112,7 @@
     <!--    <div class="photos__wrapper">-->
     <div class="photos__left">
         <div class="photo__bg">
-            <img src="images/photos/photo-2.svg">
+            <img id="photo-2" src="images/photos/photo-2.svg">
         </div>
         <img id="photo-1" src="images/photos/photo-1.svg">
         <div style="display: flex; order: 3">
@@ -1076,7 +1130,7 @@
                 <img src="images/photos/emoji-4.svg" class="emoji">
                 <img src="images/photos/emoji-5.svg" class="emoji">
             </div>
-            <div class="mobile__hidden">
+            <div class="mobile__hidden tablet-hidden">
                 <img src="images/photos/emoji-6.svg" class="emoji">
                 <img src="images/photos/emoji-7.svg" class="emoji">
                 <img src="images/photos/emoji-8.svg" class="emoji">
@@ -1086,7 +1140,7 @@
         <!--        </div>-->
     </div>
     <div class="photos__right">
-        <img src="images/photos/photo-4.svg">
+        <img id="photo-4" src="images/photos/photo-4.svg">
         <img class="mobile__hidden" id="photo-5" src="images/photos/photo-5.svg">
     </div>
     <div id="photo-logo"><img src="images/logo.svg"></div>
@@ -1165,7 +1219,7 @@
         slides = document.querySelector('.examples__slides'),
         sliderTrack = slider.querySelector('.examples__slider-track'),
         allSlides = document.querySelectorAll('.example'),
-        slideWidth = allSlides[0].offsetWidth,
+        slideWidth = allSlides[0].offsetWidth + 24,
         slideIndex = 0,
         posInit = 0,
         posX1 = 0,
@@ -1183,7 +1237,7 @@
         posThreshold = slideWidth * .35,
         trfRegExp = /[-0-9.]+(?=px)/,
         slide = () => {
-            if (transition) {
+            if (transition && deviceWidth <= 767) {
                 sliderTrack.style.transition = 'transform .5s';
             }
             sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0px, 0px)`;
@@ -1213,7 +1267,7 @@
                 slides.classList.add('grabbing');
             }
         },
-        swipeAction = function() {
+        swipeAction = function () {
 
             let evt = getEvent(),
                 style = sliderTrack.style.transform,
@@ -1265,7 +1319,7 @@
             }
 
         },
-        swipeEnd = function() {
+        swipeEnd = function () {
             posFinal = posInit - posX1;
 
             isScroll = false;
@@ -1300,7 +1354,7 @@
             }
 
         },
-        setTransform = function(transform, comapreTransform) {
+        setTransform = function (transform, comapreTransform) {
             if (transform >= comapreTransform) {
                 if (transform > comapreTransform) {
                     sliderTrack.style.transform = `translate3d(${comapreTransform}px, 0px, 0px)`;
@@ -1308,7 +1362,7 @@
             }
             allowSwipe = false;
         },
-        reachEdge = function() {
+        reachEdge = function () {
             transition = false;
             swipeEnd();
             allowSwipe = true;
@@ -1335,5 +1389,6 @@
     //     slide();
     // });
 </script>
+
 </body>
 </html>
