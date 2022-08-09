@@ -2,7 +2,7 @@ const deviceWidth = window.screen.width;
 const shiftTeachers = deviceWidth > 768 ? 636 : 334;
 
 const slideTeachersRight = () => {
-    if (deviceWidth > 768) {
+    // if (deviceWidth > 768) {
         let prevNum = 0;
         const slideT = document.getElementsByClassName('teachers__slide_1')[0];
         const btn = document.getElementsByClassName('slider__button')[0];
@@ -19,11 +19,11 @@ const slideTeachersRight = () => {
                 console.log(btn, btn.style.backgroundImage);
             }
         }
-    }
+    // }
 }
 
 const slideTeachersLeft = () => {
-    if (deviceWidth > 768) {
+    // if (deviceWidth > 768) {
         let prevNum = 0;
         const slideT = document.getElementsByClassName('teachers__slide_1')[0];
         const btn = document.getElementsByClassName('slider__button')[1];
@@ -42,7 +42,7 @@ const slideTeachersLeft = () => {
                 // console.log(btn, btn.style.backgroundImage);
             }
         }
-    }
+    // }
 }
 const radioBgChangeColor = (el) => {
     let number = 0;
