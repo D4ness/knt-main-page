@@ -1,17 +1,30 @@
 @font-face {
   font-family: "PT Root UI";
   font-style: normal;
+  font-weight: 300;
+  src: local("PT Root UI"),
+  url("../fonts/PT Root UI_Light.otf") format("otf")
+}
+@font-face {
+  font-family: "PT Root UI";
+  font-style: normal;
   font-weight: 400;
   src: local("PT Root UI"),
-  url("/fonts/PT Root UI_Regular.otf") format("otf")
+  url("../fonts/PT Root UI_Regular.otf") format("otf")
 }
-
 @font-face {
   font-family: "PT Root UI";
   font-style: normal;
   font-weight: 500;
   src: local("PT Root UI"),
-  url("/fonts/PT Root UI_Medium.otf") format("otf")
+  url("../fonts/PT Root UI_Medium.otf") format("otf")
+}
+@font-face {
+  font-family: "PT Root UI";
+  font-style: normal;
+  font-weight: 700;
+  src: local("PT Root UI"),
+  url("../fonts/PT Root UI_Bold.otf") format("otf")
 }
 
 *,
@@ -314,7 +327,7 @@
   font-size: 20px;
   line-height: 24px;
   background-image: url("../images/discount-bg.svg");
-  transform: rotate(-30deg);
+  //transform: rotate(-30deg);
 }
 
 .universities {
@@ -983,7 +996,12 @@
     //display: flex;
     overflow: hidden;
     max-width: 604px + 32px;
+    user-select: none;
+    touch-action: pan-y;
     //max-height: 690px;
+    &__track {
+
+    }
     &__navigation {
       //position: absolute;
       display: flex;
@@ -1235,6 +1253,8 @@ input[name="teachers__slider__r"] {
     top: 670px;
     width: 160px;
     height: 160px;
+    left: 180px;
+    z-index: -1;
   }
 
   &__margin {
@@ -1591,13 +1611,13 @@ input[name="teachers__slider__r"] {
 
 @media (max-width: 1300px) {
   .wrapper, .education-info {
-    padding-left: 40px !important;
-    padding-right: 40px !important;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .teachers-wrapper, .results, .questions, .footer {
-    margin-right: 40px !important;
-    margin-left: 40px !important;
+    margin-right: 40px;
+    margin-left: 40px;
   }
 
   .header {
@@ -1713,8 +1733,8 @@ input[name="teachers__slider__r"] {
 
   .photos {
     width: fit-content;
-    margin-right: 40px !important;
-    margin-left: 40px !important;
+    margin-right: 40px;
+    margin-left: 40px;
 
     &__right {
       max-width: 250px;

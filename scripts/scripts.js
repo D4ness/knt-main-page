@@ -88,9 +88,9 @@ const radioBgChange = (el) => {
 
 const offsetExample = deviceWidth > 767 ? 0 : 170;
 // const exampleLeftSide = deviceWidth > 767 ? 544 : 170;
-const exampleLeftSide = deviceWidth > 767 ? 1452 : 170;
-// const exampleRightSide = deviceWidth > 767 ? -1088 : -2278;
+const exampleLeftSide = deviceWidth > 767 ? 1632 : 170;
 const exampleRightSide = deviceWidth > 767 ? -1632 : -2278;
+// const exampleRightSide = deviceWidth > 767 ? 1632 : -2278;
 const slideE = document.getElementsByClassName('example_1')[0];
 if (deviceWidth > 767) {
     // slideE.style.marginLeft = "92px";

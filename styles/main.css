@@ -1,14 +1,26 @@
 @font-face {
   font-family: "PT Root UI";
   font-style: normal;
+  font-weight: 300;
+  src: local("PT Root UI"), url("../fonts/PT Root UI_Light.otf") format("otf");
+}
+@font-face {
+  font-family: "PT Root UI";
+  font-style: normal;
   font-weight: 400;
-  src: local("PT Root UI"), url("/fonts/PT Root UI_Regular.otf") format("otf");
+  src: local("PT Root UI"), url("../fonts/PT Root UI_Regular.otf") format("otf");
 }
 @font-face {
   font-family: "PT Root UI";
   font-style: normal;
   font-weight: 500;
-  src: local("PT Root UI"), url("/fonts/PT Root UI_Medium.otf") format("otf");
+  src: local("PT Root UI"), url("../fonts/PT Root UI_Medium.otf") format("otf");
+}
+@font-face {
+  font-family: "PT Root UI";
+  font-style: normal;
+  font-weight: 700;
+  src: local("PT Root UI"), url("../fonts/PT Root UI_Bold.otf") format("otf");
 }
 *,
 *:after,
@@ -242,7 +254,6 @@
   font-size: 20px;
   line-height: 24px;
   background-image: url("../images/discount-bg.svg");
-  transform: rotate(-30deg);
 }
 .universities {
   margin-bottom: 120px;
@@ -792,6 +803,8 @@
 .teachers__slider {
   overflow: hidden;
   max-width: 636px;
+  user-select: none;
+  touch-action: pan-y;
 }
 .teachers__slider__navigation {
   display: flex;
@@ -980,6 +993,8 @@ input[name="teachers__slider__r"] {
   top: 670px;
   width: 160px;
   height: 160px;
+  left: 180px;
+  z-index: -1;
 }
 .comment__margin {
   margin-top: 64px;
@@ -1266,15 +1281,15 @@ input[name="teachers__slider__r"] {
 @media (max-width: 1300px) {
   .wrapper,
   .education-info {
-    padding-left: 40px !important;
-    padding-right: 40px !important;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   .teachers-wrapper,
   .results,
   .questions,
   .footer {
-    margin-right: 40px !important;
-    margin-left: 40px !important;
+    margin-right: 40px;
+    margin-left: 40px;
   }
   .header {
     padding: 0 40px;
@@ -1366,8 +1381,8 @@ input[name="teachers__slider__r"] {
   }
   .photos {
     width: fit-content;
-    margin-right: 40px !important;
-    margin-left: 40px !important;
+    margin-right: 40px;
+    margin-left: 40px;
   }
   .photos__right {
     max-width: 250px;

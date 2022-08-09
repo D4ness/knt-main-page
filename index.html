@@ -892,7 +892,7 @@
                     <img src="images/comments/vk-icon.svg" style="padding-left: 4px">
                 </a>
             </div>
-            <div class="comment__alert">Проверь<br>отзыв, нажав<br>на иконку<br>соц сети</div>
+            <div class="comment__alert"></div>
             <div style="margin-top: 36px">
                 <div class="comment comment_white">
                     <div style="display: flex">
@@ -998,8 +998,8 @@
             </div>
         </div>
         <div style="display: flex; margin: 64px auto 120px" class="mobile__hidden">
-            <div class="slider__button slider__button__left slider__button__left__examples" style="margin-right: 12px"
-                 onclick="slideExampleLeft()">
+            <div class="slider__button slider__button__left slider__button__left__examples"
+                 style="margin-right: 12px" onclick="slideExampleLeft()">
                 <!--                    <img class="slider__button__arrow-left" src="images/slider/arrow-left.svg">-->
             </div>
             <div class="slider__button slider__button_right" onclick="slideExampleRight()">
@@ -1215,6 +1215,7 @@
 
 </script>
 <script>
+    // examples-slider
     let slider = document.querySelector('.examples__slider'),
         slides = document.querySelector('.examples__slides'),
         sliderTrack = slider.querySelector('.examples__slider-track'),
@@ -1236,8 +1237,9 @@
         lastTrf = --slides.length * slideWidth,
         posThreshold = slideWidth * .35,
         trfRegExp = /[-0-9.]+(?=px)/,
+        deviceWidthM = window.screen.width,
         slide = () => {
-            if (transition && deviceWidth <= 767) {
+            if (transition && deviceWidthM <= 767) {
                 sliderTrack.style.transition = 'transform .5s';
             }
             sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0px, 0px)`;
@@ -1247,7 +1249,7 @@
 
         swipeStart = function () {
             let evt = getEvent();
-            if (allowSwipe) {
+            if (allowSwipe && deviceWidthM <= 767) {
                 transition = true;
 
                 nextTrf = (slideIndex + 1) * -slideWidth;
@@ -1280,7 +1282,7 @@
             posY1 = evt.clientY;
 
             // определение действия свайп или скролл
-            if (!isSwipe && !isScroll) {
+            if (!isSwipe && !isScroll  && deviceWidthM <= 767) {
                 let posY = Math.abs(posY2);
                 if (posY > 7 || posX2 === 0) {
                     isScroll = true;
@@ -1289,7 +1291,7 @@
                     isSwipe = true;
                 }
             }
-            if (isSwipe) {
+            if (isSwipe && deviceWidthM <= 767) {
                 // запрет ухода влево на первом слайде
                 if (slideIndex === 0) {
                     if (posInit < posX1) {
@@ -1301,7 +1303,7 @@
                 }
 
                 // запрет ухода вправо на последнем слайде
-                if (slideIndex === --slides.length) {
+                if (slideIndex === --slides.length && deviceWidthM <= 767) {
                     if (posInit > posX1) {
                         setTransform(transform, lastTrf);
                         return;
@@ -1311,7 +1313,7 @@
                 }
 
                 // запрет протаскивания дальше одного слайда
-                if (posInit > posX1 && transform < nextTrf || posInit < posX1 && transform > prevTrf) {
+                if ((posInit > posX1 && transform < nextTrf || posInit < posX1 && transform > prevTrf)  && deviceWidthM <= 767) {
                     reachEdge();
                     return;
                 }
@@ -1333,7 +1335,7 @@
             slides.classList.add('grab');
             slides.classList.remove('grabbing');
 
-            if (allowSwipe) {
+            if (allowSwipe && deviceWidthM <= 767) {
                 if (Math.abs(posFinal) > posThreshold) {
                     if (posInit < posX1) {
                         slideIndex--;
@@ -1354,10 +1356,10 @@
             }
 
         },
-        setTransform = function (transform, comapreTransform) {
-            if (transform >= comapreTransform) {
-                if (transform > comapreTransform) {
-                    sliderTrack.style.transform = `translate3d(${comapreTransform}px, 0px, 0px)`;
+        setTransform = function (transform, compareTransform) {
+            if (transform >= compareTransform && deviceWidthM <= 767) {
+                if (transform > compareTransform) {
+                    sliderTrack.style.transform = `translate3d(${compareTransform}px, 0px, 0px)`;
                 }
             }
             allowSwipe = false;
@@ -1389,6 +1391,134 @@
     //     slide();
     // });
 </script>
+<script>
+    let subjects = document.querySelectorAll('.price__subject');
+    let text = document.querySelector('.price__discount__title');
+    let discount = document.querySelector('.price__discount');
+    // const changePrice = () => {
+    //     let count = document.querySelectorAll('input.price__subject__checkbox:checked').length;
+    //     console.log('count:', count, discount);
+    //     switch (count){
+    //         case 0: {
+    //             discount.firstChild.innerText = '';
+    //         }
+    //         case 1: {
+    //             discount.firstChild.innerHtml = '2-й предмет';
+    //             discount.lastChild.innerText = '−25%';
+    //         }
+    //         case 2: {
+    //             discount.firstChild.innerText = '3-й предмет';
+    //             discount.lastChild.innerText = '−45%';
+    //         }
+    //
+    //     }
+    // }
+    // subjects.forEach(subject => subject.addEventListener ('click', changePrice));
+    $('.price__subject').click(function () {
+        $count = $('.price__subject__checkbox:checkbox:checked').length;
+        if ($count == 0) {
+            $('.price__discount__title').html("");
+            $('input:radio:checked').trigger('click');
+        } else if ($count == 1) {
+            $('text').html("Вы можете выбрать 2–й предмет с 19% скидкой");
+            $('input:radio:checked').trigger('click');
+        } else if ($count == 2) {
+            $('#object-text').html("Вы можете выбрать 3–й предмет с 37% скидкой");
+            $('input:radio:checked').trigger('click');
+        } else if ($count == 3) {
+            $(text).html("Вы можете выбрать 4–й предмет — стоимость рассчитывается индивидуально");
+            $('.price__subject__checkbox:checkbox:not(:checked)').each(function () {
+                $(this).attr("disabled", false); //сделал только здесь, но ведь 2 галки сразу не снимет
+            });
+            $('input:radio:checked').trigger('click');
+        } else if ($count == 4) {
+            $('#object-text').html("Выбрано максимальное кол-во предметов");
+            $('input:checkbox:not(:checked)').each(function () {
+                $(this).attr("disabled", true);
+            });
+            $('input:radio:checked').trigger('click');
+        }
+        if ($('input:radio:checked').length == 0) {
+            if ($count == 0) {
+                $('#result-price').html('Выберите предметы и период оплаты');
+            } else {
+                $('#result-price').html('Выберите период оплаты');
+            }
+        }
+    });
+    // $('#defaultRadio1').on('click', function() { помесячная
+    //     if ($('input:checkbox:checked').length == 1) {
+    //         $('#result-price').html("Стоимость одного предмета – 150 ₽ / ак. час (выгода 9%)<br><br><span style=\"color: #FF644B;\">Зафиксировать стоимость:</span>");
+    //     } else if ($('input:checkbox:checked').length == 2) {
+    //         $('#result-price').html('Стоимость одного предмета – 150 ₽ / ак. час (выгода 9%)<br>Стоимость второго предмета – 119 ₽ / ак. час (выгода 28%)<br><br><span style=\"color: #FF644B;\">Зафиксировать стоимость:</span>');
+    //     } else if ($('input:checkbox:checked').length == 3) {
+    //         $('#result-price').html('Стоимость одного предмета – 150 ₽ / ак. час (выгода 9%)<br>Стоимость второго предмета – 119 ₽ / ак. час (выгода 28%)<br>Стоимость третьего предмета – 89 ₽ / ак. час (выгода 46%)<br><br><span style=\"color: #FF644B;\">Зафиксировать стоимость:</span>');
+    //     } else if ($('input:checkbox:checked').length == 4) {
+    //         $('#result-price').html('Стоимость одного предмета – 150 ₽ / ак. час (выгода 9%)<br>Стоимость второго предмета – 119 ₽ / ак. час (выгода 28%)<br>Стоимость третьего предмета – 89 ₽ / ак. час (выгода 46%)<br>Стоимость четвертого предмета – рассчитывается индивидуально<br><br><span style=\"color: #FF644B;\">Зафиксировать стоимость:</span>');
+    //     } else if ($('input:checkbox:checked').length == 0) {
+    //         $('#result-price').html('Выберите предметы');
+    //     }
+    //     if ($('input:checkbox:checked').length == 0){
+    //         $('.form-row').removeClass("show")
+    //     } else {
+    //         $('.form-row').addClass("show")
+    //     }
+    // });
+    // $('#defaultRadio2').on('click', function() {//полугодовая
+    //     if ($('input:checkbox:checked').length == 1) {
+    //         $('#result-price').html('Стоимость одного предмета – 142 ₽ / ак. час (выгода 14%)<br><br><span style=\"color: #FF644B;\">Зафиксировать стоимость:</span>');
+    //     } else if ($('input:checkbox:checked').length == 2) {
+    //         $('#result-price').html('Стоимость одного предмета – 142 ₽ / ак. час (выгода 14%)<br>Стоимость второго предмета – 110 ₽ / ак. час (выгода 33%)<br><br><span style=\"color: #FF644B;\">Зафиксировать стоимость:</span>');
+    //     } else if ($('input:checkbox:checked').length == 3) {
+    //         $('#result-price').html('Стоимость одного предмета – 142 ₽ / ак. час (выгода 14%)<br>Стоимость второго предмета – 110 ₽ / ак. час (выгода 33%)<br>Стоимость третьего предмета – 81 ₽ / ак. час (выгода 51%)<br><br><span style=\"color: #FF644B;\">Зафиксировать стоимость:</span>');
+    //     } else if ($('input:checkbox:checked').length == 4) {
+    //         $('#result-price').html('Стоимость одного предмета – 142 ₽ / ак. час (выгода 14%)<br>Стоимость второго предмета – 110 ₽ / ак. час (выгода 33%)<br>Стоимость третьего предмета – 81 ₽ / ак. час (выгода 51%)<br>Стоимость четвертого предмета – рассчитывается индивидуально<br><br><span style=\"color: #FF644B;\">Зафиксировать стоимость:</span>');
+    //     } else if ($('input:checkbox:checked').length == 0) {
+    //         $('#result-price').html('Выберите предметы');
+    //     }
+    //     if ($('input:checkbox:checked').length == 0){
+    //         $('.form-row').removeClass("show")
+    //     } else {
+    //         $('.form-row').addClass("show")
+    //     }
+    // });
+    // $('#defaultRadio3').on('click', function() {//годовая
+    //     if ($('input:checkbox:checked').length == 1) {
+    //         $('#result-price').html('Стоимость одного предмета – 135 ₽ / ак. час (выгода 18%)<br><br><span style=\"color: #FF644B;\">Зафиксировать стоимость:</span>');
+    //     } else if ($('input:checkbox:checked').length == 2) {
+    //         $('#result-price').html('Стоимость одного предмета – 135 ₽ / ак. час (выгода 18%)<br>Стоимость второго предмета – 104 ₽ / ак. час (выгода 37%)<br><br><span style=\"color: #FF644B;\">Зафиксировать стоимость:</span>');
+    //     } else if ($('input:checkbox:checked').length == 3) {
+    //         $('#result-price').html('Стоимость одного предмета – 135 ₽ / ак. час (выгода 18%)<br>Стоимость второго предмета – 104 ₽ / ак. час (выгода 37%)<br>Стоимость третьего предмета – 74 ₽ / ак. час (выгода 55%)<br><br><span style=\"color: #FF644B;\">Зафиксировать стоимость:</span>');
+    //     } else if ($('input:checkbox:checked').length == 4) {
+    //         $('#result-price').html('Стоимость одного предмета – 135 ₽ / ак. час (выгода 18%)<br>Стоимость второго предмета – 104 ₽ / ак. час (выгода 37%)<br>Стоимость третьего предмета – 74 ₽ / ак. час (выгода 55%)<br>Стоимость четвертого предмета – рассчитывается индивидуально<br><br><span style=\"color: #FF644B;\">Зафиксировать стоимость:</span>');
+    //     } else if ($('input:checkbox:checked').length == 0) {
+    //         $('#result-price').html('Выберите предметы');
+    //     }
+    //     if ($('input:checkbox:checked').length == 0){
+    //         $('.form-row').removeClass("show")
+    //     } else {
+    //         $('.form-row').addClass("show")
+    //     }
+    // });
+    // $('#defaultRadio4').on('click', function() {//понедельная
+    //     if ($('input:checkbox:checked').length == 1) {
+    //         $('#result-price').html('Стоимость одного предмета – 165 ₽ / ак. час (выгода 0%)<br><br><span style=\"color: #FF644B;\">Зафиксировать стоимость:</span>');
+    //     } else if ($('input:checkbox:checked').length == 2) {
+    //         $('#result-price').html('Стоимость одного предмета – 165 ₽ / ак. час (выгода 0%)<br>Стоимость второго предмета – 134 ₽ / ак. час (выгода 19%)<br><br><span style=\"color: #FF644B;\">Зафиксировать стоимость:</span>');
+    //     } else if ($('input:checkbox:checked').length == 3) {
+    //         $('#result-price').html('Стоимость одного предмета – 165 ₽ / ак. час (выгода 0%)<br>Стоимость второго предмета – 134 ₽ / ак. час (выгода 19%)<br>Стоимость третьего предмета – 104 ₽ / ак. час (выгода 37%)<br><br><span style=\"color: #FF644B;\">Зафиксировать стоимость:</span>');
+    //     } else if ($('input:checkbox:checked').length == 4) {
+    //         $('#result-price').html('Стоимость одного предмета – 165 ₽ / ак. час (выгода 0%)<br>Стоимость второго предмета – 134 ₽ / ак. час (выгода 19%)<br>Стоимость третьего предмета – 104 ₽ / ак. час (выгода 37%)<br>Стоимость четвертого предмета – рассчитывается индивидуально<br><br><span style=\"color: #FF644B;\">Зафиксировать стоимость:</span>');
+    //     } else if ($('input:checkbox:checked').length == 0) {
+    //         $('#result-price').html('Выберите предметы');
+    //     }
+    //     if ($('input:checkbox:checked').length == 0){
+    //         $('.form-row').removeClass("show")
+    //     } else {
+    //         $('.form-row').addClass("show")
+    //     }
+    // });
 
+</script>
 </body>
 </html>
