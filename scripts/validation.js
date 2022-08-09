@@ -79,6 +79,9 @@ number2.addEventListener('keyup', formatToPhone);
 const number3 = document.getElementsByClassName('questions__tel')[0];
 number3.addEventListener('keydown', deleteWrongNumberSymbols);
 number3.addEventListener('keyup', formatToPhone);
+const numberModal = document.getElementsByClassName('questions__tel')[0];
+numberModal.addEventListener('keydown', deleteWrongNumberSymbols);
+numberModal.addEventListener('keyup', formatToPhone);
 
 // const inputPass = document.querySelector('.login__pass_pass');
 // inputPass.addEventListener('keydown', deleteWrongPassSymbols);
