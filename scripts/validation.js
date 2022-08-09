@@ -76,7 +76,7 @@ number1.addEventListener('keyup', formatToPhone);
 const number2 = document.getElementsByClassName('check__input')[0];
 number2.addEventListener('keydown', deleteWrongNumberSymbols);
 number2.addEventListener('keyup', formatToPhone);
-const number3 = document.getElementsByClassName('questions__tel')[0];
+const number3 = document.getElementsByClassName('questions__tel')[1];
 number3.addEventListener('keydown', deleteWrongNumberSymbols);
 number3.addEventListener('keyup', formatToPhone);
 const numberModal = document.getElementsByClassName('questions__tel')[0];

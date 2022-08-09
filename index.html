@@ -26,14 +26,14 @@
                 <label class="price__period__label" for="city-ekb">
                     <div class="period__label__circle"></div>
                 </label>
-                <div class="price__period__name">Екатеринбург</div>
+                <label for="city-ekb" class="price__period__name">Екатеринбург</label>
             </div>
             <div class="price__period__option" style="margin: 0">
                 <input class="price__period__radio" type="radio" name="city" id="city-chel">
                 <label class="price__period__label" for="city-chel">
                     <div class="period__label__circle"></div>
                 </label>
-                <div class="price__period__name">Челябинск</div>
+                <label for="city-chel" class="price__period__name">Челябинск</label>
             </div>
         </div>
     </div>
@@ -75,7 +75,7 @@
         <img class="header__logo" src="images/logo.svg" alt="logo">
         <div>
             <a href="#"><img class="header__profile" src="images/profile_icon.svg"></a>
-            <img onclick="showHideMenu(this)" class="header__burger desktop__hidden" src="images/mobile/btn-menu.svg"
+            <img onclick="showHideMenu(this)" id="burger" class="header__burger desktop__hidden" src="images/mobile/btn-menu.svg"
                  alt="burger">
             <img onclick="showHideMenu(this)" style="display: none" class="header__burger desktop__hidden"
                  src="images/mobile/cross.svg"
@@ -97,8 +97,8 @@
             <a href="#" class="navbar__link">10 класс
                 <!--                <img class="navbar__arrow" src="images/10_CaretDoubleDown.svg" alt="Стрелка">-->
             </a>
-            <a href="#" class="navbar__link mobile__hidden">Отзывы</a>
-            <a href="#" class="navbar__link mobile__hidden">Преподаватели</a>
+            <a href="#reviews-hook" class="navbar__link mobile__hidden">Отзывы</a>
+            <a href="#teachers-hook" class="navbar__link mobile__hidden">Преподаватели</a>
         </nav>
         <div class="header__menu__contacts">
             <div class="header__menu__city" onclick="showCityWindow()">
@@ -137,14 +137,14 @@
                         <label class="price__period__label" for="modal-city-ekb">
                             <div class="period__label__circle"></div>
                         </label>
-                        <div class="price__period__name">Екатеринбург</div>
+                        <label for="modal-city-ekb" class="price__period__name">Екатеринбург</label>
                     </div>
                     <div class="price__period__option" style="margin: 0">
                         <input class="price__period__radio" type="radio" name="modal-city" id="modal-city-chel">
                         <label class="price__period__label" for="modal-city-chel">
                             <div class="period__label__circle"></div>
                         </label>
-                        <div class="price__period__name">Челябинск</div>
+                        <label for="modal-city-chel" class="price__period__name">Челябинск</label>
                     </div>
                 </div>
             </form>
@@ -202,7 +202,7 @@
         <div class="recruit">
             <div class="recruit__title">Идёт набор на <span style="color: #F35C22">годовой курс</span></div>
             <div class="recruit__info">
-                <div class="recruit__info__desc">Чем раньше запишетесь,<br>тем выгоднее будет цена</div>
+                <div class="recruit__info__desc">Чем раньше запишетесь,<br class="mobile__hidden">тем выгоднее будет цена</div>
                 <form style="width: 100%;">
                     <input class="recruit__input" type=tel value="+7" maxlength="17">
                     <button class="recruit__button">Оставить заявку</button>
@@ -246,7 +246,7 @@
         <div class="modal-w__content">
             <div class="modal-w__title-wrapper">
                 <div class="modal-w__title">Пришлем вам план занятий</div>
-                <img onclick="document.querySelector('.modal-w__wrapper').style.display = 'none';"
+                <img onclick="document.querySelector('#modal-w__download').style.display = 'none';"
                      class="modal-w__cross"
                      src="images/mobile/cross.svg"/>
             </div>
@@ -531,7 +531,7 @@
                 <button class="check__button">Зафиксировать стоимость</button>
             </form>
             <div style="padding: 8px 0; color: #2B2D33; text-align: center">или</div>
-            <a href="#" class="check__link">Задать вопрос</a>
+            <a href="#questions-hook" class="check__link">Задать вопрос</a>
             <div class="check__rights">Отправляя форму, вы даете согласие на
                 <a href="#">обработку персональных данных</a></div>
         </div>
@@ -553,7 +553,7 @@
     </div>
 </section>
 </div>
-<section class="teachers-wrapper">
+<section class="teachers-wrapper" id="teachers-hook">
     <div class="teachers__description">
         <div class="teachers__title">Методисты и разработчики <span>курсов</span></div>
         <div class="teachers__subtitle">Ежегодно разрабатывают и обновляют наши учебные материалы, изучают
@@ -776,7 +776,7 @@
         <!--        <input checked type="radio" class="teachers__slider__radio">-->
     </div>
 </section>
-<section class="results">
+<section class="results" id="reviews-hook">
     <div class="results__title">Результаты наших учеников</div>
     <div class="results__subtitle">Выпускники победили экзамены вместе с нами и поступили в ВУЗ мечты. Наша средняя
         оценка по отзывам на Флампе 5 из 5!
@@ -1061,7 +1061,7 @@
         </div>
     </div>
 </section>
-<section class="questions">
+<section class="questions" id="questions-hook">
     <div class="questions__title">Есть <span style="color: #F35C22">вопросы?</span></div>
     <div class="questions__subtitle">Мы перезвоним в течение рабочего дня и расскажем о курсах</div>
     <form>
@@ -1074,14 +1074,14 @@
                         <label class="price__period__label" for="parent__radio">
                             <div class="period__label__circle"></div>
                         </label>
-                        <div class="price__period__name">Родитель</div>
+                        <label for="parent__radio" class="price__period__name">Родитель</label>
                     </div>
                     <div class="price__period__option">
                         <input class="price__period__radio" type="radio" name="who" id="student__radio">
                         <label class="price__period__label" for="student__radio">
                             <div class="period__label__circle"></div>
                         </label>
-                        <div class="price__period__name">Ученик</div>
+                        <label for="student__radio" class="price__period__name">Ученик</label>
                     </div>
 
                 </div>
@@ -1103,8 +1103,6 @@
             </div>
 
         </div>
-
-
     </form>
 </section>
 <section class="photos">

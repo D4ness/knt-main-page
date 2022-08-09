@@ -1,8 +1,8 @@
 const deviceWidth = window.screen.width;
-const shiftTeachers = deviceWidth > 767 ? 636 : 334;
+const shiftTeachers = deviceWidth > 768 ? 636 : 334;
 
 const slideTeachersRight = () => {
-    if (deviceWidth > 767) {
+    if (deviceWidth > 768) {
         let prevNum = 0;
         const slideT = document.getElementsByClassName('teachers__slide_1')[0];
         const btn = document.getElementsByClassName('slider__button')[0];
@@ -23,7 +23,7 @@ const slideTeachersRight = () => {
 }
 
 const slideTeachersLeft = () => {
-    if (deviceWidth > 767) {
+    if (deviceWidth > 768) {
         let prevNum = 0;
         const slideT = document.getElementsByClassName('teachers__slide_1')[0];
         const btn = document.getElementsByClassName('slider__button')[1];
@@ -86,13 +86,13 @@ const radioBgChange = (el) => {
     // slideRadio();
 }
 
-const offsetExample = deviceWidth > 767 ? 0 : 170;
-// const exampleLeftSide = deviceWidth > 767 ? 544 : 170;
-const exampleLeftSide = deviceWidth > 767 ? 1632 : 170;
-const exampleRightSide = deviceWidth > 767 ? -1632 : -2278;
-// const exampleRightSide = deviceWidth > 767 ? 1632 : -2278;
+const offsetExample = deviceWidth > 768 ? 0 : 170;
+// const exampleLeftSide = deviceWidth > 768 ? 544 : 170;
+const exampleLeftSide = deviceWidth > 768 ? 1632 : 170;
+const exampleRightSide = deviceWidth > 768 ? -1632 : -2278;
+// const exampleRightSide = deviceWidth > 768 ? 1632 : -2278;
 const slideE = document.getElementsByClassName('example_1')[0];
-if (deviceWidth > 767) {
+if (deviceWidth > 768) {
     // slideE.style.marginLeft = "92px";
 } else {
     const btn = document.getElementsByClassName('slider__button')[2];
@@ -100,7 +100,7 @@ if (deviceWidth > 767) {
 }
 
 const slideExampleRight = () => {
-    if (deviceWidth > 767) {
+    if (deviceWidth > 768) {
         const slideE = document.getElementsByClassName('example_1')[0];
         const btn = document.getElementsByClassName('slider__button')[2];
         btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
@@ -119,7 +119,7 @@ const slideExampleRight = () => {
 }
 // 0 2278 mobile
 const slideExampleLeft = () => {
-    if (deviceWidth > 767) {
+    if (deviceWidth > 768) {
         const slideE = document.getElementsByClassName('example_1')[0];
         const btn = document.getElementsByClassName('slider__button')[3];
         btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
@@ -181,8 +181,13 @@ const showDownloadWindow = () => {
 const modalC = document.getElementById('modal-w__city');
 
 const showCityWindow = () => {
+    if (deviceWidth > 768 ) {
+        modalC.style.display = 'flex';
 
-    modalC.style.display = 'flex';
+    } else {
+        const burger = document.querySelector('#burger');
+        showHideMenu(burger);
+    }
 }
 
 

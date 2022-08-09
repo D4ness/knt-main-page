@@ -398,6 +398,7 @@
 }
 
 .modal-w {
+  transition: all 0.5s linear;
   &__wrapper {
     position: fixed;
     top: 0;
@@ -446,7 +447,7 @@
     font-weight: 700;
     font-size: 30px;
     line-height: 32px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   &__title-wrapper {
@@ -473,7 +474,7 @@
   background: #326EEA;
 }
 
-#modal-city-ekb:checked ~ div {
+#modal-city-ekb:checked ~ label {
   color: #326EEA;
 }
 
@@ -481,7 +482,7 @@
   background: #326EEA;
 }
 
-#modal-city-chel:checked ~ div {
+#modal-city-chel:checked ~ label {
   color: #326EEA;
 }
 
@@ -725,7 +726,6 @@
   #input-liter:checked ~ .price__subject__name,
   #input-eng:checked ~ .price__subject__name {
     background-color: #326EEA;
-
     border-radius: 24px;
   }
 
@@ -1253,8 +1253,6 @@ input[name="teachers__slider__r"] {
     top: 670px;
     width: 160px;
     height: 160px;
-    left: 180px;
-    z-index: -1;
   }
 
   &__margin {
@@ -1597,7 +1595,7 @@ input[name="teachers__slider__r"] {
   background: #326EEA;
 }
 
-#city-ekb:checked ~ div {
+#city-ekb:checked ~ label {
   color: #326EEA;
 }
 
@@ -1605,7 +1603,7 @@ input[name="teachers__slider__r"] {
   background: #326EEA;
 }
 
-#city-chel:checked ~ div {
+#city-chel:checked ~ label {
   color: #326EEA;
 }
 
@@ -1764,7 +1762,7 @@ input[name="teachers__slider__r"] {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .desktop__hidden {
     visibility: visible;
     position: relative;
@@ -1850,6 +1848,7 @@ input[name="teachers__slider__r"] {
 
       &__contacts {
         margin-right: 0;
+        width: auto;
       }
     }
 
@@ -1967,6 +1966,7 @@ input[name="teachers__slider__r"] {
       margin: 32px 16px 30px;
       font-size: 44px;
       line-height: 48px;
+      width: auto;
     }
 
     &__info {
@@ -1979,6 +1979,7 @@ input[name="teachers__slider__r"] {
         font-size: 24px;
         line-height: 26px;
         padding-bottom: 32px;
+        width: auto;
       }
 
       & form {
@@ -2268,6 +2269,8 @@ input[name="teachers__slider__r"] {
 
     &__alert {
       top: 0;
+      left: 180px;
+      z-index: -1;
     }
 
     &__poster {
