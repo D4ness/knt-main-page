@@ -1554,6 +1554,7 @@ input[name="teachers__slider__r"] {
     padding-bottom: 12px;
   }
   .recruit {
+    height: fit-content;
     order: 1;
     min-height: 480px;
     flex-wrap: wrap;
@@ -1591,17 +1592,21 @@ input[name="teachers__slider__r"] {
     margin: 16px 0;
   }
   .recruit__discount {
-    left: 100px;
-    top: 1000px;
+    position: relative;
+    margin: -140px auto 0;
+    left: 0;
+    top: 80px;
   }
   .universities {
     margin-bottom: 80px;
+  }
+  .universities__icons {
+    justify-content: center;
   }
   .universities__title {
     text-align: left;
     font-size: 24px;
     line-height: 32px;
-    max-width: 296px;
   }
   .education-info {
     padding: 0 16px;
@@ -1617,7 +1622,6 @@ input[name="teachers__slider__r"] {
     width: auto;
     font-size: 18px;
     line-height: 22px;
-    max-width: 296px;
   }
   .education-info__plan {
     font-size: 20px;
@@ -1631,6 +1635,9 @@ input[name="teachers__slider__r"] {
   .education-info__seasons {
     margin-left: 0 !important;
     margin-top: 64px;
+  }
+  .season {
+    width: 50%;
   }
   .season:nth-child(odd) {
     padding-right: 20px;
@@ -1803,7 +1810,7 @@ input[name="teachers__slider__r"] {
   }
   .comment__alert {
     top: 0;
-    left: 180px;
+    left: 160px;
     z-index: -1;
   }
   .results {
@@ -1873,7 +1880,7 @@ input[name="teachers__slider__r"] {
     line-height: 26px;
     max-width: 296px;
   }
-  .questions__name-wrapper {
+  .questions form > div > div {
     width: 100%;
   }
   .questions__tel {

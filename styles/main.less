@@ -1956,6 +1956,7 @@ input[name="teachers__slider__r"] {
   }
 
   .recruit {
+    height: fit-content;
     order: 1;
     min-height: 480px;
     flex-wrap: wrap;
@@ -1999,20 +2000,23 @@ input[name="teachers__slider__r"] {
     }
 
     &__discount {
-      left: 100px;
+      position: relative;
+      margin: -140px auto 0;
+      left: 0;
       //top: 873px;
-      top: 1000px;
+      top: 80px;
     }
   }
 
   .universities {
     margin-bottom: 80px;
-
+    &__icons {
+      justify-content: center;
+    }
     &__title {
       text-align: left;
       font-size: 24px;
       line-height: 32px;
-      max-width: 296px;
     }
   }
 
@@ -2031,7 +2035,7 @@ input[name="teachers__slider__r"] {
       width: auto;
       font-size: 18px;
       line-height: 22px;
-      max-width: 296px;
+      //max-width: 296px;
     }
 
     &__plan {
@@ -2053,10 +2057,10 @@ input[name="teachers__slider__r"] {
   }
 
   .season {
+    width: 50%;
     &:nth-child(odd) {
       padding-right: 20px;
     }
-
     &__title {
       font-size: 30px;
       line-height: 32px;
@@ -2072,7 +2076,6 @@ input[name="teachers__slider__r"] {
         height: 32px;
       }
     }
-
 
     &__list {
       padding-bottom: 42px;
@@ -2270,7 +2273,7 @@ input[name="teachers__slider__r"] {
 
     &__alert {
       top: 0;
-      left: 180px;
+      left: 160px;
       z-index: -1;
     }
 
@@ -2366,8 +2369,7 @@ input[name="teachers__slider__r"] {
       line-height: 26px;
       max-width: 296px;
     }
-
-    &__name-wrapper {
+    & form>div>div {
       width: 100%;
     }
 
