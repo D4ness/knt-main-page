@@ -572,6 +572,18 @@
 .price #input-eng:checked ~ label img {
   display: flex;
 }
+.price #input-math:disabled ~ label,
+.price #input-rus:disabled ~ label,
+.price #input-it:disabled ~ label,
+.price #input-chemistry:disabled ~ label,
+.price #input-soc:disabled ~ label,
+.price #input-bio:disabled ~ label,
+.price #input-phys:disabled ~ label,
+.price #input-history:disabled ~ label,
+.price #input-liter:disabled ~ label,
+.price #input-eng:disabled ~ label {
+  opacity: 0.8;
+}
 .price #input-math:checked ~ .price__subject__name,
 .price #input-rus:checked ~ .price__subject__name,
 .price #input-it:checked ~ .price__subject__name,
@@ -624,14 +636,13 @@
   background: #326EEA;
 }
 .price__discount {
-  width: 218px;
-  height: 56px;
   background: #F35C22;
   border-radius: 10px;
   padding: 0 12px;
   display: flex;
   align-items: center;
   margin-top: 50px;
+  width: fit-content;
 }
 .price__discount__title {
   max-width: 62px;
@@ -643,6 +654,11 @@
   line-height: 48px;
   margin: 4px 0 4px 16px;
 }
+.price__discount__subtitle {
+  font-size: 20px;
+  line-height: 21px;
+  padding-left: 6px;
+}
 .price__border {
   width: 0;
   height: 324px;
@@ -652,8 +668,7 @@
 }
 .price__check {
   width: 326px;
-  height: 596px;
-  background-image: url("../images/check.svg");
+  background: white;
   padding: 0 24px;
   margin-left: 50px;
 }
@@ -676,12 +691,18 @@
   height: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
+.check__subject {
+  color: #2B2D33;
+}
 .check__subject div {
   color: #2B2D33;
   font-weight: 400;
   font-size: 19px;
   line-height: 21px;
   font-family: 'PT Mono', monospace;
+}
+.check__subject__price {
+  text-align: right;
 }
 .check__input,
 .check__button {
@@ -730,7 +751,7 @@
   line-height: 18px;
   text-align: center;
   color: #8F9AB3;
-  margin-top: 24px;
+  margin: 24px 0 50px;
 }
 .check__rights a {
   text-decoration: none;

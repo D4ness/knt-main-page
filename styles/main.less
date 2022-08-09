@@ -715,6 +715,19 @@
     display: flex;
   }
 
+  #input-math:disabled ~ label,
+  #input-rus:disabled ~ label,
+  #input-it:disabled ~ label,
+  #input-chemistry:disabled ~ label,
+  #input-soc:disabled ~ label,
+  #input-bio:disabled ~ label,
+  #input-phys:disabled ~ label,
+  #input-history:disabled ~ label,
+  #input-liter:disabled ~ label,
+  #input-eng:disabled ~ label {
+    opacity: 0.8;
+  }
+
   #input-math:checked ~ .price__subject__name,
   #input-rus:checked ~ .price__subject__name,
   #input-it:checked ~ .price__subject__name,
@@ -780,15 +793,15 @@
   }
 
   &__discount {
-    width: 218px;
-    height: 56px;
+    //width: 218px;
+    //height: 56px;
     background: #F35C22;
     border-radius: 10px;
     padding: 0 12px;
     display: flex;
     align-items: center;
     margin-top: 50px;
-
+    width: fit-content;
     &__title {
       max-width: 62px;
       font-size: 16px;
@@ -799,6 +812,11 @@
       font-size: 44px;
       line-height: 48px;
       margin: 4px 0 4px 16px;
+    }
+    &__subtitle {
+      font-size: 20px;
+      line-height: 21px;
+      padding-left: 6px;
     }
   }
 
@@ -812,8 +830,9 @@
 
   &__check {
     width: 326px;
-    height: 596px;
-    background-image: url("../images/check.svg");
+    //height: 596px;
+    //background-image: url("../images/check.svg");
+    background: white;
     padding: 0 24px;
     margin-left: 50px;
   }
@@ -844,12 +863,16 @@
   }
 
   &__subject {
+    color: #2B2D33;
     & div {
       color: #2B2D33;
       font-weight: 400;
       font-size: 19px;
       line-height: 21px;
       font-family: 'PT Mono', monospace;
+    }
+    &__price {
+      text-align: right;
     }
   }
 
@@ -904,7 +927,7 @@
     line-height: 18px;
     text-align: center;
     color: #8F9AB3;
-    margin-top: 24px;
+    margin: 24px 0 50px;
 
     & a {
       text-decoration: none;
