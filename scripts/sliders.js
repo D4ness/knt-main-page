@@ -1,4 +1,6 @@
 // examples-slider
+const deviceWidth = window.screen.width;
+
 let slider = document.querySelector('.examples__slider'),
     slides = document.querySelector('.examples__slides'),
     sliderTrack = slider.querySelector('.examples__slider-track'),
