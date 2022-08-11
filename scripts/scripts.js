@@ -157,12 +157,16 @@ const showHideMenu = (el) => {
         document.querySelector('.announce').style.marginTop = '124px';
 
     } else if (menu.classList.value === 'menu-mobile active') {
-        document.querySelector('.menu-mobile').classList.remove('active');
-        el.style.display = 'none';
-        document.getElementsByClassName('header__burger')[0].style.display = 'inline';
-        document.getElementsByClassName('header')[0].style.position = 'relative';
-        document.querySelector('.announce').style.marginTop = '0';
+        hideMenu(el);
     }
+}
+const hideMenu = (el) => {
+    console.log(el);
+    document.querySelector('.menu-mobile').classList.remove('active');
+    el.style.display = 'none';
+    document.getElementsByClassName('header__burger')[0].style.display = 'inline';
+    document.getElementsByClassName('header')[0].style.position = 'relative';
+    document.querySelector('.announce').style.marginTop = '0';
 }
 
 const showHideNavList = (el) => {
@@ -188,6 +192,12 @@ const showCityWindow = () => {
         const burger = document.querySelector('#burger');
         showHideMenu(burger);
     }
+}
+
+const modalFL = document.getElementById('modal-w__free-lesson');
+
+const showFLWindow = () => {
+        modalFL.style.display = 'flex';
 }
 
 

@@ -76,12 +76,15 @@ number1.addEventListener('keyup', formatToPhone);
 const number2 = document.getElementsByClassName('check__input')[0];
 number2.addEventListener('keydown', deleteWrongNumberSymbols);
 number2.addEventListener('keyup', formatToPhone);
-const number3 = document.getElementsByClassName('questions__tel')[1];
+const number3 = document.getElementsByClassName('questions__tel')[2];
 number3.addEventListener('keydown', deleteWrongNumberSymbols);
 number3.addEventListener('keyup', formatToPhone);
-const numberModal = document.getElementsByClassName('questions__tel')[0];
+const numberModal = document.getElementsByClassName('questions__tel')[1];
 numberModal.addEventListener('keydown', deleteWrongNumberSymbols);
 numberModal.addEventListener('keyup', formatToPhone);
+const numberFL = document.getElementsByClassName('questions__tel')[0];
+numberFL.addEventListener('keydown', deleteWrongNumberSymbols);
+numberFL.addEventListener('keyup', formatToPhone);
 
 // const inputPass = document.querySelector('.login__pass_pass');
 // inputPass.addEventListener('keydown', deleteWrongPassSymbols);

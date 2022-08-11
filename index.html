@@ -40,11 +40,15 @@
     <div class="navbar__el" style="padding-top: 0px">
         <button onclick="showHideNavList(this)" class="navbar__link">ЕГЭ</button>
         <ul class="navbar__ul">
-            <li class="navbar__li"><img src="images/mobile/yellow-arrow.svg"><a href="#">Формат обучения</a></li>
-            <li class="navbar__li"><img src="images/mobile/yellow-arrow.svg"><a href="#">Стоимость</a></li>
-            <li class="navbar__li"><img src="images/mobile/yellow-arrow.svg"><a href="#teachers-hook">Преподаватели</a>
+            <li class="navbar__li"><img src="images/mobile/yellow-arrow.svg">
+                <a onclick="hideMenu(document.querySelector('.header__cross'))" href="#education-info-hook">Формат обучения</a></li>
+            <li class="navbar__li"><img src="images/mobile/yellow-arrow.svg">
+                <a onclick="hideMenu(document.querySelector('.header__cross'))" href="#price-hook">Стоимость</a></li>
+            <li class="navbar__li"><img src="images/mobile/yellow-arrow.svg">
+                <a onclick="hideMenu(document.querySelector('.header__cross'))" href="#teachers-hook">Преподаватели</a>
             </li>
-            <li class="navbar__li"><img src="images/mobile/yellow-arrow.svg"><a href="#reviews-hook">Отзывы</a></li>
+            <li class="navbar__li"><img src="images/mobile/yellow-arrow.svg">
+                <a onclick="hideMenu(document.querySelector('.header__cross'))" href="#reviews-hook">Отзывы</a></li>
         </ul>
     </div>
     <div class="navbar__el">
@@ -53,11 +57,32 @@
     <div class="navbar__el">
         <a href="#" class="navbar__link">10 класс</a>
     </div>
-    <a href="#teachers-hook" class="navbar__link" style="padding: 16px 0 24px">Преподаватели</a>
-    <a href="#reviews-hook" class="navbar__link">Отзывы</a>
-    <button class="recruit__button menu-mobile__button">Бесплатное занятие</button>
+    <a onclick="hideMenu(document.querySelector('.header__cross'))" href="#teachers-hook" class="navbar__link" style="padding: 16px 0 24px">Преподаватели</a>
+    <a onclick="hideMenu(document.querySelector('.header__cross'))" href="#reviews-hook" class="navbar__link">Отзывы</a>
+    <button onclick="showFLWindow()" class="recruit__button menu-mobile__button">Бесплатное занятие</button>
     <a href="tel: +79923466545" class="menu-mobile__tel">+7 992 346-65-45</a>
     <div style="font-weight: 400;font-size: 14px;line-height: 10px;">на связи 9–21:00</div>
+</div>
+<div id="modal-w__free-lesson" class="modal-w__wrapper">
+    <!--     onclick="document.querySelector('.modal-w__wrapper').style.display = 'none';"-->
+
+    <div class="modal-w">
+        <div class="modal-w__content">
+            <div class="modal-w__title-wrapper">
+                <div class="modal-w__title">Беспалтное занятие</div>
+                <img onclick="document.querySelector('#modal-w__free-lesson').style.display = 'none';"
+                     class="modal-w__cross"
+                     src="images/mobile/cross.svg"/>
+            </div>
+
+            <form class="modal-w__form">
+                <input id="modal-w-fl-name" class="questions__name" type="text" placeholder="Имя"/>
+                <input id="modal-w-fl-tel" class="questions__tel" type="tel" value="+7" maxlength="17"/>
+                <button id="modal-w-fl-btn" class="questions__button" type="button">Запросить</button>
+            </form>
+        </div>
+    </div>
+
 </div>
 <header class="header">
     <div class="header__menu desktop__hidden" style="display: flex; justify-content: space-between">
@@ -67,7 +92,7 @@
             <img onclick="showHideMenu(this)" id="burger" class="header__burger desktop__hidden"
                  src="images/mobile/btn-menu.svg"
                  alt="burger">
-            <img onclick="showHideMenu(this)" style="display: none" class="header__burger desktop__hidden"
+            <img onclick="showHideMenu(this)" style="display: none" class="header__burger desktop__hidden header__cross"
                  src="images/mobile/cross.svg"
                  alt="cross">
         </div>
@@ -109,8 +134,6 @@
     </div>
 </header>
 <div id="modal-w__city" class="modal-w__wrapper">
-    <!--     onclick="document.querySelector('.modal-w__wrapper').style.display = 'none';"-->
-
     <div class="modal-w">
         <div class="modal-w__content">
             <div class="modal-w__title-wrapper">
@@ -140,7 +163,6 @@
             </form>
         </div>
     </div>
-
 </div>
 <section class="wrapper">
     <div class="announce">
@@ -251,8 +273,7 @@
     </div>
 
 </div>
-<!--<div class="modal__download__shadow"></div>-->
-<section class="education-info">
+<section class="education-info" id="education-info-hook">
     <div>
         <div class="education-info__title">Эффективный и удобный формат обучения</div>
         <div class="education-info__subtitle">Объём подготовки в неделю равен 10 школьным урокам. Это больше чем с
@@ -368,7 +389,7 @@
             </div>
         </div>
     </section>
-    <section class="price">
+    <section class="price" id="price-hook">
         <div class="price__title">Стоимость обучения</div>
         <div class="price__subtitle">Вы можете получить налоговый вычет за образовательные услуги
             и использовать материнский капитал
@@ -1102,7 +1123,7 @@
             </div>
             <div>
                 <div style="display: flex; flex-wrap: wrap;">
-                    <input class="questions__tel" type="tel" placeholder="+7" maxlength="17">
+                    <input class="questions__tel" type="tel" value="+7" maxlength="17">
                     <select class="questions__time">
                         <option disabled selected hidden>Время звонка</option>
                         <option>9:00</option>

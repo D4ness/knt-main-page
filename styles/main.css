@@ -1752,6 +1752,7 @@ input[name="teachers__slider__r"] {
   }
   .price__discount {
     margin: 20px 0 40px 0;
+    max-width: 300px;
   }
   .price__check {
     margin: 40px auto 275px;
