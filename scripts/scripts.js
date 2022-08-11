@@ -3,45 +3,45 @@ const shiftTeachers = deviceWidth > 768 ? 636 : 334;
 
 const slideTeachersRight = () => {
     // if (deviceWidth > 768) {
-        let prevNum = 0;
-        const slideT = document.getElementsByClassName('teachers__slide_1')[0];
-        const btn = document.getElementsByClassName('slider__button')[0];
-        btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
-        const prevMargin = parseInt(slideT.style.marginLeft) || 0;
-        if (prevMargin > -2544) {
-            slideT.style.marginLeft = (prevMargin - shiftTeachers).toString() + "px";
-            let radioNum = -prevMargin / shiftTeachers + 2;
-            const radio = document.getElementById('slider__label' + radioNum.toString())
-            prevNum = radioBgChangeColor(radio);
-            if ((prevMargin - shiftTeachers === -2544) || (prevMargin === -2004)) {
-                const btn = document.getElementsByClassName('slider__button')[1];
-                btn.style.backgroundImage = 'url(images/slider/arrow-left-disabled.svg)';
-                console.log(btn, btn.style.backgroundImage);
-            }
+    let prevNum = 0;
+    const slideT = document.getElementsByClassName('teachers__slide_1')[0];
+    const btn = document.getElementsByClassName('slider__button')[0];
+    btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
+    const prevMargin = parseInt(slideT.style.marginLeft) || 0;
+    if (prevMargin > -2544) {
+        slideT.style.marginLeft = (prevMargin - shiftTeachers).toString() + "px";
+        let radioNum = -prevMargin / shiftTeachers + 2;
+        const radio = document.getElementById('slider__label' + radioNum.toString())
+        prevNum = radioBgChangeColor(radio);
+        if ((prevMargin - shiftTeachers === -2544) || (prevMargin === -2004)) {
+            const btn = document.getElementsByClassName('slider__button')[1];
+            btn.style.backgroundImage = 'url(images/slider/arrow-left-disabled.svg)';
+            console.log(btn, btn.style.backgroundImage);
         }
+    }
     // }
 }
 
 const slideTeachersLeft = () => {
     // if (deviceWidth > 768) {
-        let prevNum = 0;
-        const slideT = document.getElementsByClassName('teachers__slide_1')[0];
-        const btn = document.getElementsByClassName('slider__button')[1];
-        btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
-        const prevMargin = parseInt(slideT.style.marginLeft) || 0;
-        // const shift = 20;
-        // console.log(prevMargin);
-        if (prevMargin < 0) {
-            slideT.style.marginLeft = (prevMargin + shiftTeachers).toString() + "px";
-            let radioNum = -prevMargin / shiftTeachers;
-            const radio = document.getElementById('slider__label' + radioNum.toString())
-            prevNum = radioBgChangeColor(radio);
-            if (prevMargin + shiftTeachers === 0) {
-                const btn = document.getElementsByClassName('slider__button')[0];
-                btn.style.backgroundImage = 'url(images/slider/arrow-left-disabled.svg)';
-                // console.log(btn, btn.style.backgroundImage);
-            }
+    let prevNum = 0;
+    const slideT = document.getElementsByClassName('teachers__slide_1')[0];
+    const btn = document.getElementsByClassName('slider__button')[1];
+    btn.style.backgroundImage = 'url(images/slider/arrow-left.svg)';
+    const prevMargin = parseInt(slideT.style.marginLeft) || 0;
+    // const shift = 20;
+    // console.log(prevMargin);
+    if (prevMargin < 0) {
+        slideT.style.marginLeft = (prevMargin + shiftTeachers).toString() + "px";
+        let radioNum = -prevMargin / shiftTeachers;
+        const radio = document.getElementById('slider__label' + radioNum.toString())
+        prevNum = radioBgChangeColor(radio);
+        if (prevMargin + shiftTeachers === 0) {
+            const btn = document.getElementsByClassName('slider__button')[0];
+            btn.style.backgroundImage = 'url(images/slider/arrow-left-disabled.svg)';
+            // console.log(btn, btn.style.backgroundImage);
         }
+    }
     // }
 }
 const radioBgChangeColor = (el) => {
@@ -185,7 +185,7 @@ const showDownloadWindow = () => {
 const modalC = document.getElementById('modal-w__city');
 
 const showCityWindow = () => {
-    if (deviceWidth > 768 ) {
+    if (deviceWidth > 768) {
         modalC.style.display = 'flex';
 
     } else {
@@ -197,7 +197,8 @@ const showCityWindow = () => {
 const modalFL = document.getElementById('modal-w__free-lesson');
 
 const showFLWindow = () => {
-        modalFL.style.display = 'flex';
+    modalFL.style.display = 'flex';
+    hideMenu(document.querySelector('.header__cross'))
 }
 
 
