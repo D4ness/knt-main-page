@@ -534,8 +534,9 @@
   font-size: 20px;
   line-height: 26px;
   margin-bottom: 26px;
-  display: flex;
   max-width: 194px;
+  display: flex;
+  align-items: center;
 }
 .price__subject__name {
   font-size: 19px;
