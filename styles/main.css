@@ -672,6 +672,12 @@
   padding: 0 24px;
   margin-left: 50px;
 }
+.price__check:after {
+  content: url("../images/check-tail.svg");
+  position: relative;
+  top: 16px;
+  left: -24px;
+}
 .period__label__circle {
   width: 16px;
   height: 16px;
@@ -752,6 +758,7 @@
   text-align: center;
   color: #8F9AB3;
   margin: 24px 0 50px;
+  background-image: url("../images/check.svg");
 }
 .check__rights a {
   text-decoration: none;

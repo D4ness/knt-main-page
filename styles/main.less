@@ -841,8 +841,14 @@
     background: white;
     padding: 0 24px;
     margin-left: 50px;
-  }
 
+    &:after {
+      content: url("../images/check-tail.svg");
+      position: relative;
+      top: 16px;
+      left: -24px;
+    }
+  }
 }
 
 .period__label__circle {
@@ -936,6 +942,7 @@
     text-align: center;
     color: #8F9AB3;
     margin: 24px 0 50px;
+    background-image: url("../images/check.svg");
 
     & a {
       text-decoration: none;
@@ -1078,25 +1085,6 @@
 
 }
 
-//#teachers__slider__radio1:checked ~ .teachers__slide_1 {
-//  margin-left: 0;
-//}
-//
-//#teachers__slider__radio2:checked ~ .teachers__slide_1 {
-//  margin-left: -20%;
-//}
-//
-//#teachers__slider__radio3:checked ~ .teachers__slide_1 {
-//  margin-left: -40%;
-//}
-//
-//#teachers__slider__radio4:checked ~ .teachers__slide_1 {
-//  margin-left: -60%;
-//}
-//
-//#teachers__slider__radio5:checked ~ .teachers__slide_1 {
-//  margin-left: -80%;
-//}
 
 input[name="teachers__slider__r"] {
   position: absolute;
@@ -1721,6 +1709,7 @@ input[name="teachers__slider__r"] {
     &__check {
       margin-top: 50px;
     }
+
     &__discount {
       margin-bottom: 40px;
     }

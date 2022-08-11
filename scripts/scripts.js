@@ -1,4 +1,4 @@
-const deviceWidth = window.screen.width;
+const deviceWidthS = window.screen.width;
 
 const showHideMenu = (el) => {
     const menu = document.querySelector('.menu-mobile');
@@ -36,7 +36,7 @@ const showDownloadWindow = () => {
 const modalC = document.getElementById('modal-w__city');
 
 const showCityWindow = () => {
-    if (deviceWidth > 768) {
+    if (deviceWidthS > 768) {
         modalC.style.display = 'flex';
 
     } else {
