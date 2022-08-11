@@ -179,7 +179,6 @@ const showHideNavList = (el) => {
 }
 const modalD = document.getElementById('modal-w__download');
 const showDownloadWindow = () => {
-
     modalD.style.display = 'flex';
 }
 const modalC = document.getElementById('modal-w__city');
