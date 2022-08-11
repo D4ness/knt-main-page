@@ -1365,6 +1365,9 @@ input[name="teachers__slider__r"] {
   .price__check {
     margin-top: 50px;
   }
+  .price__discount {
+    margin-bottom: 40px;
+  }
   .document-img {
     width: 350px;
   }
