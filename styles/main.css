@@ -534,8 +534,8 @@
   font-size: 20px;
   line-height: 26px;
   margin-bottom: 26px;
-  max-width: 194px;
   display: flex;
+  max-width: 194px;
   align-items: center;
 }
 .price__subject__name {
@@ -1752,6 +1752,7 @@ input[name="teachers__slider__r"] {
   .price__columns {
     margin: 0 !important;
     flex-wrap: wrap;
+    justify-content: start;
     padding-bottom: 0;
   }
   .price__margin {
